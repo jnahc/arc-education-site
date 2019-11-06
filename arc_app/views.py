@@ -19,6 +19,12 @@ def home(request):
 def about_us(request):
   return render(request, 'about_us.html')
 
+def api_profiles(request):
+  all_profiles = Profile.objects.all()
+  data = []
+  for profile in all_profiles:
+    data.append({"name": profile.full_name, "photo": profile.photo_url, "skills": profile.skills, "bio": profile.bio})
+  return JsonResponse({"data": data, "status": 200})
 
 def profile_create(request):
   if request.method == 'POST':
