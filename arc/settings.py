@@ -38,7 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'arc',
+    'arc_app',
     'arc_profile',
+    'accounts'
 ]
 
 MIDDLEWARE = [
