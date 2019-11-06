@@ -26,4 +26,8 @@ def register(request):
                 context = {'error': 'Username is already in use!'}
                 return render(request, 'register.html', context)
             else:
-                if User.objects.filter(email=email_form)
+                if User.objects.filter(email=email_form).exists():
+                    context = {'error': 'That email already exists.'}
+                    return render(request, 'register.html', context)
+                else:
+                    user = User.objects.create_profile()
