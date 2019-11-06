@@ -1,4 +1,4 @@
-#!/Users/jeffchan/sei/deliverables/academy-revolutionary-confederation/.env/bin/python
+#!/Users/twpride/sei/deliverables/academy-revolutionary-confederation/.env/bin/python
 
 import sys
 import getopt

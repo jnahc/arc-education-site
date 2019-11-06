@@ -14,7 +14,22 @@ from .models import Course
 #   return HttpResponse("Goodbye rocketship. Hello Home.")
 
 def home(request):
-  return render(request, 'index.html')
+    return render(request, 'index.html')
 
 def about_us(request):
   return render(request, 'about_us.html')
+
+
+def profile_create(request):
+  if request.method == 'POST':
+    form = ProfileForm(request.POST)
+    if form.is_valid():
+      profile = form.save(commit=False)
+      profile.user = request.user
+      profile.save()
+      return redirect('profile_detail', pk=profile.pk)
+  else:
+    form = ProfileForm()
+  context = {'from': form, 'header': "Create Profile"}
+  return render(request, 'profile_form.html', context)
+

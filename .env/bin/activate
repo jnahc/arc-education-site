@@ -46,7 +46,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/Users/jeffchan/sei/deliverables/academy-revolutionary-confederation/.env"
+VIRTUAL_ENV="/Users/twpride/sei/deliverables/academy-revolutionary-confederation/.env"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
