@@ -10,5 +10,11 @@ from .models import Course
 
 # Create your views here.
 
+# def home(request):
+#   return HttpResponse("Goodbye rocketship. Hello Home.")
+
 def home(request):
-  return HttpResponse("Goodbye rocketship. Hello Home.")
+  return render(request, 'index.html')
+
+def about_us(request):
+  return render(request, 'about_us.html')
