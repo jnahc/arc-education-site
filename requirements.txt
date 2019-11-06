@@ -1,7 +1,4 @@
 Django==2.2.7
-<<<<<<< HEAD
-=======
 psycopg2-binary==2.8.4
->>>>>>> 321cb8baa24174c57bf81bc473f9da603c32784f
 pytz==2019.3
 sqlparse==0.3.0
