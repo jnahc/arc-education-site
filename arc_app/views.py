@@ -10,8 +10,15 @@ from .models import Course
 
 # Create your views here.
 
+# def home(request):
+#   return HttpResponse("Goodbye rocketship. Hello Home.")
+
 def home(request):
-  return HttpResponse("Goodbye rocketship. Hello Home.")
+    return render(request, 'index.html')
+
+def about_us(request):
+  return render(request, 'about_us.html')
+
 
 def profile_create(request):
   if request.method == 'POST':
@@ -25,3 +32,4 @@ def profile_create(request):
     form = ProfileForm()
   context = {'from': form, 'header': "Create Profile"}
   return render(request, 'profile_form.html', context)
+
