@@ -10,6 +10,7 @@ class Profile(models.Model):
   bio = models.TextField(default="")
   creditcard_info = models.CharField(max_length=18)
   address = models.TextField()
+  password2 = models.CharField(max_length=20)
   user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="profiles")
 
   def __str__(self):
