@@ -31,3 +31,198 @@ def register(request):
                     return render(request, 'register.html', context)
                 else:
                     user = User.objects.create_profile()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# pouyesh jeff code 
+
+def login(request):
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+        #authentication
+        user = auth.authenticate(username=username, password=password)
+
+        if user is not None:
+            #login
+            auth.login(request,user)
+            #redirect
+            return redirect('home')
+        else:
+            context = {'error', 'Invalid Credentials'}
+            return render(request, 'login.html',context)
+    else:
+        return render(request, 'login.html')
+
+# pouyesh jeff code 
