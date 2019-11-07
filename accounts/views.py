@@ -38,7 +38,10 @@ def register(request):
                         last_name=last_name)
                     user.save()
                     #####need route
-                    return redirect('login')
+
+
+                    return redirect('home')
+
         else:
             context = {'error':'Passwords do not match'}
             return render(request, 'profile_create.html', context)
@@ -47,9 +50,6 @@ def register(request):
 
 
 
-def logout(request):
-    auth.logout(request)
-    return redirect('home')
 
 
 
@@ -220,8 +220,6 @@ def logout(request):
 
 
 
-
-# pouyesh jeff code 
 
 def login(request):
     if request.method == 'POST':
@@ -234,17 +232,22 @@ def login(request):
             #login
             auth.login(request,user)
             #redirect
-            return redirect('home')
+            return redirect('profile')
         else:
             context = {'error':'Invalid Credentials'}
             return render(request, 'login.html', context)
     else:
         return render(request, 'login.html')
 
-# def profile(request):
-#     profile = Profile.objects.filter(user=request.user)
-#     context = {'profiles':profiles}
-#     return render(request, "profile.html", context)
 
-# pouyesh jeff code 
+def logout(request):
+    auth.logout(request)
+    return redirect('home')
+
+
+def profile(request):
+    profile = Profile.objects.filter(user=request.user)
+    return render(request, "profile.html")
+
+
 
