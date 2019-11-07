@@ -3,7 +3,6 @@ from django.http import HttpResponse, JsonResponse
 from django.core import serializers 
 from django.contrib.auth.decorators import login_required
 
-from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 
 
@@ -37,6 +36,7 @@ def course_create(request):
 
 def course_detail(request):
   return render(request, 'course_detail.html')
+
 
 
 
