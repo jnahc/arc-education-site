@@ -70,7 +70,7 @@ def login(request):
 
 def logout(request):
     auth.logout(request)
-    return redirect('user_list')
+    return redirect('home')
 
 @login_required
 def profile(request):
