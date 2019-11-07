@@ -29,11 +29,24 @@
           <li class="nav-item">
             <a class="nav-link" href="{% url 'about_us' %}">About Us</a>
           </li>
+          
+          {% if user.is_authenticated %}
+            Welcome, {{user.username}}
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+          </li>
+          {% else %}
           <li class="nav-item">
             <a class="nav-link" href="#">Register</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Login</a>
+            <a class="nav-link" href="{% url 'login' %}">Login</a>
+          </li>
+
+          {% endif %}
+          
+         
+           
           </li>
         </ul>
       </div>
