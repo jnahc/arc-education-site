@@ -249,8 +249,8 @@ def login(request):
             #redirect
             return redirect('home')
         else:
-            context = {'error', 'Invalid Credentials'}
-            return render(request, 'login.html',context)
+            context = {'error':'Invalid Credentials'}
+            return render(request, 'login.html', context)
     else:
         return render(request, 'login.html')
 
