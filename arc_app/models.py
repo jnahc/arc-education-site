@@ -1,5 +1,5 @@
 from django.db import models
-from arc_profile.models import Profile
+from django.contrib.auth.models import User
 
 # Create your models here.
 
@@ -9,7 +9,7 @@ class Course(models.Model):
   start_date = models.DateField()
   end_date = models.DateField()
   category = models.CharField(max_length=100)
-  profile = models.ForeignKey(Profile, on_delete=models.CASCADE, related_name='courses')
+  user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='courses')
 
 def __str__(self):
   return f"{self.title}"
