@@ -24,11 +24,11 @@ def register(request):
         if password == password2:
             if User.objects.filter(username=username_form).exists():
                 context = {'error': 'Username is already in use!'}
-                return render(request, 'profile_create.html', context)
+                return render(request, 'register.html', context)
             else:
                 if User.objects.filter(email=email_form).exists():
                     context = {'error': 'That email already exists.'}
-                    return render(request, 'profile_create.html', context)
+                    return render(request, 'register.html', context)
                 else:
                     user = User.objects.create_user(
                         username=username_form, 
@@ -40,13 +40,13 @@ def register(request):
                     #####need route
 
 
-                    return redirect('home')
+                    return redirect('course_list')
 
         else:
             context = {'error':'Passwords do not match'}
-            return render(request, 'profile_create.html', context)
+            return render(request, 'register.html', context)
     else:
-        return render(request, 'profile_create.html')
+        return render(request, 'register.html')
 
 
 
@@ -223,10 +223,10 @@ def register(request):
 
 def login(request):
     if request.method == 'POST':
-        username = request.POST['username']
-        password = request.POST['password']
+        username_form = request.POST['username']
+        password_form = request.POST['password']
         #authentication
-        user = auth.authenticate(username=username, password=password)
+        user = auth.authenticate(username=username_form, password=password_form)
 
         if user is not None:
             #login
@@ -242,12 +242,13 @@ def login(request):
 
 def logout(request):
     auth.logout(request)
-    return redirect('home')
+    return redirect('user_list')
 
 
 def profile(request):
-    profile = Profile.objects.filter(user=request.user)
-    return render(request, "profile.html")
+    courses = Course.objects.filter(user=request.user)
+    context = {'courses':courses}
+    return render(request, 'profile.html',context)
 
 
 
