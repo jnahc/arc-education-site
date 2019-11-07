@@ -26,18 +26,17 @@ def api_profiles(request):
     data.append({"name": profile.full_name, "photo": profile.photo_url, "skills": profile.skills, "bio": profile.bio})
   return JsonResponse({"data": data, "status": 200})
 
-def profile_create(request):
+def user_create(request):
   if request.method == 'POST':
     form = ProfileForm(request.POST)
     if form.is_valid():
-      profile = form.save(commit=False)
-      profile.user = request.user
-      profile.save()
-      return redirect('profile_detail', pk=profile.pk)
+      user = form.save(commit=False)
+      user.save()
+      return redirect('user_detail', pk=profile.pk)
   else:
-    form = ProfileForm()
-  context = {'from': form, 'header': "Create Profile"}
-  return render(request, 'profile_create.html', context)
+    form = UserForm()
+  context = {'from': form, 'header': "Create User"}
+  return render(request, 'user_create.html', context)
 
 def api_courses(request):
   all_courses = Course.objects.all()
