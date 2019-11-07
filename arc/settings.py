@@ -37,9 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'arc',
     'arc_app',
-    'arc_profile',
     'accounts'
 ]
 
