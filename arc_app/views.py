@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, JsonResponse
 from django.core import serializers 
+from django.contrib.auth.decorators import login_required
 
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
@@ -26,13 +27,17 @@ def course_create(request):
     form = CourseForm(request.POST)
     if form.is_valid():
       course = form.save(commit=False)
-      course.user = request.user
+      course.course_owner = request.user
       course.save()
       return redirect('course_detail', pk=course.pk)
   else:
     form = CourseForm()
   context = {'from': form, 'header': "Create Course"}
   return render(request, 'course_form.html', context)
+
+def course_detail(request):
+  return render(request, 'course_detail.html')
+
 
 
 

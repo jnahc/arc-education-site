@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib import auth
+from django.contrib.auth.decorators import login_required
 
 from arc_app.models import Course
 
@@ -47,180 +48,6 @@ def register(request):
             return render(request, 'profile_create.html', context)
     else:
         return render(request, 'profile_create.html')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 def login(request):
     if request.method == 'POST':
         username = request.POST['username']
@@ -244,7 +71,7 @@ def logout(request):
     auth.logout(request)
     return redirect('home')
 
-
+@login_required
 def profile(request):
     # user = User.objects.filter(username=request.user)
     return render(request, "profile.html")
