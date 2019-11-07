@@ -246,9 +246,14 @@ def logout(request):
 
 
 def profile(request):
+<<<<<<< HEAD
     courses = Course.objects.filter(user=request.user)
     context = {'courses':courses}
     return render(request, 'profile.html',context)
+=======
+    # user = User.objects.filter(username=request.user)
+    return render(request, "profile.html")
+>>>>>>> f3ed29eb748166fd148a526d1b4f5ea9c4b84e74
 
 
 
