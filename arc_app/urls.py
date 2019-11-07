@@ -25,8 +25,12 @@ urlpatterns = [
 
 
 
-    ### CREATE 
-    # path('users/create/', views.user_create, name='user_create'),
+
+
+
+    ### COURSES
+    path('courses/create/', views.course_create, name='course_create')
+
 
 
 ]

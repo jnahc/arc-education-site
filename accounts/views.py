@@ -47,9 +47,6 @@ def register(request):
 
 
 
-def logout(request):
-    auth.logout(request)
-    return redirect('home')
 
 
 
@@ -232,16 +229,22 @@ def login(request):
             #login
             auth.login(request,user)
             #redirect
-            return redirect('home')
+            return redirect('profile')
         else:
             context = {'error':'Invalid Credentials'}
             return render(request, 'login.html', context)
     else:
         return render(request, 'login.html')
 
+
+def logout(request):
+    auth.logout(request)
+    return redirect('home')
+
+
 def profile(request):
-    courses = Course.objects.filter(user=request.user)
-    context = {'courses':courses}
-    return render(request, "profile.html", context)
+    profile = Profile.objects.filter(user=request.user)
+    return render(request, "profile.html")
+
 
 
