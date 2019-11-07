@@ -7,7 +7,7 @@ from arc_profile.models import Profile
 # Create your views here.
 
 def register(request):
-    if requested.method == "POST":
+    if request.method == "POST":
         full_name = request.POST['full_name']
         photo_url = request.POST['photo_url']
         skills = request.POST['skills']
