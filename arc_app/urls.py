@@ -14,8 +14,8 @@ urlpatterns = [
 
 
     ### API
-    path('api/v1/profiles/', views.api_profiles),
-    path('api/v1/courses/', views.api_courses),
+    # path('api/v1/users/', views.api_users)
+    # path('api/v1/courses/', views.api_courses),
 
 
 
@@ -24,7 +24,7 @@ urlpatterns = [
 
 
     ### CREATE 
-    path('profiles/create/', views.profile_create, name='profile_create'),
+    path('users/create/', views.user_create, name='user_create'),
 
 
 ]
