@@ -3,7 +3,6 @@ from django.http import HttpResponse, JsonResponse
 from django.core import serializers 
 from django.contrib.auth.decorators import login_required
 
-from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 
 
@@ -41,6 +40,7 @@ def course_detail(request, pk):
   course = Course.objects.get(id=pk)
   context = {"course": course}
   return render(request, "course_detail.html", context)
+
 
 
 
