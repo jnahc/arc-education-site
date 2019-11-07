@@ -30,7 +30,34 @@ def register(request):
                     context = {'error': 'That email already exists.'}
                     return render(request, 'register.html', context)
                 else:
-                    user = User.objects.create_profile()
+                    user = User.objects.create_user(
+                        username=username_form, 
+                        email=email_form, 
+                        password=password, 
+                        first_name=first_name, 
+                        last_name=last_name)
+                    user.save()
+                    profile = Profile.objects.create_profile(
+                        full_name=full_name,
+                        photo_url=photo_url,
+                        skills=skills,
+                        bio=bio,
+                        creditcard_info=creditcard_info,
+                        address_form=address_form,
+                        password2=password2,
+                        is_staff=is_staff,
+                        date_joined=date_joined,
+                        is_superuser=is_superuser
+                    )
+                    profile.save()
+                    #####need route
+                    return redirect('')
+        else:
+            context = {'error':'Passwords do not match'}
+            return render(request, 'register.html', context)
+    else:
+        return render(request, 'register.html')
+
 
 
 def logout(request):
@@ -228,3 +255,4 @@ def login(request):
         return render(request, 'login.html')
 
 # pouyesh jeff code 
+

@@ -37,5 +37,11 @@ def profile_create(request):
   else:
     form = ProfileForm()
   context = {'from': form, 'header': "Create Profile"}
-  return render(request, 'profile_form.html', context)
+  return render(request, 'profile_create.html', context)
 
+def api_courses(request):
+  all_courses = Course.objects.all()
+  data = []
+  for course in all_courses:
+    data.append({"title": course.title, "description": course.description, "start_date": course.start_date, "end_date": course.end_date})
+  return JsonResponse({"data": data, "status": 200})
