@@ -10,12 +10,12 @@ class Course(models.Model):
   start_date = models.DateField()
   end_date = models.DateField()
   category = models.CharField(max_length=100)
-
-  course_owner = models.ForeignKey(User, on_delete=models.CASCADE, related_name='courses')
-
+  user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='courses')
+  photo_url = models.CharField(max_length=100)
 
   def __str__(self):
     return f"{self.title}"
 
   def template(self):
     return f"<li>{self.title}</li>"
+
