@@ -33,25 +33,15 @@ def course_create(request,):
   context = {'from': form}
   return render(request, 'course_form.html', context)
 
-def course_detail(request):
-  return render(request, 'course_detail.html')
 
-# def course_create(request, pk):
-#   user = User.objects.get(id=pk)
-#   if request.method == 'POST':
-#     form = CourseForm(request.POST)
-#     if form.is_valid():
-#       course = form.save(commit=False)
-#       course.user = user
-#       course.save()
-#       return redirect('course_detail', pk=course.user.pk)
-#   else:
-#     form = CourseForm()
-#   context = {'from': form}
-#   return render(request, 'course_form.html', context)
+def course_list(request):
+      return render(request, 'course_list.html')
+    
+def course_detail(request, pk):
+  course = Course.objects.get(id=pk)
+  context = {"course": course}
+  return render(request, "course_detail.html", context)
 
-def course_detail(request):
-  return render(request, 'course_detail.html')
 
 
 
