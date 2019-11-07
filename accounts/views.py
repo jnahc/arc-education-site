@@ -254,5 +254,10 @@ def login(request):
     else:
         return render(request, 'login.html')
 
+# def profile(request):
+#     profile = Profile.objects.filter(user=request.user)
+#     context = {'profiles':profiles}
+#     return render(request, "profile.html", context)
+
 # pouyesh jeff code 
 
