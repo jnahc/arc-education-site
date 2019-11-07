@@ -246,7 +246,7 @@ def logout(request):
 
 
 def profile(request):
-    profile = Profile.objects.filter(user=request.user)
+    # user = User.objects.filter(username=request.user)
     return render(request, "profile.html")
 
 
