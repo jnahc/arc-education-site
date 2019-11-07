@@ -6,9 +6,9 @@
   <div class="card-header">
     {{user.username}}'s Profile
   </div>
-  <img src="{{user.photo_url}}" class="card-img-top" alt="{{user.username}}">
+  {% comment %} <img src="{{user.photo_url}}" class="card-img-top" alt="{{user.username}}"> {% endcomment %}
   <div class="card-body">
-    <h5 class="card-title">{{user.fullname}}</h5>
+    <h5 class="card-title">{{user.first_name}}</h5>
     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
