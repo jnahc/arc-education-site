@@ -22,18 +22,17 @@ def about_us(request):
   return render(request, 'about_us.html')
 
 
-def course_create(request):
+def course_create(request,):
   if request.method == 'POST':
     form = CourseForm(request.POST)
     if form.is_valid():
-      course = form.save(commit=False)
-      course.course_owner = request.user
-      course.save()
-      return redirect('course_detail', pk=course.pk)
+      course = form.save()
+      return redirect('home')
   else:
     form = CourseForm()
-  context = {'from': form, 'header': "Create Course"}
+  context = {'from': form}
   return render(request, 'course_form.html', context)
+
 
 def course_list(request):
       return render(request, 'course_list.html')
@@ -43,14 +42,6 @@ def course_detail(request, pk):
   context = {"course": course}
   return render(request, "course_detail.html", context)
 
-
-
-
-# def post_detail(request, pk):
-#     post = Post.objects.get(id=pk)
-#     comments = Comment.objects.all()
-#     context = {"post": post, "comments": comments}
-#     return render(request, "post_detail.html", context)
 
 
 
