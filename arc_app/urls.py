@@ -15,6 +15,37 @@ urlpatterns = [
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     ### API
     # path('api/v1/users/', views.api_users)
     path('api/v1/courses/', views.api_courses),
@@ -28,8 +59,10 @@ urlpatterns = [
 
 
 
+
     ### COURSES
     path('courses/create/', views.course_create, name='course_create')
+
 
 
 

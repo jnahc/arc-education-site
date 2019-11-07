@@ -2,6 +2,10 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse, JsonResponse
 from django.core import serializers 
 
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
+
+
 from .models import Course
 from .forms import CourseForm
 
@@ -29,6 +33,7 @@ def course_create(request):
     form = CourseForm()
   context = {'from': form, 'header': "Create Course"}
   return render(request, 'course_form.html', context)
+
 
 
 
