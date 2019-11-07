@@ -1,1 +1,20 @@
-<h1>Course List</h1>
+{% extends 'base.html' %}
+
+{% block content %}
+<ul class="tracks">
+    <h2>
+        Courses
+        <a href="{% url 'course_create' %}">+</a>
+    </h2>
+    {% for course in courses %}
+    <a href="{% url 'course_detail' pk=course.pk %}">
+        <li class="track">
+            <img src="{{course.photo_url}}" alt="{{course.title}}">
+            {{ course.title }}
+        </li>
+    </a>
+    {% endfor %}
+</ul>
+
+{% endblock %}
+
