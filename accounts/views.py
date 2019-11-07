@@ -33,7 +33,9 @@ def register(request):
                     user = User.objects.create_profile()
 
 
-
+def logout(request):
+    auth.logout(request)
+    return redirect('home')
 
 
 
