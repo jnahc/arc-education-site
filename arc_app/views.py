@@ -4,6 +4,7 @@ from django.core import serializers
 from django.contrib.auth.decorators import login_required
 
 from .models import Course
+from .forms import CourseForm
 # from ..arc_profile.models import Profile
 
 # import forms here
@@ -26,17 +27,148 @@ def api_profiles(request):
     data.append({"name": profile.full_name, "photo": profile.photo_url, "skills": profile.skills, "bio": profile.bio})
   return JsonResponse({"data": data, "status": 200})
 
-def user_create(request):
-  if request.method == 'POST':
-    form = ProfileForm(request.POST)
-    if form.is_valid():
-      user = form.save(commit=False)
-      user.save()
-      return redirect('user_detail', pk=profile.pk)
-  else:
-    form = UserForm()
-  context = {'from': form, 'header': "Create User"}
-  return render(request, 'user_create.html', context)
+# def user_create(request):
+#   if request.method == 'POST':
+#     form = ProfileForm(request.POST)
+#     if form.is_valid():
+#       user = form.save(commit=False)
+#       user.save()
+#       return redirect('user_detail', pk=profile.pk)
+#   else:
+#     form = UserForm()
+#   context = {'from': form, 'header': "Create User"}
+#   return render(request, 'user_create.html', context)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 def api_courses(request):
   all_courses = Course.objects.all()
@@ -44,3 +176,193 @@ def api_courses(request):
   for course in all_courses:
     data.append({"title": course.title, "description": course.description, "start_date": course.start_date, "end_date": course.end_date})
   return JsonResponse({"data": data, "status": 200})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+def course_create(request):
+  if request.method == 'POST':
+    form = CourseForm(request.POST)
+    if form.is_valid():
+      course = form.save()
+      # course.profile = request.profile
+      # course.save()
+      return redirect('profile')
+  else:
+    form = CourseForm()
+  context = {'form': form, 'header': "Add New Course"}
+  return render (request, 'course_form.html', context)
+
+
