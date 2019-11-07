@@ -35,140 +35,22 @@ def course_create(request):
   context = {'from': form, 'header': "Create Course"}
   return render(request, 'course_form.html', context)
 
-def course_detail(request):
-  return render(request, 'course_detail.html')
+def course_list(request):
+      return render(request, 'course_list.html')
+    
+def course_detail(request, pk):
+  course = Course.objects.get(id=pk)
+  context = {"course": course}
+  return render(request, "course_detail.html", context)
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# def post_detail(request, pk):
+#     post = Post.objects.get(id=pk)
+#     comments = Comment.objects.all()
+#     context = {"post": post, "comments": comments}
+#     return render(request, "post_detail.html", context)
 
 
 
