@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib import auth
 
-from arc_profile.models import Profile
+from arc_app.models import Course
 
 # Create your views here.
 
@@ -37,21 +37,8 @@ def register(request):
                         first_name=first_name, 
                         last_name=last_name)
                     user.save()
-                    profile = Profile.objects.create_profile(
-                        full_name=full_name,
-                        photo_url=photo_url,
-                        skills=skills,
-                        bio=bio,
-                        creditcard_info=creditcard_info,
-                        address_form=address_form,
-                        password2=password2,
-                        is_staff=is_staff,
-                        date_joined=date_joined,
-                        is_superuser=is_superuser
-                    )
-                    profile.save()
                     #####need route
-                    return redirect('')
+                    return redirect('home')
         else:
             context = {'error':'Passwords do not match'}
             return render(request, 'register.html', context)
@@ -234,8 +221,6 @@ def logout(request):
 
 
 
-# pouyesh jeff code 
-
 def login(request):
     if request.method == 'POST':
         username = request.POST['username']
@@ -254,10 +239,9 @@ def login(request):
     else:
         return render(request, 'login.html')
 
-# def profile(request):
-#     profile = Profile.objects.filter(user=request.user)
-#     context = {'profiles':profiles}
-#     return render(request, "profile.html", context)
+def profile(request):
+    courses = Course.objects.filter(user=request.user)
+    context = {'courses':courses}
+    return render(request, "profile.html", context)
 
-# pouyesh jeff code 
 
