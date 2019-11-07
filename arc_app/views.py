@@ -22,153 +22,36 @@ def about_us(request):
   return render(request, 'about_us.html')
 
 
-def course_create(request):
+def course_create(request,):
   if request.method == 'POST':
     form = CourseForm(request.POST)
     if form.is_valid():
-      course = form.save(commit=False)
-      course.course_owner = request.user
-      course.save()
-      return redirect('course_detail', pk=course.pk)
+      course = form.save()
+      return redirect('home')
   else:
     form = CourseForm()
-  context = {'from': form, 'header': "Create Course"}
+  context = {'from': form}
   return render(request, 'course_form.html', context)
 
 def course_detail(request):
   return render(request, 'course_detail.html')
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# def course_create(request, pk):
+#   user = User.objects.get(id=pk)
+#   if request.method == 'POST':
+#     form = CourseForm(request.POST)
+#     if form.is_valid():
+#       course = form.save(commit=False)
+#       course.user = user
+#       course.save()
+#       return redirect('course_detail', pk=course.user.pk)
+#   else:
+#     form = CourseForm()
+#   context = {'from': form}
+#   return render(request, 'course_form.html', context)
+
+def course_detail(request):
+  return render(request, 'course_detail.html')
 
 
 
