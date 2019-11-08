@@ -3,11 +3,67 @@
 * {
 }
 
-body {
-  background: turquoise;
+.home-page-body {
+  background: black;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* BASE HTML ****************************************************************************/
+
+.welcome-user-container {
+  display: flex;
+  justify-content: flex-end;
 }
 
 /* HOME PAGE *************************************************/
+.welcomeToArc_container {
+  background-image: url("https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1753&q=80");
+  color: azure;
+  width: 100%;
+}
+
+.welcomeToArc_title {
+  font-size: 100px;
+  font-family: "McLaren", cursive;
+}
+
+.welcomeToArc_slogan {
+  /* max-width: 20px; */
+  font-size: 50px;
+  margin-top: -30px;
+}
+
+.hp-topics {
+  /* margin-left: 90px; */
+  color: white;
+}
+
+.bd-placeholder-img {
+  margin-bottom: 50px;
+}
+
+.unlock-oportunity {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.unlock-oportunity-btn {
+  width: 300px;
+  font-size: 30px;
+  font-family: "Poiret One", cursive;
+}
+
+.topic-description {
+  color: white;
+}
+
+.col-lg-4 {
+  text-align: center;
+}
 
 /* LOGIN PAGE **************************************************/
 .login-button {
