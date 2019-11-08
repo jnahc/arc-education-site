@@ -76,14 +76,21 @@ def logout(request):
 def profile(request):
     #list out courses
     courses = Course.objects.filter(user=request.user)
-    # courses = Course.objects.all()
-    context = {"courses": courses}
+    #list out purchases
+    purchases = Purchase.objects.filter(student=request.user)
+    context = {"courses": courses, "purchases": purchases}
     return render(request, "profile.html", context)
 
 def purchase_list(request):
     purchases = Purchase.objects.all()
     context = {"purchases": purchases}
     return render(request, 'purchase_list.html', context)
+
+
+
+
+
+
 
 
 
