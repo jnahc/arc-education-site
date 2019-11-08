@@ -41,14 +41,16 @@ def api_courses(request):
 
 
 def course_create(request):
-    if request.method == 'POST':
-        form = CourseForm(request.POST)
-        if form.is_valid():
-            course = form.save()
-            # course.profile = request.profile
-            # course.save()
-            return redirect('profile')
-    else:
-        form = CourseForm()
-    context = {'form': form, 'header': "Add New Course"}
-    return render(request, 'course_form.html', context)
+
+  if request.method == 'POST':
+    form = CourseForm(request.POST)
+    if form.is_valid():
+      course = form.save(commit=False)
+      course.user = request.user
+      course.save()
+      return redirect('profile')
+  else:
+    form = CourseForm()
+  context = {'form': form, 'header': "Add New Course"}
+  return render (request, 'course_form.html', context)
+

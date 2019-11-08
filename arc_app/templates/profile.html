@@ -16,5 +16,16 @@
     <a href="#" class="btn btn-primary">See Courses</a>
   </div>
 </div>
+<ul>
+  {% for course in courses %}
+  <li class="track">
+    <a href="{% url 'course_detail' pk=course.pk %}">
+      <img src="{{course.photo_url}}" alt="{{course.title}}" class="course-pic">
+      {{ course.title }}
+    </a>
+  </li>
+{% endfor %}
+</ul>
+
 
 {% endblock %}

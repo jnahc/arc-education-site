@@ -4,12 +4,13 @@ from django.contrib.auth.models import User
 # Create your models here.
 
 class Course(models.Model):
-  title = models.CharField(max_length=20)
+  title = models.CharField(max_length=100)
   description = models.TextField(default="")
   start_date = models.DateField()
   end_date = models.DateField()
   photo_url = models.TextField(default="")
   category = models.CharField(max_length=20)
+
   user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='courses')
 
   
