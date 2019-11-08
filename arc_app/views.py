@@ -25,8 +25,8 @@ def course_list(request):
     return render(request, 'course_list.html', context)
 
 
-def course_detail(request, pk):
-    course = Course.objects.get(id=pk)
+def course_detail(request, course_slug):
+    course = Course.objects.get(slug=course_slug)
     context = {"course": course}
     return render(request, "course_detail.html", context)
 
@@ -54,8 +54,8 @@ def course_create(request):
   context = {'form': form, 'header': "Add New Course"}
   return render (request, 'course_form.html', context)
 
-def purchase_create(request, pk):
-  course = Course.objects.get(id=pk)
+def purchase_create(request, course_slug):
+  course = Course.objects.get(slug=course_slug)
   purchase = Purchase(student=request.user, course=course)
   purchase.save()
   return redirect ('profile')
@@ -71,82 +71,19 @@ def purchase_create(request, pk):
     # else:
     #     return redirect ('home')
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-def course_edit(request, pk):
-  course = Course.objects.get(id=pk)
+def course_edit(request, course_slug):
+  course = Course.objects.get(slug=course_slug)
   if request.method == 'POST':
     form = CourseForm(request.POST, instance=course)
     if form.is_valid():
       course = form.save()
-      return redirect('course_detail', pk=course.pk)
+      return redirect('course_detail', slug=course.slug)
   else:
     form = CourseForm(instance=course)
     context = {'form': form}
     return render(request, 'course_form.html', context)
 
-def course_delete(request, pk):
-  Course.objects.get(id=pk).delete()
+def course_delete(request, course_slug):
+  Course.objects.get(slug=course_slug).delete()
   return redirect('profile')
 
