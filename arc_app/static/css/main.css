@@ -1,20 +1,103 @@
+/* GLOBAL VARIABLES **************************************************/
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-
   background: turquoise;
+  margin: 0;
+}
+
+/* HOME PAGE *************************************************/
+
+/* LOGIN PAGE **************************************************/
+.form-section{
+  width: max-content;
+  /* margin-right: auto; */
+  padding: 15px;
+  color: rgb(255, 255, 255);
+  display: grid;
+  place-content: center;
+  text-align: center;
+  background: rgb(96, 96, 96);
+  margin-top: 10vh;
 
 }
 
-.course-pic {
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 5px;
-  max-width: 150px;
+.login-img {
+  background: url(../img/star-wars-stormtrooper-digital-art-wallpaper-preview.jpg) no-repeat center center fixed;
+  background-size: cover;
 }
 
-.course-pic:hover {
-  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+.register-img {
+  background: url(../img/stormtrooper-sketches-star-wars-wallpaper-preview.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+/* 
+#login-cycle-img {
+  position:relative;
+  top:0;
+  width:100%;
+  height:635px;
+  background:
+      url(../img/lego-stormtrooper-star-wars-wallpaper-preview.jpg),
+      url(../img/low-poly-stormtrooper-star-wars-boba-fett-wallpaper-preview.jpg),
+      url(../img/star-wars-stormtrooper-digital-art-wallpaper-preview.jpg),
+      url(../img/star-wars-stormtrooper-movies-wallpaper-preview.jpg),
+      url(../img/star-wars-xenomorph-stormtrooper-artwork-wallpaper-preview.jpg),
+      url(../img/simple-background-simple-star-wars-stormtrooper-wallpaper-preview.jpg);
+  background-repeat:no-repeat;
+  background-size:100%;
+} */
+
+/* https://css-tricks.com/creating-a-css-sliding-background-effect/ */
+/* .wrapper {
+  overflow: hidden;
 }
 
+.sliding-background {
+  background: url("../img") repeat-x;
+  height: 560px;
+  width: 5076px;
+  animation: slide 60s linear infinite;
+}
+
+@keyframes slide{
+  0%{
+    transform: translate3d(0, 0, 0);
+  }
+  100%{
+    transform: translate3d(-1692px, 0, 0);
+  }
+} */
+
+.form-section form {
+  width: 100%;
+  min-width: 30vw;
+}
+
+.form-section p {
+  display: flex;
+  flex-direction: column;
+}
+.form-section h1 {
+  margin: 10px;
+}
+
+.form-section button {
+  background-color: rgb(30, 215, 96);
+  border: none;
+  border-radius: 5%;
+  font-size: 1.5em;
+  padding: 8px;
+  color: rgb(255, 255, 255);
+}
+
+/* .login-section form {
+  width: 100%;
+  min-width: 30vw;
+}
 
 .login-button {
   display: block;
@@ -27,11 +110,8 @@ body {
   background-color: #22c08a;
   border: none;
   border-radius: 20px;
-  transition: background-color .10s ease-in-out;
-  -webkit-user-select:none;
-  -moz-user-select:none;
-  -ms-user-select:none;
-  user-select:none;
+  transition: background-color 0.1s ease-in-out;
+  user-select: none;
 }
 
 .login-button:hover {
@@ -40,37 +120,36 @@ body {
 
 .login-button:active {
   background-color: #1eaa7a;
-}
+} */
 
-.container {
+/* .login-container {
   width: 40vw;
-  height: 50vh;  
+  height: 50vh;
   padding: 50px;
   margin: auto;
   margin-top: 100px;
   border: 1px solid red;
+} */
+
+/* REGISTER PAGE **************************************************/
+
+/* ABOUT US PAGE **************************************************/
+
+/* PROFILE PAGE **************************************************/
+
+/* COURSE LIST **************************************************/
+
+.course-pic {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  max-width: 150px;
 }
 
+.course-pic:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 
 
@@ -182,3 +261,4 @@ text-align-last:justify;
 .course_form_textarea{
   width: 100%;
 }
+
