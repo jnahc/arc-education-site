@@ -18,9 +18,7 @@ def about_us(request):
 
 
 def course_list(request):
-  courses = Course.objects.all()
-  context = {"courses":courses}
-  return render(request, 'course_list.html', context)
+      return render(request, 'course_list.html')
     
 def course_detail(request, pk):
   course = Course.objects.get(id=pk)
@@ -46,5 +44,3 @@ def course_create(request):
     form = CourseForm()
   context = {'form': form, 'header': "Add New Course"}
   return render (request, 'course_form.html', context)
-
-

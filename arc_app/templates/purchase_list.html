@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<ul class="purchase">
+  <h2>
+    Purchases
+  </h2>
+  {% for purchase in purchases %}
+    <li class="purchase">
+      <img src="{{purchase.course.photo_url}}" alt="{{purchase.course.title}}">
+      <p>{{ purchase.student.first_name }} -  {{ purchase.student.last_name }}</p>
+      <p>
+          Class Details
+          <ul>
+              <li>{{purchase.course.start_date}}</li>
+              <li>{{purchase.course.end_date}}</li>
+              <li>{{purchase.course.category}}</li>
+          </ul>
+
+      </p>
+      
+    </li>
+  </a>
+  {% endfor %}
+</ul>
+
+{% endblock %}
