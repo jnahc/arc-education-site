@@ -1,13 +1,46 @@
-{% extends 'base.html' %}
+
+
+ {% extends 'base.html' %}
+
 {% block content %}
-    <section class="form-section">
-        <h1>{{ header }}</h1>
-        <form method="post" class="course-form">
-            {% csrf_token %}
-            {{ form.as_p}}
-            <button type="submit">Save</button>
-        </form>
+
+  <div class="container  tracks " >
+    <section  >
+      <form action="{% url 'course_create' %}" method="POST" >
+        {% csrf_token %}
+
+        <div class="course_form_div">
+          <label for="title"> </label>
+          <input class= "course_form_input"  type="text" name="title"  maxlength="25" minlength="2" placeholder="Title : " required>
+        </div>
+
+        <div class="course_form_div"> 
+          <label for="last_name"> </label>
+          <input class= "course_form_input"  type="text" name="category"  maxlength="25" minlength="2" placeholder="Category : " required>
+        </div>
+
+        <div class="course_form_div">
+          <label for="start_date"></label>
+          <input class= "course_form_input"  type="date" name="start_date"   required>
+        </div>
+
+        <div class="course_form_div"> 
+          <label for="end_date"> </label>
+          <input class= "course_form_input" type="date" name="end_date"  required>
+        </div>
+
+        <div class="course_form_div">
+          <label for="photo_url"></label>
+          <input  class= "course_form_input" type="text" name="photo_url"  placeholder= "Photo_URL :" required>
+        </div>
+        
+        <div class="course_form_div">
+                <label for="description"></label>
+                <textarea class="course_form_textarea" name="description"   placeholder="Description : " required></textarea>
+        </div>
+        <button  class= "btn btn-success" type="submit" class="login-button"> add </button>
+      </form>
     </section>
+  </div>
+
 {% endblock %}
-
-

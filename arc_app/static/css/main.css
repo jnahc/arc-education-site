@@ -73,3 +73,112 @@ body {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.course_form_div{
+margin: 5px;
+margin: 5px;
+padding: 8px;
+background:  rgba(79, 74, 74, 0.42);
+text-decoration: none;
+color: white;
+border-radius: 10px;
+text-align-last:justify;
+
+}
+
+.course_form_btn{
+
+  width: 100px;
+  height: 30px;
+  background-color: blue;
+  color: #fff;
+  border-radius: 10px;
+}
+.container{
+
+  background-color: rgb(1, 0, 0);
+  height: 600px;
+  border-radius: 20px;
+  margin-bottom: 50px;
+}
+.course_form_input{
+  width: 100%;
+}
+
+.course_form_textarea{
+  width: 100%;
+}
