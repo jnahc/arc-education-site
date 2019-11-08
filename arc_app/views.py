@@ -16,7 +16,7 @@ def home(request):
 def about_us(request):
   return render(request, 'about_us.html')
 
-def course_create(request):
+def course_create(request,):
   if request.method == 'POST':
     form = CourseForm(request.POST)
     if form.is_valid():
@@ -28,9 +28,7 @@ def course_create(request):
   return render(request, 'course_form.html', context)
 
 def course_list(request):
-  courses = Course.objects.all()
-  context = {"courses":courses}
-  return render(request, 'course_list.html', context)
+      return render(request, 'course_list.html')
     
 def course_detail(request, pk):
   course = Course.objects.get(id=pk)
