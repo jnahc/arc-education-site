@@ -75,10 +75,9 @@ def logout(request):
 @login_required
 def profile(request):
     #list out courses
-    courses = Course.objects.all()
+    courses = Course.objects.filter(user=request.user)
+    # courses = Course.objects.all()
     context = {"courses": courses}
-    # user = User.objects.filter(request.user)
-    #
     return render(request, "profile.html", context)
 
 def purchase_list(request):
