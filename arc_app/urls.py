@@ -4,6 +4,7 @@ from . import views
 urlpatterns = [
     ### HOME NAV
     path('', views.home,name='home'),
+
     path('about_us/', views.about_us, name='about_us'),
     path('courses/create/', views.course_create, name='course_create'),
     path('courses/', views.course_list, name='course_list'),
