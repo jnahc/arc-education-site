@@ -46,3 +46,83 @@ def course_create(request):
     form = CourseForm()
   context = {'form': form, 'header': "Add New Course"}
   return render (request, 'course_form.html', context)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+def course_edit(request, pk):
+  course = Course.objects.get(id=pk)
+  if request.method == 'POST':
+    form = CourseForm(request.POST, instance=course)
+    if form.is_valid():
+      course = form.save()
+      return redirect('course_detail', pk=course.pk)
+  else:
+    form = CourseForm(instance=course)
+    context = {'form': form}
+    return render(request, 'course_form.html', context)
+
+def course_delete(request, pk):
+  Course.objects.get(id=pk).delete()
+  return redirect('profile')
+
