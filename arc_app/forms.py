@@ -5,5 +5,3 @@ class CourseForm(forms.ModelForm):
   class Meta:
     model = Course
     fields = ('title', 'description', 'start_date', 'end_date', 'category', 'photo_url')
-
-
