@@ -54,5 +54,3 @@ def course_create(request):
     form = CourseForm()
   context = {'form': form, 'header': "Add New Course"}
   return render (request, 'course_form.html', context)
-
-
