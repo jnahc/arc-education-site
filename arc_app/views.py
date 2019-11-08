@@ -42,15 +42,15 @@ def api_courses(request):
     data.append({"title": course.title, "description": course.description, "start_date": course.start_date, "end_date": course.end_date})
   return JsonResponse({"data": data, "status": 200})
 
-def course_create(request):
-  if request.method == 'POST':
-    form = CourseForm(request.POST)
-    if form.is_valid():
-      course = form.save()
-      # course.profile = request.profile
-      # course.save()
-      return redirect('profile')
-  else:
-    form = CourseForm()
-  context = {'form': form, 'header': "Add New Course"}
-  return render (request, 'course_form.html', context)
+# def course_create(request):
+#   if request.method == 'POST':
+#     form = CourseForm(request.POST)
+#     if form.is_valid():
+#       course = form.save()
+#       # course.profile = request.profile
+#       # course.save()
+#       return redirect('profile')
+#   else:
+#     form = CourseForm()
+#   context = {'form': form, 'header': "Add New Course"}
+#   return render (request, 'course_form.html', context)
