@@ -6,11 +6,10 @@
     Courses
     <a href="{% url 'course_create' %}">+</a>
   </h2>
-  {{  courses|length }}
   {% for course in courses %}
   <a href="{% url 'course_detail' pk=course.pk %}">
     <li class="track">
-      <img src="{{course.photo_url}}" alt="{{course.title}}">
+      <img src="{{course.photo_url}}" alt="{{course.title}}" class="course-pic">
       {{ course.title }}
     </li>
   </a>
