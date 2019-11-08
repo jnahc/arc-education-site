@@ -5,22 +5,29 @@
   {% if error %}
     <p style="background-color: firebrick">{{error}}</p>
   {% endif %}
-  <div class="container">
+   <body class="login-img" id="login-cycle-img">
+     
+    <div class="container">
     <section class="form-section">
       <form action="{% url 'login' %}" method="POST">
         {% csrf_token %}
         <p>
-          <label class="login-page" for="username">Username</label>
-          <input type="text" name="username" maxlength="25" minlength="2" required>
+          <label class="login-page" for="username">Username:</label>
+          <input type="text" name="username" maxlength="25" minlength="2" placeholder="Username" required>
         </p>
         <p>
           <label class="login-password" for="password">Password</label>
           <input type="password" name="password" maxlength="25" minlength="4" required>
         </p>
-        <button type="submit" class="login-button">Login</button>
+        <button type="submit" class="btn btn-lg btn-primary">Login</button>
+
+        
       </form>
     </section>
-  </div>
+  
+    </div>
+  </body>
+  
 
 {% endblock %}
 
