@@ -11,6 +11,8 @@ urlpatterns = [
 
   ### PURCHASES
   path('profile/purchase_list', views.purchase_list, name='purchase_list'),
-  path('courses/<int:pk>/create_purchase', views.purchase_create, name="purchase_create")
+  
+
+
 ]
 
