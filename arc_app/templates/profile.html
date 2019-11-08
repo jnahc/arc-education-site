@@ -21,15 +21,15 @@
   {% for course in courses %}
   <li class="track">
     <p>{{ course.title }}</p>
-    <a href="{% url 'course_detail' slug=course.slug %}">
+    <a href="{% url 'course_detail' course_slug=course.slug %}">
       <img src="{{course.photo_url}}" alt="{{course.title}}" class="course-pic">      
     </a>
     <p>
       <span>
-        <a href="{% url 'course_edit' slug=course.slug %}">Edit</a>
+        <a href="{% url 'course_edit' course_slug=course.slug %}">Edit</a>
       </span>
       <span>
-        <a href="{% url 'course_delete' slug=course.slug %}">Delete</a>
+        <a href="{% url 'course_delete' course_slug=course.slug %}">Delete</a>
       </span>
     </p>
   </li>
