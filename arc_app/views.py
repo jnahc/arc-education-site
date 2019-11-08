@@ -16,16 +16,6 @@ def home(request):
 def about_us(request):
   return render(request, 'about_us.html')
 
-def course_create(request):
-  if request.method == 'POST':
-    form = CourseForm(request.POST)
-    if form.is_valid():
-      course = form.save()
-      return redirect('home')
-  else:
-    form = CourseForm()
-  context = {'from': form}
-  return render(request, 'course_form.html', context)
 
 def course_list(request):
   courses = Course.objects.all()
