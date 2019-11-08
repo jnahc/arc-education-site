@@ -19,11 +19,11 @@
 .welcome-user-container {
   display: flex;
   justify-content: flex-end;
-
+}
 body {
   background: turquoise;
   margin: 0;
-
+}
 
 /* HOME PAGE *************************************************/
 .welcomeToArc_container {
@@ -288,6 +288,7 @@ body {
 
 
 .course_form_div{
+padding: 20px;
 margin: 5px;
 margin: 5px;
 padding: 8px;
@@ -307,12 +308,16 @@ text-align-last:justify;
   color: #fff;
   border-radius: 10px;
 }
-.container{
+.course_form_container{
 
   background-color: rgb(1, 0, 0);
   height: 600px;
   border-radius: 20px;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
+  margin-top: 50px;
+  width: 50%;
+  margin-left: 25%;
+  
 }
 .course_form_input{
   width: 100%;
