@@ -4,6 +4,7 @@ from django.contrib import auth
 from django.contrib.auth.decorators import login_required
 
 from arc_app.models import Course, Purchase
+from arc_app.forms import PurchaseForm
 
 # Create your views here.
 
@@ -84,6 +85,23 @@ def purchase_list(request):
     purchases = Purchase.objects.all()
     context = {"purchases": purchases}
     return render(request, 'purchase_list.html', context)
+
+def purchase_create(request):
+    course = Course.objects.get(id=pk)
+    if request.method == 'POST':
+        form = PurchaseForm(request.POST)
+        if form.is_valid():
+            purchase = form.save(commit=False)
+            purchase.student=request.user
+            purchase.course=course
+            purchase.save()
+            return redirect ('profile')
+    else:
+        return redirect ('home')
+
+
+
+
 
 
 

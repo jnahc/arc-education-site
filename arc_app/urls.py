@@ -13,13 +13,11 @@ urlpatterns = [
     path('courses/<int:pk>/edit/', views.course_edit, name='course_edit'),
     path('courses/<int:pk>/delete/', views.course_delete, name='course_delete'),
     
+    
+    
     ### API
     # path('api/v1/users/', views.api_users)
     path('api/v1/courses/', views.api_courses),
-
-
-    ### PURCHASES
-    
 
 
 ]

@@ -3,11 +3,14 @@ from . import views
 
 urlpatterns = [
 
-
+  ### USER
   path('register/', views.register, name='register'),
   path('login/', views.login, name='login'),
   path('logout/', views.logout, name='logout'),
   path('profile/', views.profile, name='profile'),
+
+  ### PURCHASES
   path('profile/purchase_list', views.purchase_list, name='purchase_list'),
+  path('courses/<int:pk>/create_purchase', views.purchase_create, name="purchase_create")
 ]
 
