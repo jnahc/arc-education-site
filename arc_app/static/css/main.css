@@ -211,15 +211,20 @@ body {
   box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
 }
 
-.course_form_div {
-  margin: 5px;
-  margin: 5px;
-  padding: 8px;
-  background: rgba(79, 74, 74, 0.42);
-  text-decoration: none;
-  color: white;
-  border-radius: 10px;
-  text-align-last: justify;
+
+
+
+.course_form_div{
+padding: 20px;
+margin: 5px;
+margin: 5px;
+padding: 8px;
+background:  rgba(79, 74, 74, 0.42);
+text-decoration: none;
+color: white;
+border-radius: 10px;
+text-align-last:justify;
+
 }
 
 .course_form_btn {
@@ -229,11 +234,17 @@ body {
   color: #fff;
   border-radius: 10px;
 }
-.container {
+
+.course_form_container{
+
   background-color: rgb(1, 0, 0);
   height: 600px;
   border-radius: 20px;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
+  margin-top: 50px;
+  width: 50%;
+  margin-left: 25%;
+  
 }
 .course_form_input {
   width: 100%;
