@@ -18,7 +18,9 @@ def about_us(request):
 
 
 def course_list(request):
-      return render(request, 'course_list.html')
+  courses = Course.objects.all()
+  context = {"courses":courses}
+  return render(request, 'course_list.html', context)
     
 def course_detail(request, pk):
   course = Course.objects.get(id=pk)
