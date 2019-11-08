@@ -10,14 +10,14 @@
     <form action="{% url 'login' %}" method="POST">
       {% csrf_token %}
       <p>
-        <label for="username">Username</label>
+        <label class="login-page" for="username">Username</label>
         <input type="text" name="username" maxlength="25" minlength="2" required>
       </p>
       <p>
-        <label for="password">Password</label>
+        <label class="login-password" for="password">Password</label>
         <input type="text" name="password" maxlength="25" minlength="4" required>
       </p>
-      <button type="submit">Login</button>
+      <button type="submit" class="login-button">Login</button>
     </form>
   </section>
 

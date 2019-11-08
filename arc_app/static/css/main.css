@@ -12,3 +12,40 @@ body {
 .course-pic:hover {
   box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
 }
+
+
+.login-button {
+  display: block;
+  width: 240px;
+  height: 40px;
+  padding: 0;
+  margin: 10px 20px 10px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #22c08a;
+  border: none;
+  border-radius: 20px;
+  transition: background-color .10s ease-in-out;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+}
+
+.login-button:hover {
+  background-color: #26d69a;
+}
+
+.login-button:active {
+  background-color: #1eaa7a;
+}
+
+.container {
+  width: 40vw;
+  height: 50vh;  
+  padding: 50px;
+  margin: auto;
+  border: 1px solid red;
+}
+
+
