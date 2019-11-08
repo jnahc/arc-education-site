@@ -1,18 +1,15 @@
+/* GLOBAL VARIABLES **************************************************/
+
+* {
+}
+
 body {
   background: turquoise;
 }
 
-.course-pic {
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 5px;
-  max-width: 150px;
-}
+/* HOME PAGE *************************************************/
 
-.course-pic:hover {
-  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
-}
-
+/* LOGIN PAGE **************************************************/
 .login-button {
   display: block;
   width: 240px;
@@ -46,4 +43,23 @@ body {
   margin: auto;
   margin-top: 100px;
   border: 1px solid red;
+}
+
+/* REGISTER PAGE **************************************************/
+
+/* ABOUT US PAGE **************************************************/
+
+/* PROFILE PAGE **************************************************/
+
+/* COURSE LIST **************************************************/
+
+.course-pic {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  max-width: 150px;
+}
+
+.course-pic:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
 }
