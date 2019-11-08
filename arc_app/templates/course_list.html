@@ -10,7 +10,7 @@
   <a href="{% url 'course_detail' pk=course.pk %}">
     <li class="track">
       <img src="{{course.photo_url}}" alt="{{course.title}}" class="course-pic">
-      {{ course.title }}
+      {% comment %} {{ course.title }} {% endcomment %}
     </li>
   </a>
   {% endfor %}
