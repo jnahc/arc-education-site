@@ -12,11 +12,17 @@
 }
 
 body {
-  background: black;
+  /* background: black; */
   margin: 0;
 }
 
+
+.nav-item {
+  font-family: "Abril Fatface", cursive;
+}
+
 /* PROFILE PAGE******************************************************************* */
+
 
 
 /* HOME PAGE *************************************************/
@@ -44,21 +50,44 @@ body {
 .welcomeToArc_slogan {
   /* max-width: 20px; */
   font-size: 50px;
-  margin-top: -30px;
+  font-family: "Abril Fatface", cursive;
+}
+
+.new-here {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 60px;
+}
+
+.position-relative {
+  margin: 0 !important;
+}
+
+.jumbotron-heading {
+  font-family: "Abril Fatface", cursive;
+  color: white;
+  margin-bottom: 40px;
 }
 
 .hp-topics {
-  /* margin-left: 90px; */
+  padding: 40px 0;
   color: white;
+  border-top: #ddd;
+  background-color: #660000;
 }
 
 .bd-placeholder-img {
   margin-bottom: 50px;
 }
 
+.topic-description {
+  color: white;
+}
+
 .unlock-oportunity {
   display: flex;
   justify-content: space-evenly;
+  padding: 90px;
 }
 
 .unlock-oportunity-btn {
@@ -67,8 +96,34 @@ body {
   font-family: "Poiret One", cursive;
 }
 
-.topic-description {
-  color: white;
+.unlock-oportunity-btn:hover {
+  transform: scale(1.1);
+  transition: transform 0.4s, opacity 0.5s;
+}
+
+.hp-about-us {
+  font-family: "Poiret One", cursive;
+  font-size: 100px;
+}
+
+.hp-about-us-description {
+  font-family: "Poiret One", cursive;
+  font-size: 25px;
+  margin-bottom: 40px;
+}
+
+.hp-about-us-btn:hover {
+  transform: scale(1.8);
+  transition: transform 0.2s, opacity 0.5s;
+}
+
+.testimonial {
+  font-style: italic;
+  color: #ddd;
+}
+.testimony-img {
+  border-radius: 20px;
+  margin-left: 150px;
 }
 
 .col-lg-4 {
