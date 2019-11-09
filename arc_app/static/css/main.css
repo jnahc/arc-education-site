@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 
-
 .home-page-body {
   background: black;
   width: 100%;
@@ -24,7 +23,9 @@
 body {
   background: turquoise;
   margin: 0;
-  }
+}
+
+
 
 /* HOME PAGE *************************************************/
 .welcomeToArc_container {
@@ -73,7 +74,7 @@ body {
 }
 
 /* LOGIN PAGE **************************************************/
-.form-section{
+.form-section {
   width: max-content;
   /* margin-right: auto; */
   padding: 15px;
@@ -83,16 +84,17 @@ body {
   text-align: center;
   background: rgb(96, 96, 96);
   margin-top: 10vh;
-
 }
 
 .login-img {
-  background: url(../img/star-wars-stormtrooper-digital-art-wallpaper-preview.jpg) no-repeat center center fixed;
+  background: url(../img/star-wars-stormtrooper-digital-art-wallpaper-preview.jpg)
+    no-repeat center center fixed;
   background-size: cover;
 }
 
 .register-img {
-  background: url(../img/stormtrooper-sketches-star-wars-wallpaper-preview.jpg) no-repeat center center fixed;
+  background: url(../img/stormtrooper-sketches-star-wars-wallpaper-preview.jpg)
+    no-repeat center center fixed;
   background-size: cover;
 }
 /* 
@@ -209,86 +211,13 @@ body {
 
 .course-pic:hover {
   box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
-
 }
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .course_form_div{
+padding: 20px;
 margin: 5px;
 margin: 5px;
 padding: 8px;
@@ -300,26 +229,29 @@ text-align-last:justify;
 
 }
 
-.course_form_btn{
-
+.course_form_btn {
   width: 100px;
   height: 30px;
   background-color: blue;
   color: #fff;
   border-radius: 10px;
 }
-.container{
+
+.course_form_container{
 
   background-color: rgb(1, 0, 0);
   height: 600px;
   border-radius: 20px;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
+  margin-top: 50px;
+  width: 50%;
+  margin-left: 25%;
+  
 }
-.course_form_input{
+.course_form_input {
   width: 100%;
 }
 
-.course_form_textarea{
+.course_form_textarea {
   width: 100%;
 }
-
