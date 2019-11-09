@@ -12,17 +12,14 @@
 }
 
 body {
-  background: black;
   margin: 0;
 }
-
 
 .nav-item {
   font-family: "Abril Fatface", cursive;
 }
 
 /* PROFILE PAGE******************************************************************* */
-
 
 /* HOME PAGE *************************************************/
 
@@ -72,7 +69,6 @@ body {
   font-family: "Poiret One", cursive;
 }
 
-
 .unlock-oportunity-btn:hover {
   transform: scale(1.1);
   transition: transform 0.4s, opacity 0.5s;
@@ -106,7 +102,6 @@ body {
 
 .topic-description {
   color: white;
-
 }
 
 .col-lg-4 {
@@ -159,9 +154,8 @@ body {
 .R {
   /* background: url("http://i.giphy.com/ZAseSBcoRly1i.gif") repeat; */
   /* background: url('http://i.giphy.com/8SylEdgXn0BIQ.gif') repeat; */
-  background: url('http://i.giphy.com/l41lGRYy2zkAjnfhK.gif') repeat;
+  background: url("http://i.giphy.com/l41lGRYy2zkAjnfhK.gif") repeat;
   /* background: url('http://giphygifs.s3.amazonaws.com/media/hlWy1CHPoJ8qs/giphy.gif') repeat; */
-
 
   background-position: 10px;
   font-size: 400px;
@@ -174,13 +168,12 @@ body {
   filter: grayscale(1);
 }
 
-
 .C {
   /* background: url('http://i.giphy.com/xTiTnF2bsvgYf22cUg.gif') repeat; */
   /* background: url('http://i.giphy.com/l41lGRYy2zkAjnfhK.gif') repeat; */
   /* background: url('http://i.giphy.com/l41lGRYy2zkAjnfhK.gif') repeat; */
-  background: url('http://i.giphy.com/8SylEdgXn0BIQ.gif') repeat;
- 
+  background: url("http://i.giphy.com/8SylEdgXn0BIQ.gif") repeat;
+
   background-position: 10px;
   font-size: 400px;
   font-family: Helvetica;
@@ -354,8 +347,6 @@ body {
   width: 100%;
 }
 
-
-
 .moveBox-create-course {
   margin: 50px auto;
   width: auto;
@@ -365,5 +356,4 @@ body {
   justify-content: center;
 
   max-height: 300px;
-
 }
