@@ -4,9 +4,9 @@
 
 {% block content %}
 
-
     <h1>Create a new course here!</h1>
     <section class="course-form-section col-md-8 order-md-1">
+
       <form action="{% url 'course_create' %}" method="POST" >
         {% csrf_token %}
 
