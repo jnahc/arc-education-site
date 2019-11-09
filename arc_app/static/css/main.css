@@ -4,6 +4,20 @@
   box-sizing: border-box;
 }
 
+/* BASE HTML ****************************************************************************/
+
+.welcome-user-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+body {
+  background: black;
+  margin: 0;
+}
+
+/* HOME PAGE *************************************************/
+
 .home-page-body {
   background: black;
   width: 100%;
@@ -13,19 +27,6 @@
   margin-left: auto;
 }
 
-/* BASE HTML ****************************************************************************/
-
-.welcome-user-container {
-  display: flex;
-  justify-content: flex-end;
-}
-
-body {
-  background: turquoise;
-  margin: 0;
-}
-
-/* HOME PAGE *************************************************/
 .welcomeToArc_container {
   background-image: url("https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1753&q=80");
   color: azure;
@@ -210,21 +211,26 @@ body {
 .course-pic:hover {
   box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
 }
+/* COURSE FORM ****************************************************** */
+.course_form_div {
+  padding: 20px;
+  margin: 5px;
+  margin: 5px;
+  padding: 8px;
+  background: rgba(79, 74, 74, 0.42);
+  text-decoration: none;
+  color: white;
+  border-radius: 10px;
+  /* text-align-last: justify; */
+}
 
+.course-form-section {
+  display: flex;
+  justify-content: space-evenly;
+}
 
-
-
-.course_form_div{
-padding: 20px;
-margin: 5px;
-margin: 5px;
-padding: 8px;
-background:  rgba(79, 74, 74, 0.42);
-text-decoration: none;
-color: white;
-border-radius: 10px;
-text-align-last:justify;
-
+.course-form-label {
+  font-size: 20px;
 }
 
 .course_form_btn {
@@ -235,8 +241,7 @@ text-align-last:justify;
   border-radius: 10px;
 }
 
-.course_form_container{
-
+.course_form_container {
   background-color: rgb(1, 0, 0);
   height: 600px;
   border-radius: 20px;
@@ -244,7 +249,6 @@ text-align-last:justify;
   margin-top: 50px;
   width: 50%;
   margin-left: 25%;
-  
 }
 .course_form_input {
   width: 100%;
@@ -252,4 +256,43 @@ text-align-last:justify;
 
 .course_form_textarea {
   width: 100%;
+}
+
+.J {
+  background: url("http://i.giphy.com/ZAseSBcoRly1i.gif") repeat;
+  /* background: url('http://i.giphy.com/8SylEdgXn0BIQ.gif') repeat */
+
+  background-position: 10px;
+  font-size: 400px;
+  font-family: Helvetica;
+  font-weight: bold;
+  /* -webkit-background-clip: text; */
+  -webkit-text-fill-color: transparent;
+  background-position-x: 52%;
+  background-position-y: 48px;
+  filter: grayscale(1);
+}
+
+.M {
+  /* // background: url('http://i.giphy.com/xTiTnF2bsvgYf22cUg.gif') repeat
+  background: url('http://i.giphy.com/l41lGRYy2zkAjnfhK.gif') repeat */
+
+  background-position: 10px;
+  font-size: 400px;
+  font-family: Helvetica;
+  font-weight: bold;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: red;
+  background-position-x: 52%;
+  background-position-y: 48px;
+  filter: grayscale(1);
+}
+
+.moveBox {
+  margin: 50px auto;
+  width: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
 }
