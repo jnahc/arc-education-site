@@ -4,7 +4,7 @@
 
 {% block content %}
 
-  <div class="course_form_container  tracks " >
+  <div class="course_form_container tracks">
     <section class="course-form-section">
           <div class="moveBox">
         <div class="J">J</div>
@@ -15,33 +15,33 @@
         {% csrf_token %}
 
         <div class="course_form_div">
-          <label class="course-form-label">Course Title</label>
+          <label for="title" class="course-form-label">Course Title</label>
           <input class= "course_form_input"  type="text" name="title"  maxlength="25" minlength="2" placeholder="Title: " required>
         </div>
 
         <div class="course_form_div"> 
-          <label class="course-form-label">Course Category</label>
+          <label for="category" class="course-form-label">Course Category</label>
           <input class= "course_form_input"  type="text" name="category"  maxlength="25" minlength="2" placeholder="Category: " required>
         </div>
 
         <div class="course_form_div">
-          <label class="course-form-label">Start Date</label>
+          <label for="start_date" class="course-form-label">Start Date</label>
           <input class= "course_form_input"  type="date" name="start_date" placeholder="Start Date" required>
         </div>
 
         <div class="course_form_div"> 
-          <label class="course-form-label">End Date</label>
+          <label for="end_date" class="course-form-label">End Date</label>
           <input class= "course_form_input" type="date" name="end_date" placeholder="End Date" required>
         </div>
 
         <div class="course_form_div">
-          <label class="course-form-label">Course Image Url</label>
+          <label for="photo_url" class="course-form-label">Course Image Url</label>
           <input  class= "course_form_input" type="text" name="photo_url"  placeholder= "Photo_URL" required>
         </div>
         
         <div class="course_form_div">
-                <label class="course-form-label">Description</label>
-                <textarea class="course_form_textarea" name="description"   placeholder="Description: " required></textarea>
+          <label for ="description" class="course-form-label">Description</label>
+          <textarea class="course_form_textarea" name="description"   placeholder="Description: " required></textarea>
         </div>
         <button  class= "btn btn-success" type="submit" class="login-button">Add Course</button>
       </form>

@@ -14,36 +14,52 @@
     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
     <a href="{% url 'course_create' %}" class="btn btn-primary">Create Course</a>
     <a href="{% url 'course_list' %}" class="btn btn-primary">See Courses</a>
-    <a href="{% url 'profile_edit' pk=user.id %}" class="btn btn-primary">Edit Profile</a>
   </div>
 </div>
-<ul>
-  <h2>Courses created by me:</h2>
-  {% for course in courses %}
-  <li class="track">
-    <p>{{ course.title }}</p>
-    <a href="{% url 'course_detail' course_slug=course.slug %}">
-      <img src="{{course.photo_url}}" alt="{{course.title}}" class="course-pic">      
-    </a>
-    <p>
-      <span>
-        <a href="{% url 'course_edit' course_slug=course.slug %}">Edit</a>
-      </span>
-      <span>
-        <a href="{% url 'course_delete' course_slug=course.slug %}">Delete</a>
-      </span>
-    </p>
-  </li>
-{% endfor %}
-</ul>
+<!-- COURSE CREATED COLLAPSE START -->
+<h2>Courses created by me:</h2>
+{% for course in courses %}
+<div class="accordion" id="accordionExample">
+  <div class="card">
+    <div class="card-header" id="{{course.slug}}-heading">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#{{course.slug}}" aria-expanded="false" aria-controls="{{course.slug}}">
+          {{course.title}}
+        </button>
+      </h2>
+    </div>
+
+    <div id="{{course.slug}}" class="collapse" aria-labelledby="{{course.slug}}-heading" data-parent="#accordionExample">
+      <div class="card-body">
+        <a href="{% url 'course_detail' course_slug=course.slug %}">
+          <img src="{{course.photo_url}}" alt="{{course.title}}" class="course-pic">      
+        </a>
+        <p>
+          <span>
+            <a href="{% url 'course_edit' course_slug=course.slug %}">Edit</a>
+          </span>
+          <span>
+            <a href="{% url 'course_delete' course_slug=course.slug %}">Delete</a>
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<!-- COURSE CREATED COLLAPSE END -->
+
+
 <ul class="purchase">
   <h2>
     Purchases
   </h2>
   {% for purchase in purchases %}
     <li class="purchase">
-      <img src="{{purchase.course.photo_url}}" alt="{{purchase.course.title}}">
-      <p>{{ purchase.student.first_name }} -  {{ purchase.student.last_name }}</p>
+      <a href="{% url 'course_detail' course_slug=purchase.course.slug %}">
+        <img src="{{purchase.course.photo_url}}" alt="{{purchase.course.title}}">
+      </a>    
       <p>
         {{purchase.course.title}} Details
           <ul>
@@ -51,6 +67,7 @@
               <li>Start Date: {{purchase.course.start_date}}</li>
               <li>End Date: {{purchase.course.end_date}}</li>
               <li>Category: {{purchase.course.category}}</li>
+              <li>Course Creator: {{purchase.course.user.first_name}} {{purchase.course.user.last_name}}</li>
           </ul>
           <p>
             <a href="{% url 'purchase_delete' course_slug=purchase.course.slug  purchase_pk=purchase.pk %}">Remove Purchase</a>
@@ -65,3 +82,24 @@
 
 {% endblock %}
 
+<!-- 
+<ul>
+  <h2>Courses created by me:</h2>
+  {% for course in courses %}
+  <li class="track">
+    <p>{{ course.title }}</p>
+    <a href="{% url 'course_detail' course_slug=course.slug %}">
+      <img src="{{course.photo_url}}" alt="{{course.title}}" class="course-pic">      
+    </a>
+    <p></p>
+    <p>
+      <span>
+        <a href="{% url 'course_edit' course_slug=course.slug %}">Edit</a>
+      </span>
+      <span>
+        <a href="{% url 'course_delete' course_slug=course.slug %}">Delete</a>
+      </span>
+    </p>
+  </li>
+{% endfor %}
+</ul> -->
