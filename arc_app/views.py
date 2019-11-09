@@ -59,17 +59,6 @@ def purchase_create(request, course_slug):
   purchase = Purchase(student=request.user, course=course)
   purchase.save()
   return redirect ('profile')
-    # course = Course.objects.get(id=pk)
-    # if request.method == 'POST':
-    #     form = PurchaseForm(request.POST)
-    #     if form.is_valid():
-    #         purchase = form.save(commit=False)
-    #         purchase.student=request.user
-    #         purchase.course=course
-    #         purchase.save()
-    #         return redirect ('profile')
-    # else:
-    #     return redirect ('home')
 
 @login_required
 def course_edit(request, course_slug):
