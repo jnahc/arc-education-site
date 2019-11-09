@@ -12,11 +12,14 @@
 }
 
 body {
-  background: black;
   margin: 0;
 }
 
+.nav-item {
+  font-family: "Abril Fatface", cursive;
+}
 
+/* PROFILE PAGE******************************************************************* */
 
 /* HOME PAGE *************************************************/
 
@@ -66,12 +69,44 @@ body {
   font-family: "Poiret One", cursive;
 }
 
+.unlock-oportunity-btn:hover {
+  transform: scale(1.1);
+  transition: transform 0.4s, opacity 0.5s;
+}
+
+.hp-about-us {
+  font-family: "Poiret One", cursive;
+  font-size: 100px;
+}
+
+.hp-about-us-description {
+  font-family: "Poiret One", cursive;
+  font-size: 25px;
+  margin-bottom: 40px;
+}
+
+.hp-about-us-btn:hover {
+  transform: scale(1.8);
+  transition: transform 0.2s, opacity 0.5s;
+}
+
+.testimonial {
+  font-style: italic;
+  color: #ddd;
+  font-family: "Poiret One", cursive;
+}
+.testimony-img {
+  border-radius: 20px;
+  margin-left: 150px;
+}
+
 .topic-description {
   color: white;
 }
 
 .col-lg-4 {
   text-align: center;
+  font-family: "Poiret One", cursive;
 }
 
 /* LOGIN PAGE **************************************************/
@@ -98,6 +133,67 @@ body {
     no-repeat center center fixed;
   background-size: cover;
 }
+
+/* https://codepen.io/JamieMaguire/pen/MyPboB?editors=0100 */
+
+.A {
+  background: url("http://i.giphy.com/ZAseSBcoRly1i.gif") repeat;
+  /* background: url('http://i.giphy.com/8SylEdgXn0BIQ.gif') repeat */
+
+  background-position: 10px;
+  font-size: 400px;
+  font-family: Helvetica;
+  font-weight: bold;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-position-x: 52%;
+  background-position-y: 48px;
+  filter: grayscale(1);
+}
+
+.R {
+  /* background: url("http://i.giphy.com/ZAseSBcoRly1i.gif") repeat; */
+  /* background: url('http://i.giphy.com/8SylEdgXn0BIQ.gif') repeat; */
+  background: url("http://i.giphy.com/l41lGRYy2zkAjnfhK.gif") repeat;
+  /* background: url('http://giphygifs.s3.amazonaws.com/media/hlWy1CHPoJ8qs/giphy.gif') repeat; */
+
+  background-position: 10px;
+  font-size: 400px;
+  font-family: Helvetica;
+  font-weight: bold;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-position-x: 52%;
+  background-position-y: 48px;
+  filter: grayscale(1);
+}
+
+.C {
+  /* background: url('http://i.giphy.com/xTiTnF2bsvgYf22cUg.gif') repeat; */
+  /* background: url('http://i.giphy.com/l41lGRYy2zkAjnfhK.gif') repeat; */
+  /* background: url('http://i.giphy.com/l41lGRYy2zkAjnfhK.gif') repeat; */
+  background: url("http://i.giphy.com/8SylEdgXn0BIQ.gif") repeat;
+
+  background-position: 10px;
+  font-size: 400px;
+  font-family: Helvetica;
+  font-weight: bold;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-position-x: 52%;
+  background-position-y: 48px;
+  filter: grayscale(1);
+}
+
+.moveBox-Login {
+  margin: 50px auto;
+  width: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
 /* 
 #login-cycle-img {
   position:relative;
@@ -145,7 +241,7 @@ body {
   display: flex;
   flex-direction: column;
 }
-.form-section h1 {
+.form-section {
   margin: 10px;
 }
 
@@ -214,7 +310,8 @@ body {
   box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
 }
 /* COURSE FORM ****************************************************** */
-.course_form_div {
+
+/* .course_form_div {
   padding: 20px;
   margin: 5px;
   margin: 5px;
@@ -223,8 +320,7 @@ body {
   text-decoration: none;
   color: white;
   border-radius: 10px;
-  /* text-align-last: justify; */
-}
+} */
 
 .course-form-section {
   display: flex;
@@ -243,15 +339,6 @@ body {
   border-radius: 10px;
 }
 
-.course_form_container {
-  background-color: rgb(1, 0, 0);
-  height: 600px;
-  border-radius: 20px;
-  margin-bottom: 25px;
-  margin-top: 50px;
-  width: 50%;
-  margin-left: 25%;
-}
 .course_form_input {
   width: 100%;
 }
@@ -260,41 +347,13 @@ body {
   width: 100%;
 }
 
-.J {
-  background: url("http://i.giphy.com/ZAseSBcoRly1i.gif") repeat;
-  /* background: url('http://i.giphy.com/8SylEdgXn0BIQ.gif') repeat */
-
-  background-position: 10px;
-  font-size: 400px;
-  font-family: Helvetica;
-  font-weight: bold;
-  /* -webkit-background-clip: text; */
-  -webkit-text-fill-color: transparent;
-  background-position-x: 52%;
-  background-position-y: 48px;
-  filter: grayscale(1);
-}
-
-.M {
-  /* // background: url('http://i.giphy.com/xTiTnF2bsvgYf22cUg.gif') repeat
-  background: url('http://i.giphy.com/l41lGRYy2zkAjnfhK.gif') repeat */
-
-  background-position: 10px;
-  font-size: 400px;
-  font-family: Helvetica;
-  font-weight: bold;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: red;
-  background-position-x: 52%;
-  background-position-y: 48px;
-  filter: grayscale(1);
-}
-
-.moveBox {
+.moveBox-create-course {
   margin: 50px auto;
   width: auto;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
+
+  max-height: 300px;
 }

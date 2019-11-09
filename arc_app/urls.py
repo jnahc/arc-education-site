@@ -24,4 +24,7 @@ urlpatterns = [
     path('api/v1/courses/', views.api_courses),
 
 
+    ### Search Test
+    path('courses/search/',views.course_list, name='course_list_search'),
+
 ]
