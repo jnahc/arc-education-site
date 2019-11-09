@@ -24,7 +24,7 @@ def course_list(request):
     context = {"courses": courses}
     return render(request, 'course_list.html', context)
 
-
+@login_required
 def course_detail(request, course_slug):
     course = Course.objects.get(slug=course_slug)
     context = {"course": course}
@@ -39,9 +39,8 @@ def api_courses(request):
                      "start_date": course.start_date, "end_date": course.end_date})
     return JsonResponse({"data": data, "status": 200})
 
-
+@login_required
 def course_create(request):
-
   if request.method == 'POST':
     form = CourseForm(request.POST)
     if form.is_valid():
@@ -54,6 +53,7 @@ def course_create(request):
   context = {'form': form, 'header': "Add New Course"}
   return render (request, 'course_form.html', context)
 
+@login_required
 def purchase_create(request, course_slug):
   course = Course.objects.get(slug=course_slug)
   purchase = Purchase(student=request.user, course=course)
@@ -71,6 +71,7 @@ def purchase_create(request, course_slug):
     # else:
     #     return redirect ('home')
 
+@login_required
 def course_edit(request, course_slug):
   course = Course.objects.get(slug=course_slug)
   if request.method == 'POST':
@@ -83,7 +84,18 @@ def course_edit(request, course_slug):
     context = {'form': form}
     return render(request, 'course_form.html', context)
 
+@login_required
 def course_delete(request, course_slug):
   Course.objects.get(slug=course_slug).delete()
   return redirect('profile')
+
+@login_required
+def purchase_delete(request, course_slug, purchase_pk):
+  Purchase.objects.get(id=purchase_pk).delete()
+  return redirect ('profile')
+  
+
+
+
+
 

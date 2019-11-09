@@ -19,11 +19,12 @@
 .welcome-user-container {
   display: flex;
   justify-content: flex-end;
+}
 
 body {
   background: turquoise;
   margin: 0;
-
+  }
 
 /* HOME PAGE *************************************************/
 .welcomeToArc_container {

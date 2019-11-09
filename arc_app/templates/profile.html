@@ -44,13 +44,16 @@
       <img src="{{purchase.course.photo_url}}" alt="{{purchase.course.title}}">
       <p>{{ purchase.student.first_name }} -  {{ purchase.student.last_name }}</p>
       <p>
-          Class Details
+        {{purchase.course.title}} Details
           <ul>
-              <li>{{purchase.course.start_date}}</li>
-              <li>{{purchase.course.end_date}}</li>
-              <li>{{purchase.course.category}}</li>
+              <li>Description: {{purchase.course.description}}</li>
+              <li>Start Date: {{purchase.course.start_date}}</li>
+              <li>End Date: {{purchase.course.end_date}}</li>
+              <li>Category: {{purchase.course.category}}</li>
           </ul>
-
+          <p>
+            <a href="{% url 'purchase_delete' course_slug=purchase.course.slug  purchase_pk=purchase.pk %}">Remove Purchase</a>
+          </p>
       </p>
       
     </li>

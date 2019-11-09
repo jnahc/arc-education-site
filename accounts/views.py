@@ -38,10 +38,7 @@ def register(request):
                         first_name=first_name, 
                         last_name=last_name)
                     user.save()
-                    #####need route
-
-
-                    return redirect('course_list')
+                    return redirect('login')
 
         else:
             context = {'error':'Passwords do not match'}
@@ -67,7 +64,7 @@ def login(request):
     else:
         return render(request, 'login.html')
 
-
+@login_required
 def logout(request):
     auth.logout(request)
     return redirect('home')
