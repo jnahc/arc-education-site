@@ -12,17 +12,14 @@
 }
 
 body {
-  background: black;
   margin: 0;
 }
-
 
 .nav-item {
   font-family: "Abril Fatface", cursive;
 }
 
 /* PROFILE PAGE******************************************************************* */
-
 
 /* HOME PAGE *************************************************/
 
@@ -50,11 +47,31 @@ body {
   /* max-width: 20px; */
   font-size: 50px;
   margin-top: -30px;
+  font-family: "Abril Fatface", cursive;
+}
+
+.new-here {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 60px;
+}
+
+.position-relative {
+  margin: 0 !important;
+}
+
+.jumbotron-heading {
+  font-family: "Abril Fatface", cursive;
+  color: white;
+  margin-bottom: 40px;
+  margin-top: -30px;
 }
 
 .hp-topics {
   /* margin-left: 90px; */
   color: white;
+  border-top: #ddd;
+  background-color: #660000;
 }
 
 .bd-placeholder-img {
@@ -71,7 +88,6 @@ body {
   font-size: 30px;
   font-family: "Poiret One", cursive;
 }
-
 
 .unlock-oportunity-btn:hover {
   transform: scale(1.1);
@@ -99,6 +115,7 @@ body {
   color: #ddd;
   font-family: "Poiret One", cursive;
 }
+
 .testimony-img {
   border-radius: 20px;
   margin-left: 150px;
@@ -106,7 +123,6 @@ body {
 
 .topic-description {
   color: white;
-
 }
 
 .col-lg-4 {
@@ -159,9 +175,8 @@ body {
 .R {
   /* background: url("http://i.giphy.com/ZAseSBcoRly1i.gif") repeat; */
   /* background: url('http://i.giphy.com/8SylEdgXn0BIQ.gif') repeat; */
-  background: url('http://i.giphy.com/l41lGRYy2zkAjnfhK.gif') repeat;
+  background: url("http://i.giphy.com/l41lGRYy2zkAjnfhK.gif") repeat;
   /* background: url('http://giphygifs.s3.amazonaws.com/media/hlWy1CHPoJ8qs/giphy.gif') repeat; */
-
 
   background-position: 10px;
   font-size: 400px;
@@ -174,13 +189,12 @@ body {
   filter: grayscale(1);
 }
 
-
 .C {
   /* background: url('http://i.giphy.com/xTiTnF2bsvgYf22cUg.gif') repeat; */
   /* background: url('http://i.giphy.com/l41lGRYy2zkAjnfhK.gif') repeat; */
   /* background: url('http://i.giphy.com/l41lGRYy2zkAjnfhK.gif') repeat; */
-  background: url('http://i.giphy.com/8SylEdgXn0BIQ.gif') repeat;
- 
+  background: url("http://i.giphy.com/8SylEdgXn0BIQ.gif") repeat;
+
   background-position: 10px;
   font-size: 400px;
   font-family: Helvetica;
@@ -354,8 +368,6 @@ body {
   width: 100%;
 }
 
-
-
 .moveBox-create-course {
   margin: 50px auto;
   width: auto;
@@ -365,5 +377,4 @@ body {
   justify-content: center;
 
   max-height: 300px;
-
 }

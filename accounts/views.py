@@ -11,17 +11,10 @@ def register(request):
     if request.method == "POST":
         first_name = request.POST['first_name']
         last_name = request.POST['last_name']
-        # skills = request.POST['skills']
-        # bio = request.POST['bio']
-        # creditcard_info = request.POST['creditcard_info']
-        # address_form = request.POST['address']
         email_form = request.POST['email']
         username_form = request.POST['username']
         password = request.POST['password']
         password2 = request.POST['password2']
-        # is_staff = request.POST['is_staff']
-        # date_joined = request.POST['date_joined']
-        # is_superuser = request.POST['is_superuser']
         if password == password2:
             if User.objects.filter(username=username_form).exists():
                 context = {'error': 'Username is already in use!'}
@@ -82,6 +75,21 @@ def purchase_list(request):
     purchases = Purchase.objects.all()
     context = {"purchases": purchases}
     return render(request, 'purchase_list.html', context)
+
+# @login_required
+# def profile_edit(request, pk):
+#     user = User.objects.get(id=pk)
+#     if request.method == 'POST':
+#         form = UserProfileForm(instance=user)
+#         if form.is_valid():
+#             update = form.save(commit=False)               
+#             update.user = user
+#             update.save()
+#             return redirect ('profile')
+#     else:
+#         form = UserProfileForm(instance=user)
+#     context = {'form': form}
+#     return render(request, 'profile_create', context)
 
 
 
