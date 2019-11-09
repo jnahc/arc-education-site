@@ -47,11 +47,31 @@ body {
   /* max-width: 20px; */
   font-size: 50px;
   margin-top: -30px;
+  font-family: "Abril Fatface", cursive;
+}
+
+.new-here {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 60px;
+}
+
+.position-relative {
+  margin: 0 !important;
+}
+
+.jumbotron-heading {
+  font-family: "Abril Fatface", cursive;
+  color: white;
+  margin-bottom: 40px;
+  margin-top: -30px;
 }
 
 .hp-topics {
   /* margin-left: 90px; */
   color: white;
+  border-top: #ddd;
+  background-color: #660000;
 }
 
 .bd-placeholder-img {
@@ -95,6 +115,7 @@ body {
   color: #ddd;
   font-family: "Poiret One", cursive;
 }
+
 .testimony-img {
   border-radius: 20px;
   margin-left: 150px;
