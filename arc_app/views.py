@@ -40,20 +40,6 @@ def api_courses(request):
     return JsonResponse({"data": data, "status": 200})
 
 @login_required
-def course_create(request):
-  if request.method == 'POST':
-    form = CourseForm(request.POST)
-    if form.is_valid():
-      course = form.save(commit=False)
-      course.user = request.user
-      course.save()
-      return redirect('profile')
-  else:
-    form = CourseForm()
-  context = {'form': form, 'header': "Add New Course"}
-  return render (request, 'course_form.html', context)
-
-@login_required
 def purchase_create(request, course_slug):
   course = Course.objects.get(slug=course_slug)
   purchase = Purchase(student=request.user, course=course)
@@ -61,13 +47,27 @@ def purchase_create(request, course_slug):
   return redirect ('profile')
 
 @login_required
-def course_edit(request, course_slug):
-  course = Course.objects.get(slug=course_slug)
+def course_create(request):
+  if request.method == 'POST':
+    form = CourseForm(request.POST)
+    if form.is_valid():
+      course = form.save(commit=False)
+      course.user = request.user
+      course.save()
+      return redirect('course_detail', course_slug=course.slug)
+  else:
+    form = CourseForm()
+  context = {'form': form, 'header': "Add New Course"}
+  return render (request, 'course_form.html', context)
+
+@login_required
+def course_edit(request, pk):
+  course = Course.objects.get(id=pk)
   if request.method == 'POST':
     form = CourseForm(request.POST, instance=course)
     if form.is_valid():
       course = form.save()
-      return redirect('course_detail', slug=course.slug)
+      return redirect('course_detail', course_slug=course.slug)
   else:
     form = CourseForm(instance=course)
     context = {'form': form}
