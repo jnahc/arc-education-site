@@ -215,7 +215,6 @@ body {
   justify-content: center;
 }
 
-
 .form-section form {
   width: 100%;
   min-width: 30vw;
@@ -238,13 +237,13 @@ body {
   color: rgb(255, 255, 255);
 }
 
-
 /* REGISTER PAGE **************************************************/
 
 .welcome-register {
   /* background: url('http://giphygifs.s3.amazonaws.com/media/hlWy1CHPoJ8qs/giphy.gif') repeat; */
   /* background: url('https://media.giphy.com/media/xTiTnsQ8rNxU2lwely/giphy.gif') repeat; */
-  background: url('https://media.giphy.com/media/v78keJYH0Seys/200w_d.gif') repeat;
+  background: url("https://media.giphy.com/media/v78keJYH0Seys/200w_d.gif")
+    repeat;
   background-position: 10px;
   font-size: 100px;
   font-family: Helvetica;
@@ -253,7 +252,7 @@ body {
   -webkit-text-fill-color: transparent;
   background-position-x: 40%;
   background-position-y: -5px;
-  filter: grayscale(.9);
+  filter: grayscale(0.9);
 }
 
 .moveBox-Register {
@@ -283,12 +282,12 @@ body {
 }
 /* COURSE FORM ****************************************************** */
 
-.main-create-course {
+.create-course-main {
   background-image: url("https://i.imgur.com/3tQToHD.jpg?1");
   padding: 80px;
 }
 
-.course-form-section {
+.create-course-section {
   display: flex;
   justify-content: space-evenly;
 }
@@ -363,14 +362,12 @@ body {
   filter: grayscale(1);
 }
 
-
-
 .A-course {
   background: url("http://i.giphy.com/ZAseSBcoRly1i.gif") repeat;
   /* background: url('http://i.giphy.com/8SylEdgXn0BIQ.gif') repeat */
 
   background-position: 10px;
-  font-size: 400px;
+  font-size: 200px;
   font-family: Helvetica;
   font-weight: bold;
   -webkit-background-clip: text;
@@ -387,7 +384,7 @@ body {
   /* background: url('http://giphygifs.s3.amazonaws.com/media/hlWy1CHPoJ8qs/giphy.gif') repeat; */
 
   background-position: 10px;
-  font-size: 400px;
+  font-size: 200px;
   font-family: Helvetica;
   font-weight: bold;
   -webkit-background-clip: text;
@@ -404,7 +401,7 @@ body {
   background: url("http://i.giphy.com/8SylEdgXn0BIQ.gif") repeat;
 
   background-position: 10px;
-  font-size: 400px;
+  font-size: 200px;
   font-family: Helvetica;
   font-weight: bold;
   -webkit-background-clip: text;
@@ -413,7 +410,6 @@ body {
   background-position-y: 48px;
   filter: grayscale(1);
 }
-
 
 .moveBox-create-course {
   margin: 0 auto;
@@ -426,17 +422,12 @@ body {
   max-height: 300px;
 }
 
-
-.about_page_span{
-
-color: red;
-size :2em;
+.about_page_span {
+  color: red;
+  size: 2em;
 }
 
-.about_page_div{
-
-  background-image:url("https://www.telenor.com/wp-content/uploads/2018/07/artifiticial-intelligence-1250x585.jpg");
+.about_page_div {
+  background-image: url("https://www.telenor.com/wp-content/uploads/2018/07/artifiticial-intelligence-1250x585.jpg");
   background-size: auto;
-  
-  
 }

@@ -4,11 +4,11 @@
 
 {% block content %}
  
-<main class="main-create-course">
+<main class="create-course-main">
   <h1 class="create-course-title">Create a new course here!</h1>
-    <section class="course-form-section">
+    <section class="create-course-section">
 
-      <form action="{% url 'course_create' %}" method="POST" >
+      <form class="col-md-6 order-md-1"action="{% url 'course_create' %}" method="POST" >
         {% csrf_token %}
         
         <div class="mb-3">
@@ -47,6 +47,7 @@
           <div class="R-course">R</div>
           <div class="C-course">C</div>
         </div>
+        {% comment %} <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ5Gyp79JcrcVcVDojzP4q-UAtEdM-T11qVIaXUkmD6TqNYiyH&s"> {% endcomment %}
     </section>
 
 </main>
