@@ -16,69 +16,72 @@
     <a href="{% url 'course_list' %}" class="btn btn-primary">See Courses</a>
   </div>
 </div>
-<!-- COURSE CREATED COLLAPSE START -->
-<h2>Courses created by me:</h2>
-{% for course in courses %}
-<div class="accordion" id="accordionExample">
-  <div class="card">
-    <div class="card-header" id="{{course.slug}}-heading">
-      <h2 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#{{course.slug}}" aria-expanded="false" aria-controls="{{course.slug}}">
-          {{course.title}}
-        </button>
-      </h2>
-    </div>
-
-    <div id="{{course.slug}}" class="collapse" aria-labelledby="{{course.slug}}-heading" data-parent="#accordionExample">
-      <div class="card-body">
-        <a href="{% url 'course_detail' course_slug=course.slug %}">
-          <img src="{{course.photo_url}}" alt="{{course.title}}" class="course-pic">      
-        </a>
-        <p>
-          <span>
-            <a href="{% url 'course_edit' pk=course.pk %}">Edit</a>
-          </span>
-          <span>
-            <a href="{% url 'course_delete' course_slug=course.slug %}">Delete</a>
-          </span>
-        </p>
+<div class="container profile-created-course-purchase-area">
+  <div class="row" id="course-purchase-row">    
+    <!-- COURSE CREATED COLLAPSE START -->
+    <div class="accordion" id="course-profile-created-courses-accordion">
+      <h2>Courses created by me:</h2>
+    {% for course in courses %}
+      <div class="card">
+        <div class="card-header" id="{{course.slug}}-heading">
+          <h2 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#{{course.slug}}" aria-expanded="false" aria-controls="{{course.slug}}">
+              {{course.title}}
+            </button>
+          </h2>
+        </div>      
+        <div id="{{course.slug}}" class="collapse" aria-labelledby="{{course.slug}}-heading" data-parent="#course-profile-created-courses-accordion">
+          <div class="card-body">
+            <a href="{% url 'course_detail' course_slug=course.slug %}">
+              <img src="{{course.photo_url}}" alt="{{course.title}}" class="course-pic">      
+            </a>
+            <p>
+              <span>
+                <a href="{% url 'course_edit' pk=course.pk %}">Edit</a>
+              </span>
+              <span>
+                <a href="{% url 'course_delete' course_slug=course.slug %}">Delete</a>
+              </span>
+            </p>
+          </div>
+        </div>
       </div>
+      {% endfor %}
+    </div>
+    <!-- COURSE CREATED COLLAPSE END -->    
+    <div class="row" id="profile-courses-purchased">
+      <!-- COURSE PURCHASES START -->
+      <ul class="purchase">
+        <h2>
+          Purchases
+        </h2>
+        {% for purchase in purchases %}
+          <li class="purchase">
+            <a href="{% url 'course_detail' course_slug=purchase.course.slug %}">
+              <img src="{{purchase.course.photo_url}}" alt="{{purchase.course.title}}">
+            </a>    
+            <p>
+              {{purchase.course.title}} Details
+                <ul>
+                    <li>Description: {{purchase.course.description}}</li>
+                    <li>Start Date: {{purchase.course.start_date}}</li>
+                    <li>End Date: {{purchase.course.end_date}}</li>
+                    <li>Category: {{purchase.course.category}}</li>
+                    <li>Course Creator: {{purchase.course.user.first_name}} {{purchase.course.user.last_name}}</li>
+                </ul>
+                <p>
+                  <a href="{% url 'purchase_delete' course_slug=purchase.course.slug  purchase_pk=purchase.pk %}">Remove Purchase</a>
+                </p>
+            </p>
+            
+          </li>
+        </a>
+        {% endfor %}
+      </ul>
+      <!-- COURSE PURCHASES END -->
     </div>
   </div>
-  {% endfor %}
 </div>
-
-<!-- COURSE CREATED COLLAPSE END -->
-
-
-<ul class="purchase">
-  <h2>
-    Purchases
-  </h2>
-  {% for purchase in purchases %}
-    <li class="purchase">
-      <a href="{% url 'course_detail' course_slug=purchase.course.slug %}">
-        <img src="{{purchase.course.photo_url}}" alt="{{purchase.course.title}}">
-      </a>    
-      <p>
-        {{purchase.course.title}} Details
-          <ul>
-              <li>Description: {{purchase.course.description}}</li>
-              <li>Start Date: {{purchase.course.start_date}}</li>
-              <li>End Date: {{purchase.course.end_date}}</li>
-              <li>Category: {{purchase.course.category}}</li>
-              <li>Course Creator: {{purchase.course.user.first_name}} {{purchase.course.user.last_name}}</li>
-          </ul>
-          <p>
-            <a href="{% url 'purchase_delete' course_slug=purchase.course.slug  purchase_pk=purchase.pk %}">Remove Purchase</a>
-          </p>
-      </p>
-      
-    </li>
-  </a>
-  {% endfor %}
-</ul>
-
 
 {% endblock %}
 
