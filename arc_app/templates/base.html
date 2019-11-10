@@ -62,11 +62,12 @@
 
   
 
+  <div class="container-fluid mb-5">
+    {% block content %}
+    {% endblock %}
+  </div>
 
-  {% block content %}
-  {% endblock %}
-
-  <nav class="navbar fixed-bottom navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar fixed-bottom navbar-expand-lg navbar-light bg-light mt-5">
     <a class="navbar-brand" href="#">ARC</a>
     <span class ="navbar-text">
       &copy; Copyright 2019 ARC
