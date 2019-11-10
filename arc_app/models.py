@@ -12,7 +12,7 @@ class Course(models.Model):
   end_date = models.DateField()
   photo_url = models.CharField(max_length=255)
   category = models.CharField(max_length=20)
-  slug = models.SlugField(unique=True)
+  slug = models.SlugField(unique=True) 
   user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='courses')
   
   def __str__(self):

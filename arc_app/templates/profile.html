@@ -36,7 +36,7 @@
         </a>
         <p>
           <span>
-            <a href="{% url 'course_edit' course_slug=course.slug %}">Edit</a>
+            <a href="{% url 'course_edit' pk=course.pk %}">Edit</a>
           </span>
           <span>
             <a href="{% url 'course_delete' course_slug=course.slug %}">Delete</a>
