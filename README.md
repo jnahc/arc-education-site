@@ -26,7 +26,8 @@ We are the here to help students get with simple and manageable courses/lessons.
 **Our Wire Frame:**
 
 
-# ![Wireframe 1](/wireframe1.jpg)
+# ![Wireframe 1](img/wireframe1.jpg)
+
 * Work with a group in a shared GitHub repository.
 * Plan and implement a larger scale project as part of a development team.
 * Integrate topics learned and experience gained in the course so far.
