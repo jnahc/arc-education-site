@@ -150,19 +150,19 @@ body {
 }
 
 .register-img {
-  background: url(../img/stormtrooper-sketches-star-wars-wallpaper-preview.jpg)
+  background: url(../img/dart-veider-darth-vader-binary-code-star-wars-matritsa-kod-m.jpg)
     no-repeat center center fixed;
   background-size: cover;
 }
 
 /* https://codepen.io/JamieMaguire/pen/MyPboB?editors=0100 */
 
-.A {
+.A-login {
   background: url("http://i.giphy.com/ZAseSBcoRly1i.gif") repeat;
   /* background: url('http://i.giphy.com/8SylEdgXn0BIQ.gif') repeat */
 
   background-position: 10px;
-  font-size: 400px;
+  font-size: 375px;
   font-family: Helvetica;
   font-weight: bold;
   -webkit-background-clip: text;
@@ -172,14 +172,14 @@ body {
   filter: grayscale(1);
 }
 
-.R {
+.R-login {
   /* background: url("http://i.giphy.com/ZAseSBcoRly1i.gif") repeat; */
   /* background: url('http://i.giphy.com/8SylEdgXn0BIQ.gif') repeat; */
   background: url("http://i.giphy.com/l41lGRYy2zkAjnfhK.gif") repeat;
   /* background: url('http://giphygifs.s3.amazonaws.com/media/hlWy1CHPoJ8qs/giphy.gif') repeat; */
 
   background-position: 10px;
-  font-size: 400px;
+  font-size: 375px;
   font-family: Helvetica;
   font-weight: bold;
   -webkit-background-clip: text;
@@ -189,14 +189,14 @@ body {
   filter: grayscale(1);
 }
 
-.C {
+.C-login {
   /* background: url('http://i.giphy.com/xTiTnF2bsvgYf22cUg.gif') repeat; */
   /* background: url('http://i.giphy.com/l41lGRYy2zkAjnfhK.gif') repeat; */
   /* background: url('http://i.giphy.com/l41lGRYy2zkAjnfhK.gif') repeat; */
   background: url("http://i.giphy.com/8SylEdgXn0BIQ.gif") repeat;
 
   background-position: 10px;
-  font-size: 400px;
+  font-size: 375px;
   font-family: Helvetica;
   font-weight: bold;
   -webkit-background-clip: text;
@@ -207,7 +207,7 @@ body {
 }
 
 .moveBox-Login {
-  margin: 50px auto;
+  margin: 0;
   width: auto;
   display: flex;
   flex-wrap: wrap;
@@ -215,43 +215,6 @@ body {
   justify-content: center;
 }
 
-/* 
-#login-cycle-img {
-  position:relative;
-  top:0;
-  width:100%;
-  height:635px;
-  background:
-      url(../img/lego-stormtrooper-star-wars-wallpaper-preview.jpg),
-      url(../img/low-poly-stormtrooper-star-wars-boba-fett-wallpaper-preview.jpg),
-      url(../img/star-wars-stormtrooper-digital-art-wallpaper-preview.jpg),
-      url(../img/star-wars-stormtrooper-movies-wallpaper-preview.jpg),
-      url(../img/star-wars-xenomorph-stormtrooper-artwork-wallpaper-preview.jpg),
-      url(../img/simple-background-simple-star-wars-stormtrooper-wallpaper-preview.jpg);
-  background-repeat:no-repeat;
-  background-size:100%;
-} */
-
-/* https://css-tricks.com/creating-a-css-sliding-background-effect/ */
-/* .wrapper {
-  overflow: hidden;
-}
-
-.sliding-background {
-  background: url("../img") repeat-x;
-  height: 560px;
-  width: 5076px;
-  animation: slide 60s linear infinite;
-}
-
-@keyframes slide{
-  0%{
-    transform: translate3d(0, 0, 0);
-  }
-  100%{
-    transform: translate3d(-1692px, 0, 0);
-  }
-} */
 
 .form-section form {
   width: 100%;
@@ -275,44 +238,32 @@ body {
   color: rgb(255, 255, 255);
 }
 
-/* .login-section form {
-  width: 100%;
-  min-width: 30vw;
-}
-
-.login-button {
-  display: block;
-  width: 240px;
-  height: 40px;
-  padding: 0;
-  margin: 10px 20px 10px;
-  font-weight: 700;
-  color: #fff;
-  background-color: #22c08a;
-  border: none;
-  border-radius: 20px;
-  transition: background-color 0.1s ease-in-out;
-  user-select: none;
-}
-
-.login-button:hover {
-  background-color: #26d69a;
-}
-
-.login-button:active {
-  background-color: #1eaa7a;
-} */
-
-/* .login-container {
-  width: 40vw;
-  height: 50vh;
-  padding: 50px;
-  margin: auto;
-  margin-top: 100px;
-  border: 1px solid red;
-} */
 
 /* REGISTER PAGE **************************************************/
+
+.welcome-register {
+  /* background: url('http://giphygifs.s3.amazonaws.com/media/hlWy1CHPoJ8qs/giphy.gif') repeat; */
+  /* background: url('https://media.giphy.com/media/xTiTnsQ8rNxU2lwely/giphy.gif') repeat; */
+  background: url('https://media.giphy.com/media/v78keJYH0Seys/200w_d.gif') repeat;
+  background-position: 10px;
+  font-size: 100px;
+  font-family: Helvetica;
+  font-weight: bold;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-position-x: 40%;
+  background-position-y: -5px;
+  filter: grayscale(.9);
+}
+
+.moveBox-Register {
+  margin: 0;
+  width: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
 
 /* ABOUT US PAGE **************************************************/
 
@@ -367,6 +318,58 @@ body {
 .course_form_textarea {
   width: 100%;
 }
+
+
+
+.A-course {
+  background: url("http://i.giphy.com/ZAseSBcoRly1i.gif") repeat;
+  /* background: url('http://i.giphy.com/8SylEdgXn0BIQ.gif') repeat */
+
+  background-position: 10px;
+  font-size: 400px;
+  font-family: Helvetica;
+  font-weight: bold;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-position-x: 52%;
+  background-position-y: 48px;
+  filter: grayscale(1);
+}
+
+.R-course {
+  /* background: url("http://i.giphy.com/ZAseSBcoRly1i.gif") repeat; */
+  /* background: url('http://i.giphy.com/8SylEdgXn0BIQ.gif') repeat; */
+  background: url("http://i.giphy.com/l41lGRYy2zkAjnfhK.gif") repeat;
+  /* background: url('http://giphygifs.s3.amazonaws.com/media/hlWy1CHPoJ8qs/giphy.gif') repeat; */
+
+  background-position: 10px;
+  font-size: 400px;
+  font-family: Helvetica;
+  font-weight: bold;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-position-x: 52%;
+  background-position-y: 48px;
+  filter: grayscale(1);
+}
+
+.C-course {
+  /* background: url('http://i.giphy.com/xTiTnF2bsvgYf22cUg.gif') repeat; */
+  /* background: url('http://i.giphy.com/l41lGRYy2zkAjnfhK.gif') repeat; */
+  /* background: url('http://i.giphy.com/l41lGRYy2zkAjnfhK.gif') repeat; */
+  background: url("http://i.giphy.com/8SylEdgXn0BIQ.gif") repeat;
+
+  background-position: 10px;
+  font-size: 400px;
+  font-family: Helvetica;
+  font-weight: bold;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-position-x: 52%;
+  background-position-y: 48px;
+  filter: grayscale(1);
+}
+
 
 .moveBox-create-course {
   margin: 50px auto;
