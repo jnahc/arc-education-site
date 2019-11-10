@@ -283,16 +283,10 @@ body {
 }
 /* COURSE FORM ****************************************************** */
 
-/* .course_form_div {
-  padding: 20px;
-  margin: 5px;
-  margin: 5px;
-  padding: 8px;
-  background: rgba(79, 74, 74, 0.42);
-  text-decoration: none;
-  color: white;
-  border-radius: 10px;
-} */
+.main-create-course {
+  background-image: url("https://i.imgur.com/3tQToHD.jpg?1");
+  padding: 80px;
+}
 
 .course-form-section {
   display: flex;
@@ -300,23 +294,73 @@ body {
 }
 
 .course-form-label {
-  font-size: 20px;
+  font-size: 35px;
+  font-family: "Poiret One", cursive;
 }
 
-.course_form_btn {
+/* .course_form_btn {
   width: 100px;
   height: 30px;
   background-color: blue;
   color: #fff;
   border-radius: 10px;
-}
+} */
 
-.course_form_input {
+/* .course_form_input {
   width: 100%;
 }
 
 .course_form_textarea {
   width: 100%;
+} */
+
+.A-course {
+  background: url("http://i.giphy.com/ZAseSBcoRly1i.gif") repeat;
+  /* background: url('http://i.giphy.com/8SylEdgXn0BIQ.gif') repeat */
+
+  background-position: 10px;
+  font-size: 200px;
+  font-family: Helvetica;
+  font-weight: bold;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-position-x: 52%;
+  background-position-y: 48px;
+  filter: grayscale(1);
+}
+
+.R-course {
+  /* background: url("http://i.giphy.com/ZAseSBcoRly1i.gif") repeat; */
+  /* background: url('http://i.giphy.com/8SylEdgXn0BIQ.gif') repeat; */
+  background: url("http://i.giphy.com/l41lGRYy2zkAjnfhK.gif") repeat;
+  /* background: url('http://giphygifs.s3.amazonaws.com/media/hlWy1CHPoJ8qs/giphy.gif') repeat; */
+
+  background-position: 10px;
+  font-size: 200px;
+  font-family: Helvetica;
+  font-weight: bold;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-position-x: 52%;
+  background-position-y: 48px;
+  filter: grayscale(1);
+}
+
+.C-course {
+  /* background: url('http://i.giphy.com/xTiTnF2bsvgYf22cUg.gif') repeat; */
+  /* background: url('http://i.giphy.com/l41lGRYy2zkAjnfhK.gif') repeat; */
+  /* background: url('http://i.giphy.com/l41lGRYy2zkAjnfhK.gif') repeat; */
+  background: url("http://i.giphy.com/8SylEdgXn0BIQ.gif") repeat;
+
+  background-position: 10px;
+  font-size: 200px;
+  font-family: Helvetica;
+  font-weight: bold;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-position-x: 52%;
+  background-position-y: 48px;
+  filter: grayscale(1);
 }
 
 
@@ -372,7 +416,7 @@ body {
 
 
 .moveBox-create-course {
-  margin: 50px auto;
+  margin: 0 auto;
   width: auto;
   display: flex;
   flex-wrap: wrap;
