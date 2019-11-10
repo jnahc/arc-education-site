@@ -5,27 +5,19 @@
 
 
  {% if user.is_authenticated %}
-
-
-<body>
-  <div class='home-page-loged'>
-    <div class='full-screen-video-wrap'>
-      <video src='./static/img/background-video.mp4' autoplay='true' loop='true'>
+ <div class='home-page-loged'>
+  <div class='full-screen-video-wrap'>
+  <video src='./static/img/background-video.mp4' autoplay='true' loop='true'>
   </div>
-
   <div class='home-page-loged-content'>
 
         <h1 class="cover-heading">Hi {{user.first_name}}, welcome back!</h1>
         <p class="text-center lead">{{user.username}}</p>
 
          <p class="text-center lead"><a href="{% url 'profile' %}" class="btn btn-outline-light btn-lg btn-block">My Profile</a></p>
-
-
   </div>
-
   </div> 
 
-</body> 
 
 
   {% else %}
