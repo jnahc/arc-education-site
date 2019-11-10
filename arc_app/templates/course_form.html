@@ -1,15 +1,17 @@
 
 {% extends 'base.html' %}
+
 {% block content %} 
-<main class="main-create-course">
+<main class="create-course-main">
   <h1 class="create-course-title">Create a new course here!</h1>
-  <section class="course-form-section">
-    <form method="POST">
+  <section class="create-course-section">
+    <form method="POST" class="col-md-6 order-md-1">
       {% csrf_token %}      
       <div class="mb-3">
         <label for="id_title" class="course-form-label">Course Title</label>
         <div>
           {{form.title}}
+
         </div>
       </div>
 
@@ -46,6 +48,7 @@
         <div>
           {{form.description}}
         </div>
+
       </div>
       <button  class= "btn btn-success btn-lg btn-block" type="submit" class="login-button">Save Course</button>
     </form>
@@ -55,6 +58,7 @@
         <div class="C-course">C</div>
       </div>
   </section>
+
 </main>
     
 {% endblock %}
