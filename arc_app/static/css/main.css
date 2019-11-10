@@ -21,6 +21,12 @@ body {
 
 /* PROFILE PAGE******************************************************************* */
 
+.profile-background-img {
+  position: absolute;
+  z-index: -1;
+  opacity: 0.8;
+}
+
 /* HOME PAGE *************************************************/
 
 .home-page-body {

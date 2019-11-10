@@ -3,7 +3,12 @@
 {% block content %}
 
 <div class="card">
-  <nav class="list-unstyled">
+
+  <div class="card-header">
+   <h2> {{user.first_name}}'s Profile</h2>
+  <h4>Last login: {{user.last_login}}</h4>
+  </div>
+    <nav class="list-unstyled">
         <a href="#homeSubmenu" data-toggle="collapse" class="hp-menu-btn dropdown-toggle">Menu</a>
             <ul class="collapse" id="homeSubmenu">
                 <li>
@@ -20,11 +25,8 @@
                 </li>
             </ul>
   </nav>
-  <div class="card-header">
-    {{user.username}}'s Profile
-  </div>
 
-  <img src="https://picsum.photos/id/334/300/200" class="card-img-right" alt="{{user.username}}">
+  <img class="profile-background-img" src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1753&q=80" alt="{{user.username}}">
   <div class="card-body">
     <h5 class="card-title">{{user.first_name}} {{user.last_name}} - {{user.email}}</h5>
 
