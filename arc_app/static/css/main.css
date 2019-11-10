@@ -21,6 +21,12 @@ body {
 
 /* PROFILE PAGE******************************************************************* */
 
+.profile-background-img {
+  position: absolute;
+  z-index: -1;
+  opacity: 0.8;
+}
+
 /* HOME PAGE *************************************************/
 
 .home-page-body {
@@ -200,7 +206,7 @@ body {
   /* background: url('http://i.giphy.com/8SylEdgXn0BIQ.gif') repeat */
 
   background-position: 10px;
-  font-size: 375px;
+  font-size: 200px;
   font-family: Helvetica;
   font-weight: bold;
   -webkit-background-clip: text;
@@ -217,7 +223,7 @@ body {
   /* background: url('http://giphygifs.s3.amazonaws.com/media/hlWy1CHPoJ8qs/giphy.gif') repeat; */
 
   background-position: 10px;
-  font-size: 375px;
+  font-size: 200px;
   font-family: Helvetica;
   font-weight: bold;
   -webkit-background-clip: text;
@@ -228,13 +234,13 @@ body {
 }
 
 .C-login {
-  /* background: url('http://i.giphy.com/xTiTnF2bsvgYf22cUg.gif') repeat; */
+  background: url('http://i.giphy.com/xTiTnF2bsvgYf22cUg.gif') repeat;
   /* background: url('http://i.giphy.com/l41lGRYy2zkAjnfhK.gif') repeat; */
   /* background: url('http://i.giphy.com/l41lGRYy2zkAjnfhK.gif') repeat; */
-  background: url("http://i.giphy.com/8SylEdgXn0BIQ.gif") repeat;
+  /* background: url("http://i.giphy.com/8SylEdgXn0BIQ.gif") repeat; */
 
   background-position: 10px;
-  font-size: 375px;
+  font-size: 200px;
   font-family: Helvetica;
   font-weight: bold;
   -webkit-background-clip: text;
@@ -382,10 +388,9 @@ body {
 }
 
 .C-course {
-  /* background: url('http://i.giphy.com/xTiTnF2bsvgYf22cUg.gif') repeat; */
+  background: url('http://i.giphy.com/xTiTnF2bsvgYf22cUg.gif') repeat;
   /* background: url('http://i.giphy.com/l41lGRYy2zkAjnfhK.gif') repeat; */
-  /* background: url('http://i.giphy.com/l41lGRYy2zkAjnfhK.gif') repeat; */
-  background: url("http://i.giphy.com/8SylEdgXn0BIQ.gif") repeat;
+  /* background: url("http://i.giphy.com/8SylEdgXn0BIQ.gif") repeat; */
 
   background-position: 10px;
   font-size: 200px;
