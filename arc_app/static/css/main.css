@@ -19,7 +19,36 @@ body {
   font-family: "Abril Fatface", cursive;
 }
 
+.navbar {
+  background-color: rgba(248, 249, 250, .66);
+
+}
+
 /* PROFILE PAGE******************************************************************* */
+
+.profile-background-img {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+	
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+	
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  /* position: absolute;
+  z-index: -1;
+  opacity: 0.8; */
+}
+
+.profile-area {
+  background-color: rgba(255, 255, 255, 0.75) ;
+
+}
 
 /* HOME PAGE *************************************************/
 
@@ -35,7 +64,6 @@ body {
 .welcomeToArc_container {
   background-image: url("https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1753&q=80");
   color: azure;
-  width: 100%;
 }
 
 .welcomeToArc_title {
@@ -44,9 +72,8 @@ body {
 }
 
 .welcomeToArc_slogan {
-  /* max-width: 20px; */
   font-size: 50px;
-  margin-top: -30px;
+  margin-top: -20px;
   font-family: "Abril Fatface", cursive;
 }
 
@@ -68,7 +95,7 @@ body {
 }
 
 .hp-topics {
-  /* margin-left: 90px; */
+  margin: 1px;
   color: white;
   border-top: #ddd;
   background-color: #660000;
@@ -81,10 +108,11 @@ body {
 .unlock-oportunity {
   display: flex;
   justify-content: space-evenly;
+  margin: 20px auto;
 }
 
 .unlock-oportunity-btn {
-  width: 300px;
+  margin-top: 40px;
   font-size: 30px;
   font-family: "Poiret One", cursive;
 }
@@ -118,7 +146,7 @@ body {
 
 .testimony-img {
   border-radius: 20px;
-  margin-left: 150px;
+  /* margin-left: 150px; */
 }
 
 .topic-description {
@@ -130,6 +158,53 @@ body {
   font-family: "Poiret One", cursive;
 }
 
+/* HOME PAGE LOGED ********************************************************/
+
+.home-page-loged {
+  min-width: 100%;
+}
+
+
+.full-screen-video-wrap video {
+  min-height: 100%;
+  min-width: 1024px;
+
+  width: 100%;
+  height: auto;
+
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+    
+  z-index: -1; 
+}
+
+@media screen and (max-width: 1024px) { 
+  .full-screen-video-wrap video {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
+}
+
+.home-page-loged-content {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 150px 0;
+  color: whitesmoke;
+}
+
+.cover-heading {
+  align-self: center;
+  font-family: "Abril Fatface", cursive;
+  font-size: 50px;
+}
+
+.home-page-loged-content p {
+  align-self: center;
+  font-family: "Poiret One", cursive;
+  font-size: 30px;
+}
 /* LOGIN PAGE **************************************************/
 .form-section {
   width: max-content;
@@ -162,7 +237,7 @@ body {
   /* background: url('http://i.giphy.com/8SylEdgXn0BIQ.gif') repeat */
 
   background-position: 10px;
-  font-size: 375px;
+  font-size: 200px;
   font-family: Helvetica;
   font-weight: bold;
   -webkit-background-clip: text;
@@ -179,7 +254,7 @@ body {
   /* background: url('http://giphygifs.s3.amazonaws.com/media/hlWy1CHPoJ8qs/giphy.gif') repeat; */
 
   background-position: 10px;
-  font-size: 375px;
+  font-size: 200px;
   font-family: Helvetica;
   font-weight: bold;
   -webkit-background-clip: text;
@@ -190,13 +265,13 @@ body {
 }
 
 .C-login {
-  /* background: url('http://i.giphy.com/xTiTnF2bsvgYf22cUg.gif') repeat; */
+  background: url('http://i.giphy.com/xTiTnF2bsvgYf22cUg.gif') repeat;
   /* background: url('http://i.giphy.com/l41lGRYy2zkAjnfhK.gif') repeat; */
   /* background: url('http://i.giphy.com/l41lGRYy2zkAjnfhK.gif') repeat; */
-  background: url("http://i.giphy.com/8SylEdgXn0BIQ.gif") repeat;
+  /* background: url("http://i.giphy.com/8SylEdgXn0BIQ.gif") repeat; */
 
   background-position: 10px;
-  font-size: 375px;
+  font-size: 200px;
   font-family: Helvetica;
   font-weight: bold;
   -webkit-background-clip: text;
@@ -214,7 +289,6 @@ body {
   align-items: center;
   justify-content: center;
 }
-
 
 .form-section form {
   width: 100%;
@@ -238,13 +312,13 @@ body {
   color: rgb(255, 255, 255);
 }
 
-
 /* REGISTER PAGE **************************************************/
 
 .welcome-register {
   /* background: url('http://giphygifs.s3.amazonaws.com/media/hlWy1CHPoJ8qs/giphy.gif') repeat; */
   /* background: url('https://media.giphy.com/media/xTiTnsQ8rNxU2lwely/giphy.gif') repeat; */
-  background: url('https://media.giphy.com/media/v78keJYH0Seys/200w_d.gif') repeat;
+  background: url("https://media.giphy.com/media/v78keJYH0Seys/200w_d.gif")
+    repeat;
   background-position: 10px;
   font-size: 100px;
   font-family: Helvetica;
@@ -253,7 +327,7 @@ body {
   -webkit-text-fill-color: transparent;
   background-position-x: 40%;
   background-position-y: -5px;
-  filter: grayscale(.9);
+  filter: grayscale(0.9);
 }
 
 .moveBox-Register {
@@ -264,8 +338,6 @@ body {
   align-items: center;
   justify-content: center;
 }
-
-/* ABOUT US PAGE **************************************************/
 
 /* PROFILE PAGE **************************************************/
 
@@ -283,50 +355,43 @@ body {
 }
 /* COURSE FORM ****************************************************** */
 
-/* .course_form_div {
-  padding: 20px;
-  margin: 5px;
-  margin: 5px;
-  padding: 8px;
-  background: rgba(79, 74, 74, 0.42);
-  text-decoration: none;
-  color: white;
-  border-radius: 10px;
-} */
+.create-course-main {
+  background-image: url("https://i.imgur.com/3tQToHD.jpg?1");
+  padding: 80px;
+}
 
-.course-form-section {
+.create-course-section {
   display: flex;
   justify-content: space-evenly;
 }
 
 .course-form-label {
-  font-size: 20px;
+  font-size: 35px;
+  font-family: "Poiret One", cursive;
 }
 
-.course_form_btn {
+/* .course_form_btn {
   width: 100px;
   height: 30px;
   background-color: blue;
   color: #fff;
   border-radius: 10px;
-}
+} */
 
-.course_form_input {
+/* .course_form_input {
   width: 100%;
 }
 
 .course_form_textarea {
   width: 100%;
-}
-
-
+} */
 
 .A-course {
   background: url("http://i.giphy.com/ZAseSBcoRly1i.gif") repeat;
   /* background: url('http://i.giphy.com/8SylEdgXn0BIQ.gif') repeat */
 
   background-position: 10px;
-  font-size: 400px;
+  font-size: 200px;
   font-family: Helvetica;
   font-weight: bold;
   -webkit-background-clip: text;
@@ -343,7 +408,7 @@ body {
   /* background: url('http://giphygifs.s3.amazonaws.com/media/hlWy1CHPoJ8qs/giphy.gif') repeat; */
 
   background-position: 10px;
-  font-size: 400px;
+  font-size: 200px;
   font-family: Helvetica;
   font-weight: bold;
   -webkit-background-clip: text;
@@ -354,13 +419,12 @@ body {
 }
 
 .C-course {
-  /* background: url('http://i.giphy.com/xTiTnF2bsvgYf22cUg.gif') repeat; */
+  background: url('http://i.giphy.com/xTiTnF2bsvgYf22cUg.gif') repeat;
   /* background: url('http://i.giphy.com/l41lGRYy2zkAjnfhK.gif') repeat; */
-  /* background: url('http://i.giphy.com/l41lGRYy2zkAjnfhK.gif') repeat; */
-  background: url("http://i.giphy.com/8SylEdgXn0BIQ.gif") repeat;
+  /* background: url("http://i.giphy.com/8SylEdgXn0BIQ.gif") repeat; */
 
   background-position: 10px;
-  font-size: 400px;
+  font-size: 200px;
   font-family: Helvetica;
   font-weight: bold;
   -webkit-background-clip: text;
@@ -370,33 +434,36 @@ body {
   filter: grayscale(1);
 }
 
-
 .moveBox-create-course {
-  margin: 50px auto;
+  margin: 0 auto;
   width: auto;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-
   max-height: 300px;
 }
 
+/* ABOUT US PAGE **************************************************/
 
-.about_page_span{
-
-color: red;
-size :2em;
+.about_page_span {
+  color: red;
+  size: 2em;
 }
 
-.about_page_div{
-
-  background-image:url("https://www.telenor.com/wp-content/uploads/2018/07/artifiticial-intelligence-1250x585.jpg");
+.about_page_div {
+  background-image: url("https://www.telenor.com/wp-content/uploads/2018/07/artifiticial-intelligence-1250x585.jpg");
   background-size: auto;
-  
-  
+}
+/* 
+@media (min-aspect-ratio: 16/9) {
+  .home-page-loged-video {
+    width: 100%;
+    height: auto;
+  }
 }
 
+<<<<<<< HEAD
 .about_page_four{
   margin-top: 0;
   background: rgba(141, 139, 139, 0.65);
@@ -404,3 +471,11 @@ size :2em;
   
 
 }
+=======
+@media (max-aspect-ratio: 16/9) {
+  .home-page-loged-video {
+    width: auto;
+    height: 100%;
+  }
+} */
+>>>>>>> submaster

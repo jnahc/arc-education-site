@@ -1,105 +1,101 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-<div class="card">
-  <div class="card-header">
-    {{user.username}}'s Profile
+<img class="profile-background-img" src="https://images.unsplash.com/photo-1507842217343-583bb7270b66">
+<div id="user-info-area">
+  <div class="profile-area card">
+    <nav class="list-unstyled">
+      <a href="#homeSubmenu" data-toggle="collapse" class="hp-menu-btn dropdown-toggle">Menu</a>
+      <ul class="collapse" id="homeSubmenu">
+        <li>
+            <a href="{% url 'course_create' %}">New Course</a>
+        </li>
+        <li>
+            <a href="{% url 'course_list' %}">All Courses</a>
+        </li>
+        <li>
+            <a href="{% url 'about_us' %}">About</a>
+        </li>
+        <li>
+          <a href="{% url 'about_us' %}">Logout</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="card-header">
+      {{user.username}}'s Profile
+      <h4>Last login: {{user.last_login}}</h4>
   </div>
-
-  <img src="https://picsum.photos/id/334/300/200" class="card-img-right" alt="{{user.username}}">
   <div class="card-body">
-    <h5 class="card-title">{{user.first_name}} {{user.last_name}} - {{user.email}}</h5>
-
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="{% url 'course_create' %}" class="btn btn-primary">Create Course</a>
-    <a href="{% url 'course_list' %}" class="btn btn-primary">See Courses</a>
+      <h5 class="card-title">{{user.first_name}} {{user.last_name}} - {{user.email}}</h5>
+  
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <a href="{% url 'course_create' %}" class="btn btn-primary">Create Course</a>
+      <a href="{% url 'course_list' %}" class="btn btn-primary">See Courses</a>
+    </div>
   </div>
 </div>
-<!-- COURSE CREATED COLLAPSE START -->
-<h2>Courses created by me:</h2>
-{% for course in courses %}
-<div class="accordion" id="accordionExample">
-  <div class="card">
-    <div class="card-header" id="{{course.slug}}-heading">
-      <h2 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#{{course.slug}}" aria-expanded="false" aria-controls="{{course.slug}}">
-          {{course.title}}
-        </button>
-      </h2>
-    </div>
-
-    <div id="{{course.slug}}" class="collapse" aria-labelledby="{{course.slug}}-heading" data-parent="#accordionExample">
-      <div class="card-body">
-        <a href="{% url 'course_detail' course_slug=course.slug %}">
-          <img src="{{course.photo_url}}" alt="{{course.title}}" class="course-pic">      
-        </a>
-        <p>
-          <span>
-            <a href="{% url 'course_edit' pk=course.pk %}">Edit</a>
-          </span>
-          <span>
-            <a href="{% url 'course_delete' course_slug=course.slug %}">Delete</a>
-          </span>
-        </p>
+<!-- COURSE PURCHASE + CREATED  -->
+<div class="container d-flex flex-row justify-content-around mt-4 mb-5" id="profile-created-course-purchase-area">
+  <div class="row container-fluid ">
+    <!-- COURSE CREATE START -->
+    <div class="d-flex flex-column col-sm-6" id="course-purchase-column">    
+      <div class="accordion" id="course-profile-created-courses-accordion">
+        <h2>Courses created by me:</h2>
+      {% for course in courses %}
+        <div class="profile-area card border-secondary">
+          <div class="card-header" id="{{course.slug}}-heading">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed text-secondary" type="button" data-toggle="collapse" data-target="#{{course.slug}}" aria-expanded="false" aria-controls="{{course.slug}}">
+                {{course.title}}
+              </button>
+            </h2>
+          </div>      
+          <div id="{{course.slug}}" class="collapse" aria-labelledby="{{course.slug}}-heading" data-parent="#course-profile-created-courses-accordion">
+            <div class="card-body">
+              <a href="{% url 'course_detail' course_slug=course.slug %}">
+                <img src="{{course.photo_url}}" alt="{{course.title}}" class="course-pic">      
+              </a>
+              <p>
+                <span>
+                  <a href="{% url 'course_edit' pk=course.pk %}">Edit</a>
+                </span>
+                <span>
+                  <a href="{% url 'course_delete' course_slug=course.slug %}">Delete</a>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
       </div>
     </div>
+    <!-- COURSE CREATED COLLAPSE END -->    
+    <!-- COURSE PURCHASES START -->
+    <div class="d-flex flex-column col-sm-6" id="profile-courses-purchased-column">
+      <h2>
+        Purchases
+      </h2>
+      {% for purchase in purchases %}
+      <div class="profile-area card border-dark mb-2">
+        <img src="{{purchase.course.photo_url}}" class="card-img-top" alt="{{purchase.course.title}}">
+        <div class="profile-area card-body">
+          <h5 class="card-title"><a class="card-link text-dark" href="{% url 'course_detail' course_slug=purchase.course.slug %}">{{purchase.course.title}} Details</a></h5>
+          <p class="card-text">Description: {{purchase.course.description}}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="profile-area list-group-item">Course Creator: {{purchase.course.user.first_name}} {{purchase.course.user.last_name}}</li>
+          <li class="profile-area list-group-item">Start Date: {{purchase.course.start_date}}</li>
+          <li class="profile-area list-group-item">End Date: {{purchase.course.end_date}}</li>
+          <li class="profile-area list-group-item">Category: {{purchase.course.category}}</li>
+        </ul>
+        <div class="card-body">
+          <a href="{% url 'purchase_delete' course_slug=purchase.course.slug  purchase_pk=purchase.pk %}" class="card-link">Remove Purchase</a>
+        </div>
+      </div>    
+      {% endfor %}
+    </div>
+      <!-- COURSE PURCHASES END -->
   </div>
-  {% endfor %}
 </div>
 
-<!-- COURSE CREATED COLLAPSE END -->
-
-
-<ul class="purchase">
-  <h2>
-    Purchases
-  </h2>
-  {% for purchase in purchases %}
-    <li class="purchase">
-      <a href="{% url 'course_detail' course_slug=purchase.course.slug %}">
-        <img src="{{purchase.course.photo_url}}" alt="{{purchase.course.title}}">
-      </a>    
-      <p>
-        {{purchase.course.title}} Details
-          <ul>
-              <li>Description: {{purchase.course.description}}</li>
-              <li>Start Date: {{purchase.course.start_date}}</li>
-              <li>End Date: {{purchase.course.end_date}}</li>
-              <li>Category: {{purchase.course.category}}</li>
-              <li>Course Creator: {{purchase.course.user.first_name}} {{purchase.course.user.last_name}}</li>
-          </ul>
-          <p>
-            <a href="{% url 'purchase_delete' course_slug=purchase.course.slug  purchase_pk=purchase.pk %}">Remove Purchase</a>
-          </p>
-      </p>
-      
-    </li>
-  </a>
-  {% endfor %}
-</ul>
-
-
 {% endblock %}
-
-<!-- 
-<ul>
-  <h2>Courses created by me:</h2>
-  {% for course in courses %}
-  <li class="track">
-    <p>{{ course.title }}</p>
-    <a href="{% url 'course_detail' course_slug=course.slug %}">
-      <img src="{{course.photo_url}}" alt="{{course.title}}" class="course-pic">      
-    </a>
-    <p></p>
-    <p>
-      <span>
-        <a href="{% url 'course_edit' course_slug=course.slug %}">Edit</a>
-      </span>
-      <span>
-        <a href="{% url 'course_delete' course_slug=course.slug %}">Delete</a>
-      </span>
-    </p>
-  </li>
-{% endfor %}
-</ul> -->

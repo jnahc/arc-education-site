@@ -7,14 +7,14 @@
   {% endif %}
    <body class="login-img" id="login-cycle-img">
      
-    <div class="moveBox-Login">
+    <div class="moveBox-Login mt-n5">
       <div class="A-login">A</div>
       <div class="R-login">R</div>
       <div class="C-login">C</div>
     </div>
 
-    <div class="container">
-    <section class="form-section">
+    <div class="container-fluid d-flex justify-content-center align-items-center">
+    <section class="form-section mt-n5 mb-5">
       <form action="{% url 'login' %}" method="POST">
         {% csrf_token %}
         <p>
@@ -26,8 +26,6 @@
           <input type="password" name="password" maxlength="25" minlength="4" placeholder="Password" required>
         </p>
         <button type="submit" class="btn btn-lg btn-primary">Login</button>
-
-        
       </form>
     </section>
   
