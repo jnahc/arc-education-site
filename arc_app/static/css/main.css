@@ -378,3 +378,18 @@ body {
 
   max-height: 300px;
 }
+
+
+.about_page_span{
+
+color: red;
+size :2em;
+}
+
+.about_page_div{
+
+  background-image:url("https://www.telenor.com/wp-content/uploads/2018/07/artifiticial-intelligence-1250x585.jpg");
+  background-size: auto;
+  
+  
+}
