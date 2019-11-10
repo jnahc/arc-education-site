@@ -2,19 +2,42 @@
 
 {% block content %}
 
+
+
+ {% if user.is_authenticated %}
+
+
+<body>
+  <div class='home-page-loged'>
+    <div class='full-screen-video-wrap'>
+      <video src='./static/img/background-video.mp4' autoplay='true' loop='true'>
+  </div>
+
+  <div class='home-page-loged-content'>
+
+        <h1 class="cover-heading">Hi {{user.first_name}}, welcome back!</h1>
+        <p class="text-center lead">{{user.username}}</p>
+
+         <p class="text-center lead"><a href="{% url 'profile' %}" class="btn btn-outline-light btn-lg btn-block">My Profile</a></p>
+
+
+  </div>
+
+  </div> 
+
+</body> 
+
+
+  {% else %}
 <body class="home-page-body">
   <div class="welcomeToArc_container jumbotron text-center">
-    <h1 class="welcomeToArc_title display-4">Welcome to ARC</h1>
-    <p class="welcomeToArc_slogan">It is time to learn.</p>
-    <div class="welcome-user-container">
-      {% if user.is_authenticated %}
-        <h5>
-          {{user.username}}
-      {% endif %}
-      </h5>
-    </div>
-      {% comment %} <p>Check out all our courses.</p> {% endcomment %}
+      <h1 class="welcomeToArc_title display-4">Welcome to ARC</h1>
+      <p class="welcomeToArc_slogan">It is time to learn.</p>
+      <div class="welcome-user-container">
+      </div>
   </div>
+
+
   <section class="new-here text-center">
       <div>
         <h1 class="jumbotron-heading">Already have an account?</h1>
@@ -28,7 +51,10 @@
           <a class="btn btn-success btn-lg" href="{% url 'register' %}" role="button">Sign up!</a>
         </p>
       </div>
-    </section>
+  </section>
+
+
+
     <hr>
       <div class="hp-topics row jumbotron p-4 p-md-5">
           <div class="col-lg-4">
@@ -62,7 +88,9 @@
         <p class="lead my-3"></p>
         <p class="lead mb-0"><a href="accounts/profile/" class="text-white font-weight-bold">Today is all you really got.</a></p>
       </div>
-      <a href="{% url 'course_list' %}" class="unlock-oportunity-btn btn btn-warning">Click here to unlock your oportunities</a>
+      <div>
+        <a href="{% url 'course_list' %}" class="btn btn-warning unlock-oportunity-btn">Click here to unlock your oportunities</a>
+      </div>
   </div>
 
   <div class="unlock-oportunity jumbotron p-4 p-md-5 position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center text-white bg-dark">
@@ -82,12 +110,17 @@
                 <h2 class="text-muted">Student testimony:</h2>
                 <p class="testimonial lead">"Hello my name is Amy. I am a 29 year old software engineer. Born and raised here in San Francisco. I am a proud ARC student. A little about myself, I am first generation student, my parents came to this country in order to give a brighter future to their children. I am the middle child of three and grew up in a rough neighborhood. My parents taught me good morals and always wanted a good education for my siblings and I. Unfortunately, financial means were an issue and my parents weren’t fortunate enough to understand how community college works. I ended up not doing too good in high school so I attended an ARC software course and succeeded by obtaining my new position" - Amy</p>
           </div>
-              <div class="col-md-5">
-                <img class="testimony-img img-fluid rounded-circle" width="500" height="500" src="https://images.unsplash.com/photo-1551838741-1703b512d7db?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
+          <div class="col-md-5">
+            <video class="testimony-video" autoplay loop>
+               <source src='https://media.istockphoto.com/videos/handsome-young-businessman-doing-victory-dance-about-successful-at-video-id683316414'>
+            </video>
           </div>
-  </div>
 
+  </div>
 </body>
+  {% endif %}
+
+
 
 
 {% endblock %}

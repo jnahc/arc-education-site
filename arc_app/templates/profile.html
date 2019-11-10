@@ -3,6 +3,23 @@
 {% block content %}
 
 <div class="card">
+  <nav class="list-unstyled">
+        <a href="#homeSubmenu" data-toggle="collapse" class="hp-menu-btn dropdown-toggle">Menu</a>
+            <ul class="collapse" id="homeSubmenu">
+                <li>
+                    <a href="{% url 'course_create' %}">New Course</a>
+                </li>
+                <li>
+                    <a href="{% url 'course_list' %}">All Courses</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_us' %}">About</a>
+                </li>
+                  <li>
+                    <a href="{% url 'about_us' %}">Logout</a>
+                </li>
+            </ul>
+  </nav>
   <div class="card-header">
     {{user.username}}'s Profile
   </div>
