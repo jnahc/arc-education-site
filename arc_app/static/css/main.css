@@ -430,4 +430,13 @@ body {
 .about_page_div {
   background-image: url("https://www.telenor.com/wp-content/uploads/2018/07/artifiticial-intelligence-1250x585.jpg");
   background-size: auto;
+
 }
+
+.about_page_four{
+  margin:auto;
+  background: rgba(141, 139, 139, 0.65);
+
+}
+
+
