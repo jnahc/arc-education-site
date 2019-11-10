@@ -6,13 +6,21 @@
     <p style="background-color: firebrick;">{{error}}</p>
   {% endif %}
   <body class="register-img" id="register-cycle-img">
-    <div class="moveBox-Login">
-      <div class="A">A</div>
-      <div class="R">R</div>
-      <div class="C">C</div>
-    </div>
+    
   
     <div class="container">
+        <div class="moveBox-Register">
+            <div class="welcome-register">R</div>
+            <div class="welcome-register">e</div>
+            <div class="welcome-register">g</div>
+            <div class="welcome-register">i</div>
+            <div class="welcome-register">s</div>
+            <div class="welcome-register">t</div>
+            <div class="welcome-register">e</div>
+            <div class="welcome-register">r</div>
+
+
+        </div>
       <section class="form-section">
         <form action="{% url 'register' %}" method="POST" class="artist-form">
           {% csrf_token %}

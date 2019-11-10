@@ -3,20 +3,54 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Create a new course here!</h1>
-<section class="course-form-section col-md-8 order-md-1">
-  <form method="POST" >
-    {% csrf_token %}
-    {{form.as_ul}}
-   
-    <button class= "btn btn-success btn-lg btn-block" type="submit" class="login-button">Save</button>
-  </form>
-    <div class="moveBox-create-course">
-      <div class="A">A</div>
-      <div class="R">R</div>
-      <div class="C">C</div>
-    </div>
-</section>
+
+  <h1>Create a new course here!</h1>
+    <section class="course-form-section col-md-8 order-md-1">
+      <form action="{% url 'course_create' %}" method="POST" >
+        {% csrf_token %}
+        <div class="mb-3">
+          <label>Course Title</label>
+          <input class="form-control" placeholder="you@example.com">
+        </div>
+        
+        <div class="course_form_div mb-3">
+          <label class="">Course Title</label>
+          <input class= "form-control"  type="text" name="title"  maxlength="25" minlength="2" placeholder="Title: " required>
+        </div>
+
+        <div class="course_form_div  mb-3"> 
+          <label class="course-form-label">Course Category</label>
+          <input class= "form-control"  type="text" name="category"  maxlength="25" minlength="2" placeholder="Category: " required>
+        </div>
+
+        <div class="course_form_div">
+          <label class="course-form-label">Start Date</label>
+          <input class= "form-control"  type="date" name="start_date" placeholder="Start Date" required>
+        </div>
+
+        <div class="course_form_div"> 
+          <label class="course-form-label">End Date</label>
+          <input class= "form-control" type="date" name="end_date" placeholder="End Date" required>
+        </div>
+
+        <div class="course_form_div">
+          <label class="course-form-label">Course Image Url</label>
+          <input  class= "form-control" type="text" name="photo_url"  placeholder= "Photo_URL" required>
+        </div>
+        
+        <div class="course_form_div">
+                <label class="course-form-label">Description</label>
+                <textarea class="form-control" name="description"   placeholder="Description: " required></textarea>
+        </div>
+        <button  class= "btn btn-success btn-lg btn-block" type="submit" class="login-button">Add Course</button>
+      </form>
+        <div class="moveBox-create-course">
+          <div class="A-course">A</div>
+          <div class="R-course">R</div>
+          <div class="C-course">C</div>
+        </div>
+    </section>
+
     
 {% endblock %}
 
