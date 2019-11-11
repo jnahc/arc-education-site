@@ -24,7 +24,7 @@ def course_list(request):
     context = {"courses": courses}
     return render(request, 'course_list.html', context)
 
-@login_required
+
 def course_detail(request, course_slug):
     course = Course.objects.get(slug=course_slug)
     course_pk = course.pk
