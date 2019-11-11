@@ -72,8 +72,8 @@ def course_edit(request, pk):
       return redirect('course_detail', course_slug=course.slug)
   else:
     form = CourseForm(instance=course)
-    context = {'form': form}
-    return render(request, 'course_form.html', context)
+    context = {'form': form, "creator": course.user}
+    return render(request, 'course_form_edit.html', context)
 
 @login_required
 def course_delete(request, course_slug):
