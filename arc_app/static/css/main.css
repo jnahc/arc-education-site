@@ -463,19 +463,13 @@ body {
   }
 }
 
-<<<<<<< HEAD
-.about_page_four{
-  margin-top: 0;
-  background: rgba(141, 139, 139, 0.65);
-
-  
-
-}
-=======
 @media (max-aspect-ratio: 16/9) {
   .home-page-loged-video {
     width: auto;
     height: 100%;
   }
 } */
->>>>>>> submaster
+.course_list_page_style{
+
+  background: black;
+}
