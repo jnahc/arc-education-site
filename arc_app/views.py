@@ -27,7 +27,9 @@ def course_list(request):
 @login_required
 def course_detail(request, course_slug):
     course = Course.objects.get(slug=course_slug)
-    context = {"course": course}
+    course_pk = course.pk
+    purchases = Purchase.objects.filter(course = course_pk)
+    context = {"course": course, "purchases": purchases}
     return render(request, "course_detail.html", context)
 
 
@@ -35,8 +37,8 @@ def api_courses(request):
     all_courses = Course.objects.all()
     data = []
     for course in all_courses:
-        data.append({"title": course.title, "description": course.description,
-                     "start_date": course.start_date, "end_date": course.end_date})
+      data.append({"title": course.title, "description": course.description,
+      "start_date": course.start_date, "end_date": course.end_date})
     return JsonResponse({"data": data, "status": 200})
 
 @login_required
@@ -82,6 +84,14 @@ def course_delete(request, course_slug):
 def purchase_delete(request, course_slug, purchase_pk):
   Purchase.objects.get(id=purchase_pk).delete()
   return redirect ('profile')
+
+def purchase_list(request, course_slug):
+  purchases = Purchase.objects.all()
+  context = {"purchases": purchases}
+  return render(request, 'purchase_list.html', context)
+
+
+
   
 
 

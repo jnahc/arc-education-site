@@ -10,8 +10,7 @@ urlpatterns = [
   path('profile/', views.profile, name='profile'),
   # path('profile/edit', views.profile_edit, name='profile_edit'),
 
-  ### PURCHASES
-  path('profile/purchase_list', views.purchase_list, name='purchase_list'),
+
   
 
 

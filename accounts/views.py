@@ -71,10 +71,6 @@ def profile(request):
     context = {"courses": courses, "purchases": purchases}
     return render(request, "profile.html", context)
 
-def purchase_list(request):
-    purchases = Purchase.objects.all()
-    context = {"purchases": purchases}
-    return render(request, 'purchase_list.html', context)
 
 # @login_required
 # def profile_edit(request, pk):
