@@ -18,6 +18,7 @@ urlpatterns = [
     ### PURCHASE VIEWS
     path('courses/<slug:course_slug>/purchase/create', views.purchase_create, name="purchase_create"),
     path('course/<slug:course_slug>/purchase/<int:purchase_pk>/delete', views.purchase_delete, name="purchase_delete"),
+    path('course/<slug:course_slug>/purchase_list', views.purchase_list, name='purchase_list'),
     
     ### API
     # path('api/v1/users/', views.api_users)
