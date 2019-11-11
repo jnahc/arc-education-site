@@ -130,6 +130,56 @@ $navBottomText.hover(function(){
     }
 );
 
+$aLogin = $('.A-login');
+$rLogin = $(`.R-login`);
+$cLogin = $(`.C-login`);
+
+$aLogin.click(function(){
+    console.log('C');
+    $aLogin.toggleClass('animated zoomOutLeft');
+    }
+);
+$rLogin.click(function(){
+    console.log('C');
+    $rLogin.toggleClass('animated zoomOut');
+    }
+);
+$cLogin.click(function(){
+    console.log('C');
+    $cLogin.toggleClass('animated zoomOutRight');
+    }
+);
+
+$kennyPic = $('#kenny-pic');
+$jeffPic = $('#jeff-pic');
+$felipePic = $('#felipe-pic');
+$pouyeshPic = $('#pouyesh-pic');
+
+$kennyPara = $('#kenny-para');
+$jeffPara = $('#jeff-para');
+$felipePara = $('#felipe-para');
+$pouyeshPara = $('#pouyesh-para');
+
+$kennyPic.click(function(){
+    console.log('C');
+    $kennyPara.toggleClass('animated lightSpeedOut');
+    }
+);
+$jeffPic.click(function(){
+    console.log('C');
+    $jeffPara.toggleClass('animated hinge');
+    }
+);
+$felipePic.click(function(){
+    console.log('C');
+    $felipePara.toggleClass('animated bounceOutDown');
+    }
+);
+$pouyeshPic.click(function(){
+    console.log('C');
+    $pouyeshPara.toggleClass('animated rotateOutUpLeft');
+    }
+);
 
 
 // $btn.hover(function() {
