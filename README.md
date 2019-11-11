@@ -23,16 +23,15 @@
 
 We are the here to help students get with simple and manageable courses/lessons. By looking through our course list and making quick purchases. You will have access to all the course's and contents to get you to where you want to go.
 
-**Our Wire Frame:**
+**Our Wire Frames:**
 
+Just | Some | Wireframes
+- | - | 
+<img src="arc_app/static/img/wireframe1.jpg" width=200> | <img src="arc_app/static/img/wireframe2.jpg" width=200> | <img src="arc_app/static/img/wireframe3.jpg" width=200>
 
-<img src="arc_app/static/img/wireframe1.jpg" width=200>
-<img src="arc_app/static/img/wireframe2.jpg" width=200>
-<img src="arc_app/static/img/wireframe3.jpg" width=200>
-<img src="arc_app/static/img/wireframe4.jpg" width=200>
-<img src="arc_app/static/img/wireframe5.jpg" width=200>
-<img src="arc_app/static/img/wireframe6.jpg" width=200>
-<img src="arc_app/static/img/wireframe7.jpg" width=200>
+<img src="arc_app/static/img/wireframe4.jpg" width=200> | <img src="arc_app/static/img/wireframe5.jpg" width=200> | <img src="arc_app/static/img/wireframe6.jpg" width=200>
+
+<img src="arc_app/static/img/wireframe7.jpg" width=200>|
 
 
 **You will be working in groups of 4 for this project.**
