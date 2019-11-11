@@ -7,14 +7,14 @@
   {% endif %}
    <body class="login-img" id="login-cycle-img">
      
-    <div class="moveBox-Login mt-n5">
+    <div class="moveBox-Login">
       <div class="A-login">A</div>
       <div class="R-login">R</div>
       <div class="C-login">C</div>
     </div>
 
     <div class="container-fluid d-flex justify-content-center align-items-center">
-    <section class="form-section mt-n5 mb-5">
+    <section class="form-section mb-5">
       <form action="{% url 'login' %}" method="POST">
         {% csrf_token %}
         <p>
