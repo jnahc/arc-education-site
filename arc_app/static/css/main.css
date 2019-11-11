@@ -155,12 +155,30 @@ body {
   min-width: 100%;
   max-height: 100%;
 }
+
 .home-page-loged-content {
   display: flex;
   justify-content: space-around;
   flex-direction: column;
   padding: 150px 0;
   color: whitesmoke;
+}
+
+.home-page-loged-content:hover {
+  /* clip-path: polygon(
+    20% 0%,
+    0% 20%,
+    30% 50%,
+    0% 80%,
+    20% 100%,
+    50% 70%,
+    80% 100%,
+    100% 80%,
+    70% 50%,
+    100% 20%,
+    80% 0%,
+    50% 30%
+  ); */
 }
 
 .cover-heading {
@@ -311,12 +329,35 @@ body {
 /* PROFILE PAGE **************************************************/
 
 /* COURSE LIST **************************************************/
+.course-list-container {
+  display: flex;
+  /* justify-content: space-evenly; */
+  flex-wrap: wrap;
+  /* padding: 150px; */
+  margin: 10px;
+}
 
-.course-pic {
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 5px;
-  max-width: 150px;
+.course-list-div {
+  display: flex;
+  margin: 30px auto;
+  /* color: aliceblue; */
+  /* flex-direction: row; */
+}
+
+.course-list-div-category {
+  font-family: "Poiret One", cursive;
+}
+.course-list-div-title {
+  font-family: "Abril Fatface", cursive;
+}
+.course-list-img {
+  /* border: 1px solid #ddd; */
+  border-radius: 10px;
+  /* padding: 5px; */
+  /* position: absolute; */
+  z-index: -1;
+  /* opacity: 0.7; */
+  max-width: 500px;
 }
 
 .course-pic:hover {
