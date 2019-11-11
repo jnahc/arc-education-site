@@ -32,40 +32,48 @@ We are the here to help students get with simple and manageable courses/lessons.
 
 <img src="arc_app/static/img/wireframe7.jpg" width=200> 
 
-
-**You will be working in groups of 4 for this project.**
-
 ---
 
 ## Planning & Deliverables
 
-###### What will we be turning in?
-
 ### Project Planning Deliverables
 
-**You must review the following with your instructional team BEFORE you start to code.**
-
-* **Scope:** What are you planning to build? What do you reasonably think you can implement in the time period?
-* **User Stories:** Who is your user? What features will your app have? Set up your project and user stories in <a href="https://trello.com" target="_blank">Trello</a> or in some other organized format.
-* **Wireframes:** Sketch out what your core pages will look like and how they will work. Consider making a *paper prototype* to demonstrate and/or test key user interactions.
-* **Data Models:** Draw out the models and any associations for your project in an entity relationship diagram (ERD).
-* **Milestones:** Outline the milestones/sprints for your group.
-* **Delegating Tasks:** What will each group member work on? Leverage everyone's strengths, and spend the majority of coding time pair programming.
+All planning deliverables found here: 
+https://drive.google.com/drive/folders/1pPdeoyCLvcZ67a7ETXVOLxhGiPTnzhe6
+* Scope Document / Team Member Delegation
+* User Stories
+* Project Plan / Proposed Schedule / Models
 
 <img src="arc_app/static/img/trelloARC1.png" width=200> <img src="arc_app/static/img/toDoListARC.png" width=200> <img src="arc_app/static/img/scheduleARC.png" width=200>
 
+### Project Details
+#### Requirements
+* Django
+* PostgreSQL
+* Data Validation
+  * Registration Form
+  * Login Form
+  * Login Required
+  * Course Edit
+ * Error Handling
+  * Via Django forms & error messages on page
+ * Animate.css for animations
+ * User Login w/ authentication & authorization
+ * JavaScript + JQuery
+   * Event Listeners for animations
+ * User-Friendly URLs
+ 
+#### Wishlist
+* Instructor Model
+* Expanded Course Details
+* Extended User Class
 
+#### Contributors
+* Kenny K - https://git.generalassemb.ly/KennyK-TW
+* Pouyesh S - https://git.generalassemb.ly/pouyesh
+* Felipe C - https://git.generalassemb.ly/FelipeCosta
+* Jeff C - https://git.generalassemb.ly/jeff-chan-sf-sei-05
 
-### Completed Project Deliverables
-
-* Link to Heroku hosted project, with all core technical requirements and three flexible technical requirements complete.
-* Link to source code on GitHub.
-* A `README.md` file with the following:
-  * Description: Short paragraph (2-3 sentences) "elevator pitch" describing what your project does
-  * Wireframes and user stories
-  * Link to Heroku hosted project
-  * Technologies (languages, external libraries, APIs)
-  * Wish List / Future Development
-  * Contributors (with links to their GitHub profiles)
-
----
+### Project Wins & Challenges
+#### Wins
+#### Challengies
