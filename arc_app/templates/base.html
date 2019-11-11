@@ -68,15 +68,14 @@
     {% block content %}
     {% endblock %}
   </div>
-
-  <nav class="navbar fixed-bottom navbar-expand-lg navbar-light mt-5 d-none d-sm-block">
-    <a class="navbar-brand" id="bottomnav-brand" href={% url 'home' %}>ARC</a>
-    <h6>
-      &copy; Copyright 2019 ARC
-
-    </h6>
-
-  </nav>
+  <div class="d-none d-sm-block">
+    <nav class="navbar fixed-bottom navbar-expand-lg navbar-light mt-5">
+      <a class="navbar-brand" id="bottomnav-brand" href={% url 'home' %}>ARC</a>
+      <h6>
+        &copy; Copyright 2019 ARC
+      </h6>
+    </nav>
+  </div>
 
   <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"

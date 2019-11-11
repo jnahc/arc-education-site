@@ -590,3 +590,17 @@ body {
     height: 100%;
   }
 } */
+
+
+/* RESPONSE SECTION  */
+@media (max-width: 576px) {
+  h2, h3, .card-link, .hp-about-us, .hp-about-us-description, .welcomeToArc_slogan, .welcomeToArc_title {
+    font-size: 1rem;
+  }
+
+  .card-title {
+    font-size: .7rem;
+  }
+
+
+}
