@@ -3,35 +3,36 @@
 {% block content %}
 
 <div class="w-50 p-3">
-
 <img src="{{course.photo_url}}" class="rounded mx-auto d-block w-50 p-3" alt="{{course.title}}">
+  <table class="table table-dark ">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Title </th>
+        <th scope="col">Category</th>
+        <th scope="col">Start Date</th>
+        <th scope="col">End Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>{{course.title}}</td>
+        <td>{{course.category}}</td>
+        <td>{{course.start_date}}</td>
+        <td>{{course.end_date}}</td>
+      </tr>
+    </tbody>
+  </table>
+    <h1>Description</h1>
+    <p><td> {{course.description}}</td></p>
+</div>
 
-        <table class="table table-dark ">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Title </th>
-                <th scope="col">Catagory</th>
-                <th scope="col">Start Date</th>
-                <th scope="col">End Date</th>
-              </tr>
-        </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>{{course.title}}</td>
-                <td>{{course.category}}</td>
-                <td>{{course.start_date}}</td>
-                <td>{{course.end_date}}</td>
-              </tr>
-          </table>
-          <h1>Discription</h1>
-          <p><td> {{course.description}}</td></p>
- </div>
-    {% if user.is_authenticated %}
+
+ {% if user.is_authenticated %}
             <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                    <a class="nav-link" href="{% url 'home' %}">Purchase</a>
+                    <a href="{% url 'purchase_create' course_slug=course.slug %}">Purchase</a>
                 </div>
             </div>
             {% else %}
@@ -41,7 +42,13 @@
                 </div>
             </div>
             {% endif %}
-    </div>
+<ul>
+  <h2>Users that have also purchased this course</h2>
+  {% for purchase in purchases %}
+  <li>{{purchase.student.first_name}} {{purchase.student.last_name}}</li>
+  {% endfor %}
+</ul>
+
 {% endblock %}
 
 

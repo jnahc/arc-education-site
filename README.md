@@ -66,8 +66,4 @@ We are the here to help students get with simple and manageable courses/lessons.
   * Wish List / Future Development
   * Contributors (with links to their GitHub profiles)
 
-<<<<<<< HEAD
 ---
-=======
----
->>>>>>> 0525b3fd637c8cc026abd415f7ebbb74eca10edb

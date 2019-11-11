@@ -4,73 +4,61 @@
 
 
 
- {% if user.is_authenticated %}
- <div class='home-page-loged'>
+{% if user.is_authenticated %}
+<div class='home-page-loged'>
   <div class='full-screen-video-wrap'>
   <video src='./static/img/background-video.mp4' autoplay='true' loop='true'>
   </div>
   <div class='home-page-loged-content'>
-
-        <h1 class="cover-heading">Hi {{user.first_name}}, welcome back!</h1>
-        <p class="text-center lead">{{user.username}}</p>
-
-         <p class="text-center lead"><a href="{% url 'profile' %}" class="btn btn-outline-light btn-lg btn-block">My Profile</a></p>
+    <h1 class="cover-heading">Hi {{user.first_name}}, welcome back!</h1>
+    <p class="text-center lead"><a href="{% url 'profile' %}" class="btn btn-outline-light btn-lg btn-block shadow" id="homepage-loggedin-my-profile">My Profile</a></p>
   </div>
-  </div> 
-
-
-
+</div> 
   {% else %}
-<body class="home-page-body">
+<div class="home-page-body">
   <div class="welcomeToArc_container jumbotron text-center">
-      <h1 class="welcomeToArc_title display-4">Welcome to ARC</h1>
-      <p class="welcomeToArc_slogan">It is time to learn.</p>
-      <div class="welcome-user-container">
-      </div>
+    <h1 class="welcomeToArc_title display-4">Welcome to ARC</h1>
+    <p class="welcomeToArc_slogan">It is time to learn.</p>
+    <div class="welcome-user-container">
+    </div>
   </div>
-
-
   <section class="new-here text-center">
-      <div>
-        <h1 class="jumbotron-heading">Already have an account?</h1>
-        <p>
-          <a class="btn btn-success btn-lg" href="{% url 'profile' %}" role="button">My Profile</a>
-        </p>
-      </div>
-      <div>
-        <h1 class="jumbotron-heading">New here?</h1>
-        <p>
-          <a class="btn btn-success btn-lg" href="{% url 'register' %}" role="button">Sign up!</a>
-        </p>
-      </div>
+    <div>
+      <h1 class="jumbotron-heading">Already have an account?</h1>
+      <p>
+        <a class="btn btn-success btn-lg" href="{% url 'profile' %}" role="button">My Profile</a>
+      </p>
+    </div>
+    <div>
+      <h1 class="jumbotron-heading">New here?</h1>
+      <p>
+        <a class="btn btn-success btn-lg" href="{% url 'register' %}" role="button">Sign up!</a>
+      </p>
+    </div>
   </section>
-
-
-
     <hr>
       <div class="hp-topics row jumbotron p-4 p-md-5">
-          <div class="col-lg-4">
-              <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-kF4xXbQgyaOrdu7IqC5XoRgcFYo8NKMBNFgvazVtWXTpa2tv&s">
-              <h2>Cooking</h2>
-              <p class="topic-description">Cooking food properly helps to avoid food poisoning. Most raw foods feature food-borne pathogens such as viruses, bacteria, parasites and viruses that can seriously harm and kill a human being. Cooking ensures that all the micro-organisms are destroyed, which make food safe for human consumption.</p>
-              <p><a class="btn btn-info" href="#" role="button">View details »</a></p>
-          </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-kF4xXbQgyaOrdu7IqC5XoRgcFYo8NKMBNFgvazVtWXTpa2tv&s">
+          <h2>Cooking</h2>
+          <p class="topic-description">Cooking food properly helps to avoid food poisoning. Most raw foods feature food-borne pathogens such as viruses, bacteria, parasites and viruses that can seriously harm and kill a human being. Cooking ensures that all the micro-organisms are destroyed, which make food safe for human consumption.</p>
+          <p><a class="btn btn-info shadow" href="#" role="button">View details »</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="https://i.pinimg.com/originals/0f/8b/28/0f8b2870896edcde8f6149fe2733faaf.jpg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
+          <div>
+            <h2>Coding</h2>
+            <p class="text-center topic-description">Coding is a basic literacy in the digital age, and it is important for kids to understand and be able to work with and understand the technology around them. Having children learn coding at a young age prepares them for the future. Coding helps children with communication, creativity, math,writing, and confidence.</p>
+          </div>
+          <p><a class="btn btn-info shadow-sm" href="#" role="button">View details »</a></p>
+        </div><!-- /.col-lg-4 -->
 
-          <div class="col-lg-4">
-            <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="https://i.pinimg.com/originals/0f/8b/28/0f8b2870896edcde8f6149fe2733faaf.jpg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
-            <div>
-              <h2>Coding</h2>
-              <p class="text-center topic-description">Coding is a basic literacy in the digital age, and it is important for kids to understand and be able to work with and understand the technology around them. Having children learn coding at a young age prepares them for the future. Coding helps children with communication, creativity, math,writing, and confidence.</p>
-            </div>
-            <p><a class="btn btn-info" href="#" role="button">View details »</a></p>
-          </div><!-- /.col-lg-4 -->
-
-          <div class="col-lg-4">
-            <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="https://fbcd.co/product-lg/bc25b6eff2622fdfc2b9bea290763816_resize.jpg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
-            <h2>Fitness</h2>
-            <p class="topic-description">Regular exercise and physical activity promotes strong muscles and bones. It improves respiratory, cardiovascular health, and overall health. Staying active can also help you maintain a healthy weight, reduce your risk for type 2 diabetes, heart disease, and reduce your risk for some cancers.</p>
-            <p><a class="btn btn-info" href="#" role="button">View details »</a></p>
-          </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="https://fbcd.co/product-lg/bc25b6eff2622fdfc2b9bea290763816_resize.jpg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
+          <h2>Fitness</h2>
+          <p class="topic-description">Regular exercise and physical activity promotes strong muscles and bones. It improves respiratory, cardiovascular health, and overall health. Staying active can also help you maintain a healthy weight, reduce your risk for type 2 diabetes, heart disease, and reduce your risk for some cancers.</p>
+          <p><a class="btn btn-info" href="#" role="button">View details »</a></p>
+        </div><!-- /.col-lg-4 -->
   </div>
 
   <div class="unlock-oportunity text-white">
@@ -86,31 +74,28 @@
   </div>
 
   <div class="unlock-oportunity jumbotron p-4 p-md-5 position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center text-white bg-dark">
-      <div class="col-md-5 p-lg-5 mx-auto my-5">
-        <h1 class="hp-about-us display-4 font-weight-normal">About Us</h1>
-        <p class="hp-about-us-description lead font-weight-normal">Understand more about ARC and our mission.</p>
-        <a class="hp-about-us-btn btn btn-danger" href="{% url 'about_us' %}">Go</a>
-      </div>
-      <div class="product-device shadow-sm d-none d-md-block"></div>
-      <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+    <div class="col-md-5 p-lg-5 mx-auto my-5">
+      <h1 class="hp-about-us display-4 font-weight-normal">About Us</h1>
+      <p class="hp-about-us-description lead font-weight-normal">Understand more about ARC and our mission.</p>
+      <a class="hp-about-us-btn btn btn-danger" href="{% url 'about_us' %}">Go</a>
+    </div>
+    <div class="product-device shadow-sm d-none d-md-block"></div>
+    <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
   </div>
-
-
 
   <div class="unlock-oportunity p-md-5">
-          <div class="col-md-7">
-                <h2 class="text-muted">Student testimony:</h2>
-                <p class="testimonial lead">"Hello my name is Amy. I am a 29 year old software engineer. Born and raised here in San Francisco. I am a proud ARC student. A little about myself, I am first generation student, my parents came to this country in order to give a brighter future to their children. I am the middle child of three and grew up in a rough neighborhood. My parents taught me good morals and always wanted a good education for my siblings and I. Unfortunately, financial means were an issue and my parents weren’t fortunate enough to understand how community college works. I ended up not doing too good in high school so I attended an ARC software course and succeeded by obtaining my new position" - Amy</p>
-          </div>
-          <div class="col-md-5">
-            <video class="testimony-video" autoplay loop>
-               <source src='https://media.istockphoto.com/videos/handsome-young-businessman-doing-victory-dance-about-successful-at-video-id683316414'>
-            </video>
-          </div>
-
+    <div class="col-md-7">
+      <h2 class="text-muted">Student testimony:</h2>
+      <p class="testimonial lead">"Hello my name is Amy. I am a 29 year old software engineer. Born and raised here in San Francisco. I am a proud ARC student. A little about myself, I am first generation student, my parents came to this country in order to give a brighter future to their children. I am the middle child of three and grew up in a rough neighborhood. My parents taught me good morals and always wanted a good education for my siblings and I. Unfortunately, financial means were an issue and my parents weren’t fortunate enough to understand how community college works. I ended up not doing too good in high school so I attended an ARC software course and succeeded by obtaining my new position" - Amy</p>
+    </div>
+    <div class="col-md-5">
+      <video class="testimony-video" autoplay loop>
+        <source src='https://media.istockphoto.com/videos/handsome-young-businessman-doing-victory-dance-about-successful-at-video-id683316414'>
+      </video>
+    </div>
   </div>
-</body>
-  {% endif %}
+</div>
+{% endif %}
 
 
 

@@ -1,23 +1,38 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<ul class="tracks">
+<main class-"course-list-main">
   <h2>
     Courses
     <a href="{% url 'course_create' %}">+</a>
   </h2>
+
+
+<section class="course-list-container">
   {% for course in courses %}
-  <a href="{% url 'course_detail' course_slug=course.slug %}">
-    <li class="track">
-      <img src="{{course.photo_url}}" alt="{{course.title}}" class="course-pic">
-      {{ course.title }}
-      <p>
-        <a href="{% url 'purchase_create' course_slug=course.slug %}">Purchase</a>
-      </p>
-    </li>
-  </a>
-  {% endfor %}
-</ul>
+
+      
+        <div class="course-list-div flex-column">
+          <div class="course-list-div-description">
+            <div class="course-list-div-text">
+              <strong class="course-list-div-category">{{ course.category }}</strong>
+              <h3 class="course-list-div-title">{{ course.title }}</h3>
+              <div class="mb-1 text-muted">Start Date: {{ course.start_date }}</div>
+            </div>
+            <div class="course-list-div-btn">
+              <a class="btn btn-outline-info btn-sm" href="{% url 'course_detail' course_slug=course.slug %}">View details</a>
+              <a class='btn btn-outline-warning btn-sm' href="{% url 'purchase_create' course_slug=course.slug %}">Unlock this oportunity!</a>
+            </div>
+          </div>
+            {% comment %} <a href="#" class="btn btn-outline-success stretched-link">Continue reading</a> {% endcomment %}
+            <img class="course-list-img"  src={{ course.photo_url }}>
+            
+          
+        </div>
+
+   {% endfor %}
+  </section>
+</main>
 
 {% endblock %}
 
