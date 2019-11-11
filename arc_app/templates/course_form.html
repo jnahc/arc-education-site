@@ -11,44 +11,37 @@
         <label for="id_title" class="course-form-label">Course Title</label>
         <div>
           {{form.title}}
-
         </div>
       </div>
-
       <div class="mb-3"> 
         <label for="id_category" class="course-form-label">Course Category</label>
         <div>
           {{form.category}}
         </div>
       </div>
-
       <div class="mb-3">
         <label for="id_start_date" class="course-form-label">Start Date</label>
         <div>
           {{form.start_date}}
         </div>
       </div>
-
       <div class="mb-3"> 
         <label for="id_end_date" class="course-form-label">End Date</label>
         <div>
           {{form.end_date}}
         </div>
       </div>
-
       <div class="mb-3">
         <label for="id_photo_url" class="course-form-label">Course Image Url</label>
         <div>
           {{form.photo_url}}
         </div>
       </div>
-      
       <div class="mb-3">
         <label for="id_description" class="course-form-label">Description</label>
         <div>
           {{form.description}}
         </div>
-
       </div>
       <button  class= "btn btn-success btn-lg btn-block" type="submit" class="login-button">Save Course</button>
     </form>
@@ -58,24 +51,6 @@
       <div class="C-course">C</div>
     </div>
   </section>
-
 </main>
     
 {% endblock %}
-
-
-<!-- <main class="main-create-course">
-  <h1 class="create-course-title">Create a new course here!</h1>
-  <section class="course-form-section">
-    <form method="POST">
-      {% csrf_token %}        
-      {{form.as_p}}
-      <button  class= "btn btn-success btn-lg btn-block" type="submit" class="login-button">Save Course</button>
-    </form>
-      <div class="moveBox-create-course">
-        <div class="A-course">A</div>
-        <div class="R-course">R</div>
-        <div class="C-course">C</div>
-      </div>
-  </section>
-</main> -->

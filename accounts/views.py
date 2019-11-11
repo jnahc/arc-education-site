@@ -32,7 +32,6 @@ def register(request):
                         last_name=last_name)
                     user.save()
                     return redirect('login')
-
         else:
             context = {'error':'Passwords do not match'}
             return render(request, 'register.html', context)
@@ -70,28 +69,6 @@ def profile(request):
     purchases = Purchase.objects.filter(student=request.user)
     context = {"courses": courses, "purchases": purchases}
     return render(request, "profile.html", context)
-
-
-# @login_required
-# def profile_edit(request, pk):
-#     user = User.objects.get(id=pk)
-#     if request.method == 'POST':
-#         form = UserProfileForm(instance=user)
-#         if form.is_valid():
-#             update = form.save(commit=False)               
-#             update.user = user
-#             update.save()
-#             return redirect ('profile')
-#     else:
-#         form = UserProfileForm(instance=user)
-#     context = {'form': form}
-#     return render(request, 'profile_create', context)
-
-
-
-
-
-
 
 
 

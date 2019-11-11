@@ -1,8 +1,6 @@
 from django.urls import path
 from . import views
 
-
-
 urlpatterns = [
     ### PUBLIC VIEWS
     path('', views.home, name='home'),
@@ -21,11 +19,8 @@ urlpatterns = [
     path('course/<slug:course_slug>/purchase_list', views.purchase_list, name='purchase_list'),
     
     ### API
-    # path('api/v1/users/', views.api_users)
     path('api/v1/courses/', views.api_courses),
-
 
     ### Search Test
     path('courses/search/',views.course_list, name='course_list_search'),
-
 ]
