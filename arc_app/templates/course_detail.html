@@ -31,7 +31,7 @@
     {% if user.is_authenticated %}
             <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                    <a class="nav-link" href="{% url 'home' %}">Purchase</a>
+                    <a href="{% url 'purchase_create' course_slug=course.slug %}">Purchase</a>
                 </div>
             </div>
             {% else %}
