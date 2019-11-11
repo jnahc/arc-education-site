@@ -71,6 +71,9 @@ https://trello.com/b/fINu8uZk/arc-project-2
 
 ### Project Wins & Challenges
 #### Wins
+Successfully Using One CSS File
+* https://git.generalassemb.ly/jeff-chan-sf-sei-05/academy-revolutionary-confederation/blob/submaster/arc_app/static/css/main.css
+
 Purchase Object Creation:
 ```
 @login_required
