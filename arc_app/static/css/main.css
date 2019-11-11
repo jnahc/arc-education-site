@@ -47,10 +47,26 @@ body {
 }
 
 .profile-area {
-  background-color: rgba(255, 255, 255, 0.75) ;
-
+  background-color: rgba(82, 58, 46, .50);
 }
 
+.profile-secondary {
+  /* background-color: #162523; */
+  background-color: rgba(210, 143, 92, 1);
+}
+
+.profile-tertiary {
+  background-color: rgba(82, 58, 46, .75);
+}
+
+.profile-button-top {
+  background-color: #162523;
+}
+
+.profile-area-links {
+  color: #B63A2E;
+  font-size: 1.5em;
+}
 /* HOME PAGE *************************************************/
 
 .home-page-body {

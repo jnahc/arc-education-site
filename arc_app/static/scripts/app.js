@@ -10,6 +10,8 @@ console.log('hello there')
 //     }
 // );
 
+// HOMEPAGE SECTION
+
 $btnMyProfile = $('.btn:contains("My Profile")')
 $btnMyProfile.hover(function(){
     console.log('C');
@@ -49,6 +51,8 @@ $btnRegister.hover(function(){
     $btnRegister.toggleClass('animated tada');
     }
 );
+
+// TOP & BOTTOM NAV SECTION 
 
 $logoTop = $(`#topnav-brand:contains("ARC")`)
 $logoTop.hover(function(){
@@ -120,6 +124,26 @@ $navLinkLogin.hover(function(){
     }
 );
 
+$navLinkLogout = $(`.nav-link:contains("Logout")`)
+$navLinkLogout.hover(function(){
+    console.log('C');
+    $navLinkLogout.toggleClass('animated fadeOutUp')
+    }, function(){
+    console.log('D');
+    $navLinkLogout.toggleClass('animated fadeOutUp');
+    }
+);
+
+$navLinkProfile = $(`.nav-link:contains("Profile")`)
+$navLinkProfile.hover(function(){
+    console.log('C');
+    $navLinkProfile.toggleClass('animated fadeOut')
+    }, function(){
+    console.log('D');
+    $navLinkProfile.toggleClass('animated fadeOut');
+    }
+);
+
 $navBottomText = $(`.navbar-text:contains("Copyright")`)
 $navBottomText.hover(function(){
     console.log('C');
@@ -129,6 +153,8 @@ $navBottomText.hover(function(){
     $navBottomText.toggleClass('animated flash');
     }
 );
+
+// LOGIN PAGE SECTION 
 
 $aLogin = $('.A-login');
 $rLogin = $(`.R-login`);
@@ -149,6 +175,8 @@ $cLogin.click(function(){
     $cLogin.toggleClass('animated zoomOutRight');
     }
 );
+
+// ABOUT US SECTION 
 
 $kennyPic = $('#kenny-pic');
 $jeffPic = $('#jeff-pic');
@@ -180,10 +208,4 @@ $pouyeshPic.click(function(){
     $pouyeshPara.toggleClass('animated rotateOutUpLeft');
     }
 );
-
-
-// $btn.hover(function() {
-//     $btn.fadeOut( 100 );
-//     $btn.fadeIn( 500 );
-//   });
 
