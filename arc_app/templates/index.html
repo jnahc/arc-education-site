@@ -22,20 +22,22 @@
     <div class="welcome-user-container">
     </div>
   </div>
-  <section class="new-here text-center d-none d-sm-block">
-    <div>
-      <h1 class="jumbotron-heading">Already have an account?</h1>
-      <p>
-        <a class="btn btn-success btn-lg" href="{% url 'profile' %}" role="button">My Profile</a>
-      </p>
-    </div>
-    <div>
-      <h1 class="jumbotron-heading">New here?</h1>
-      <p>
-        <a class="btn btn-success btn-lg" href="{% url 'register' %}" role="button">Sign up!</a>
-      </p>
-    </div>
-  </section>
+  <div class="d-none d-sm-block">
+    <section class="new-here text-center">
+      <div>
+        <h1 class="jumbotron-heading">Already have an account?</h1>
+        <p>
+          <a class="btn btn-success btn-lg" href="{% url 'profile' %}" role="button">My Profile</a>
+        </p>
+      </div>
+      <div>
+        <h1 class="jumbotron-heading">New here?</h1>
+        <p>
+          <a class="btn btn-success btn-lg" href="{% url 'register' %}" role="button">Sign up!</a>
+        </p>
+      </div>
+    </section>
+  </div>
     <hr>
       <div class="hp-topics row jumbotron p-4 p-md-5">
         <div class="col-lg-4">
@@ -60,17 +62,18 @@
           <p><a class="btn btn-info" href="#" role="button">View details »</a></p>
         </div><!-- /.col-lg-4 -->
   </div>
-
-  <div class="unlock-oportunity text-white d-none d-sm-block">
-      <div class="text-center col-md-6 px-0">
-        <h1 class="display-4 font-italic">Unlock Your Oportunities</h1>
-        <p class="lead my-3">Yesterday is gone. Tomorrow is untouchable.</p>
-        <p class="lead my-3"></p>
-        <p class="lead mb-0"><a href="accounts/profile/" class="text-white font-weight-bold">Today is all you really got.</a></p>
-      </div>
-      <div>
-        <a href="{% url 'course_list' %}" class="btn btn-warning unlock-oportunity-btn">Click here to unlock your oportunities</a>
-      </div>
+  <div class="d-none d-sm-block">
+    <div class="unlock-oportunity text-white">
+        <div class="text-center col-md-6 px-0">
+          <h1 class="display-4 font-italic">Unlock Your Oportunities</h1>
+          <p class="lead my-3">Yesterday is gone. Tomorrow is untouchable.</p>
+          <p class="lead my-3"></p>
+          <p class="lead mb-0"><a href="accounts/profile/" class="text-white font-weight-bold">Today is all you really got.</a></p>
+        </div>
+        <div>
+          <a href="{% url 'course_list' %}" class="btn btn-warning unlock-oportunity-btn">Click here to unlock your oportunities</a>
+        </div>
+    </div>
   </div>
 
   <div class="unlock-oportunity jumbotron p-4 p-md-5 position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center text-white bg-dark">
