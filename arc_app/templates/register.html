@@ -6,22 +6,18 @@
     <p style="background-color: firebrick;">{{error}}</p>
   {% endif %}
   <body class="register-img" id="register-cycle-img">
-    
-  
-    <div class="container">
-        <div class="moveBox-Register">
-            <div class="welcome-register">R</div>
-            <div class="welcome-register">e</div>
-            <div class="welcome-register">g</div>
-            <div class="welcome-register">i</div>
-            <div class="welcome-register">s</div>
-            <div class="welcome-register">t</div>
-            <div class="welcome-register">e</div>
-            <div class="welcome-register">r</div>
-
-
-        </div>
-      <section class="form-section">
+    <div class="container-fluid d-flex flex-column justify-content-center align-items-center">
+      <div class="moveBox-Register">
+        <div class="welcome-register">R</div>
+        <div class="welcome-register">e</div>
+        <div class="welcome-register">g</div>
+        <div class="welcome-register">i</div>
+        <div class="welcome-register">s</div>
+        <div class="welcome-register">t</div>
+        <div class="welcome-register">e</div>
+        <div class="welcome-register">r</div>
+      </div>
+      <section class="form-section" id="register-form">
         <form action="{% url 'register' %}" method="POST" class="artist-form">
           {% csrf_token %}
           <p>
