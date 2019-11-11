@@ -25,8 +25,7 @@ We are the here to help students get with simple and manageable courses/lessons.
 
 **Our Wire Frames:**
 
-Just | Some | Wireframes
-- | - | 
+
 <img src="arc_app/static/img/wireframe1.jpg" width=200> | <img src="arc_app/static/img/wireframe2.jpg" width=200> | <img src="arc_app/static/img/wireframe3.jpg" width=200>
 
 <img src="arc_app/static/img/wireframe4.jpg" width=200> | <img src="arc_app/static/img/wireframe5.jpg" width=200> | <img src="arc_app/static/img/wireframe6.jpg" width=200>
