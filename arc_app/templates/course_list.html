@@ -18,7 +18,6 @@
               <strong class="course-list-div-category">{{ course.category }}</strong>
               <h3 class="course-list-div-title">{{ course.title }}</h3>
               <div class="mb-1 text-muted">Start Date: {{ course.start_date }}</div>
-              <p class="mb-auto">Unlock this oportunity</p>
             </div>
             <div class="course-list-div-btn">
               <a class="btn btn-outline-info btn-sm" href="{% url 'course_detail' course_slug=course.slug %}">View details</a>
