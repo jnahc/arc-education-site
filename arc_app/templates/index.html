@@ -11,12 +11,11 @@
   </div>
   <div class='home-page-loged-content'>
     <h1 class="cover-heading">Hi {{user.first_name}}, welcome back!</h1>
-    <p class="text-center lead">{{user.username}}</p>
-    <p class="text-center lead"><a href="{% url 'profile' %}" class="btn btn-outline-light btn-lg btn-block shadow-lg">My Profile</a></p>
+    <p class="text-center lead"><a href="{% url 'profile' %}" class="btn btn-outline-light btn-lg btn-block shadow" id="homepage-loggedin-my-profile">My Profile</a></p>
   </div>
 </div> 
   {% else %}
-<body class="home-page-body">
+<div class="home-page-body">
   <div class="welcomeToArc_container jumbotron text-center">
     <h1 class="welcomeToArc_title display-4">Welcome to ARC</h1>
     <p class="welcomeToArc_slogan">It is time to learn.</p>
@@ -95,7 +94,7 @@
       </video>
     </div>
   </div>
-</body>
+</div>
 {% endif %}
 
 
