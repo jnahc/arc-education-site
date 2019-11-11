@@ -2,6 +2,7 @@
 
 * {
   box-sizing: border-box;
+  animation-delay: .75s;
 }
 
 /* BASE HTML ****************************************************************************/
@@ -163,7 +164,6 @@ body {
 .home-page-loged {
   min-width: 100%;
 }
-
 
 .full-screen-video-wrap video {
   min-height: 100%;
