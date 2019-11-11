@@ -52,9 +52,7 @@ We are the here to help students get with simple and manageable courses/lessons.
 * **Milestones:** Outline the milestones/sprints for your group.
 * **Delegating Tasks:** What will each group member work on? Leverage everyone's strengths, and spend the majority of coding time pair programming.
 
-<img src="arc_app/static/img/trelloARC1.png" width=200>
-<img src="arc_app/static/img/toDoListARC.png" width=200>
-<img src="arc_app/static/img/scheduleARC.png" width=200>
+<img src="arc_app/static/img/trelloARC1.png" width=200> <img src="arc_app/static/img/toDoListARC.png" width=200> <img src="arc_app/static/img/scheduleARC.png" width=200>
 
 
 
