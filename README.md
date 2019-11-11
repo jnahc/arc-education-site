@@ -138,6 +138,16 @@ Django Form Semi-customization:
     </form>
 ```
 
-
-
 #### Challengies
+* Initial Setup with four people, not much to delegate in the beginning
+* Day 2 Morning conflicts - we tried to stay in our lane but ran into some issues
+
+## Appendix
+### Credits
+* Animated Logos
+  * https://codepen.io/methodoccasion/pen/ZWqbRb
+  * https://codepen.io/JamieMaguire/pen/MyPboB
+* Text Shadow Generator
+  * https://css3gen.com/text-shadow/
+* Slugify Guide
+  * https://books.agiliq.com/projects/django-orm-cookbook/en/latest/slugfield.html
