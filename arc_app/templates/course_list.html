@@ -6,26 +6,39 @@
     Courses
     <a href="{% url 'course_create' %}">+</a>
   </h2>
-  {% for course in courses %}
-  <div class="container mb-2">
-    <section class="course_list_page_style">
-      <div class="col-md-5 float-left mb-2">
-        <div class="card mb- shadow-sm ">
-          <img class="bd-placeholder-img card-img-top shadow-lg" width="100%" height="225" src="{{course.photo_url}}"  role="img" ><rect width="100%" height="100%" fill="#55595c"></rect><text class="ml-3" x="50%" y="50%" fill="#eceeef" dy=".3em">Course title:  {{course.title}}</text></img>
-          <div class="card-body">
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <a class= "btn btn-outline-dark btn-lg shadow" href="{% url 'purchase_create' course_slug=course.slug %}">Purchase</a></button>
-                <a class= "btn btn-outline-dark btn-lg shadow" href="{% url 'course_detail' course_slug=course.slug %}">Detail</a></button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>   
-  {% endfor %}
+
+  {% comment %} {% for course in courses %}
+  <a href="{% url 'course_detail' course_slug=course.slug %}">
+    <li class="track">
+      <img src="{{course.photo_url}}" alt="{{course.title}}" class="course-pic">
+      {{ course.title }}
+      <p>
+        <a href="{% url 'purchase_create' course_slug=course.slug %}">Purchase</a>
+      </p>
+    </li>
+  </a>
+  {% endfor %} {% endcomment %}
 </ul>
-<div class="mb-5"><hr></div>
+<section class="course-list-container">
+  {% for course in courses %}
+
+      
+        <div class="course-list-div flex-column">
+          <strong class="course-list-div-category">{{ course.category }}</strong>
+          
+          <h3 class="course-list-div-title">{{ course.title }}</h3>
+          <div class="mb-1 text-muted">Start Date: {{ course.start_date }}</div>
+          <p class="mb-auto">Unlock this oportunity</p>
+          
+          {% comment %} <a href="#" class="btn btn-outline-success stretched-link">Continue reading</a> {% endcomment %}
+          <img class="course-list-img"  src={{ course.photo_url }} >
+          <a href="{% url 'course_detail' course_slug=course.slug %}" class="btn btn-outline-info">View details</a>
+          <a class='btn btn-outline-success btn-sm' href="{% url 'purchase_create' course_slug=course.slug %}">Purchase</a>
+        </div>
+
+   {% endfor %}
+  </section>
+
 {% endblock %}
 
 
