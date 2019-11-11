@@ -54,6 +54,12 @@ We are the here to help students get with simple and manageable courses/lessons.
 * **Milestones:** Outline the milestones/sprints for your group.
 * **Delegating Tasks:** What will each group member work on? Leverage everyone's strengths, and spend the majority of coding time pair programming.
 
+<img src="arc_app/static/img/trelloARC1.png" width=200>
+<img src="arc_app/static/img/toDoListARC.png" width=200>
+<img src="arc_app/static/img/scheduleARC.png" width=200>
+
+
+
 ### Completed Project Deliverables
 
 * Link to Heroku hosted project, with all core technical requirements and three flexible technical requirements complete.
@@ -66,8 +72,4 @@ We are the here to help students get with simple and manageable courses/lessons.
   * Wish List / Future Development
   * Contributors (with links to their GitHub profiles)
 
-<<<<<<< HEAD
 ---
-=======
----
->>>>>>> 0525b3fd637c8cc026abd415f7ebbb74eca10edb
