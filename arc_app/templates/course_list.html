@@ -11,12 +11,12 @@
     <section class="course_list_page_style">
       <div class="col-md-5 float-left mb-2">
         <div class="card mb- shadow-sm ">
-          <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="{{course.photo_url}}"  role="img" ><rect width="100%" height="100%" fill="#55595c"></rect><text class="ml-3" x="50%" y="50%" fill="#eceeef" dy=".3em">Course title:  {{course.title}}</text></img>
+          <img class="bd-placeholder-img card-img-top shadow-lg" width="100%" height="225" src="{{course.photo_url}}"  role="img" ><rect width="100%" height="100%" fill="#55595c"></rect><text class="ml-3" x="50%" y="50%" fill="#eceeef" dy=".3em">Course title:  {{course.title}}</text></img>
           <div class="card-body">
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group">
-                <a class= "btn btn-outline-dark btn-lg " href="{% url 'purchase_create' course_slug=course.slug %}">Purchase</a></button>
-                <a class= "btn btn-outline-dark btn-lg " href="{% url 'course_detail' course_slug=course.slug %}">Detail</a></button>
+                <a class= "btn btn-outline-dark btn-lg shadow" href="{% url 'purchase_create' course_slug=course.slug %}">Purchase</a></button>
+                <a class= "btn btn-outline-dark btn-lg shadow" href="{% url 'course_detail' course_slug=course.slug %}">Detail</a></button>
               </div>
             </div>
           </div>
