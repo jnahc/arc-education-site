@@ -72,8 +72,8 @@ body {
 .home-page-body {
   background: black;
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-left: 0px;
+  padding-right: 0px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -86,12 +86,14 @@ body {
 .welcomeToArc_title {
   font-size: 100px;
   font-family: "McLaren", cursive;
+  text-shadow: -8px -7px 8px rgba(0, 0, 0, 0.74);
 }
 
 .welcomeToArc_slogan {
   font-size: 50px;
   margin-top: -20px;
   font-family: "Abril Fatface", cursive;
+  text-shadow: 8px 6px 8px rgba(71, 0, 0, 1);
 }
 
 .new-here {
@@ -214,6 +216,12 @@ body {
   align-self: center;
   font-family: "Abril Fatface", cursive;
   font-size: 50px;
+  text-shadow: 6px 1px 21px rgba(0, 0, 0, 0.95);
+}
+
+#homepage-loggedin-my-profile {
+  text-shadow: 2px 0px 5px rgba(0, 0, 0, 1);
+  font-size: 1.2em;
 }
 
 .home-page-loged-content p {
@@ -332,18 +340,19 @@ body {
 
 .welcome-register {
   /* background: url('http://giphygifs.s3.amazonaws.com/media/hlWy1CHPoJ8qs/giphy.gif') repeat; */
-  /* background: url('https://media.giphy.com/media/xTiTnsQ8rNxU2lwely/giphy.gif') repeat; */
-  background: url("https://media.giphy.com/media/v78keJYH0Seys/200w_d.gif")
-    repeat;
-  background-position: 10px;
+  background: url('https://media.giphy.com/media/xTiTnsQ8rNxU2lwely/giphy.gif') repeat;
+  /* background: url("https://media.giphy.com/media/v78keJYH0Seys/200w_d.gif") repeat; */
   font-size: 100px;
   font-family: Helvetica;
   font-weight: bold;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-position-x: 40%;
-  background-position-y: -5px;
-  filter: grayscale(0.9);
+  /* /* background-position: 10px; */
+  /* background-position-x: -20px; */
+  background-position-y: -175px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: grayscale(0.7);
 }
 
 .moveBox-Register {
@@ -474,6 +483,10 @@ body {
 .about_page_div {
   background-image: url("https://www.telenor.com/wp-content/uploads/2018/07/artifiticial-intelligence-1250x585.jpg");
   background-size: auto;
+}
+
+#about-us-brand {
+  text-shadow: -6px 0px 20px rgba(161, 130, 45, 0.75);
 }
 /* 
 @media (min-aspect-ratio: 16/9) {
