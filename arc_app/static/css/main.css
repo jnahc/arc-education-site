@@ -456,7 +456,8 @@ body {
 }
 
 .course-detail-table {
-  margin: 0 auto;
+  /* margin-left: 5%; */
+  /* margin: 0 auto; */
 }
 
 .yoda-pic {
@@ -481,8 +482,23 @@ body {
   );
 }
 
-.course-detail-img {
+.course-detail-img-container {
+  width: auto;
+  min-height: 735px;
+  margin-left: 15px;
 }
+
+.course-detail-img {
+  border-radius: 10px;
+  opacity: 0.9;
+  width: 100%;
+  overflow: hidden;
+  margin: 10px;  
+}
+
+
+
+
 /* COURSE FORM ****************************************************** */
 
 .create-course-main {
@@ -612,6 +628,12 @@ body {
 /* RESPONSIVE COURSE DETAIL AREA  */
   #course-detail-description {
     width: 300px;
+  }
+
+  .course-detail-container {
+    padding: 0px;
+    background-image: none;
+    /* background-color: green; */
   }
 
   /* RESPONSIVE LOGIN PAGE */
