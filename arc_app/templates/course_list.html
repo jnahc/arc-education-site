@@ -14,15 +14,20 @@
 <main class="course-list-main">
 <section class="course-list-container">
   {% for course in courses %}      
-  <div class="course-list-div flex-column">
-    <strong class="course-list-div-category">{{ course.category }}</strong>    
-    <h3 class="course-list-div-title">{{ course.title }}</h3>
-    <div class="mb-1 text-muted">Start Date: {{ course.start_date }}</div>
-    <p class="mb-auto">Unlock this oportunity</p>
+  <div class="course-list-div">
+<div class="lastdiv">
+    <div>
+      <strong class="course-list-div-category">{{ course.category }}</strong>    
+      <h3 class="course-list-div-title">{{ course.title }}</h3>
+      <span class="mb-1 text-muted">Start Date: {{ course.start_date }}</span>
+    </div>
+      <div class="course-list-div-btn">
+        <a class="btn btn-outline-info btn-sm shadow-sm" href="{% url 'course_detail' course_slug=course.slug %}">View details</a>
+        <a class='btn btn-outline-success btn-sm shadow-sm' href="{% url 'purchase_create' course_slug=course.slug %}">Purchase</a>
+      </div>
+  </div>
     {% comment %} <a href="#" class="btn btn-outline-success stretched-link">Continue reading</a> {% endcomment %}
-    <img class="course-list-img"  src={{ course.photo_url }} >
-    <a href="{% url 'course_detail' course_slug=course.slug %}" class="btn btn-outline-info">View details</a>
-    <a class='btn btn-outline-success btn-sm shadow-sm' href="{% url 'purchase_create' course_slug=course.slug %}">Purchase</a>
+    <img class="course-list-img"  src={{ course.photo_url }}>
   </div>
    {% endfor %}
 </section>

@@ -23,21 +23,18 @@ body {
 }
 
 .navbar {
-  background-color: rgba(248, 249, 250, .66);
+  background-color: rgba(248, 249, 250, 0.66);
 }
 
-#topnav-brand{  
-  text-shadow: 0px 2px 2px rgba(0,0,0,0.1),
-            3px 2px 4px rgba(100,100,100,0.8),
-            2px 3px 8px rgba(183,183,183,0.71),
-            4px 4px 10px rgba(183,183,183,0.54);
+#topnav-brand {
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1),
+    3px 2px 4px rgba(100, 100, 100, 0.8), 2px 3px 8px rgba(183, 183, 183, 0.71),
+    4px 4px 10px rgba(183, 183, 183, 0.54);
   font-size: 1.8em;
 }
 
-.nav-link{
-  text-shadow: 0px 1px 2px rgba(0,0,0,0.3),
-              1px 1px 3px rgba(0,0,0,0.1);
- 
+.nav-link {
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3), 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 /* PROFILE PAGE******************************************************************* */
@@ -214,7 +211,6 @@ body {
   color: whitesmoke;
 }
 
-
 .cover-heading {
   align-self: center;
   font-family: "Abril Fatface", cursive;
@@ -357,7 +353,6 @@ body {
   background-color: rgb(96, 96, 96, 0.66);
 }
 
-
 /* COURSE LIST **************************************************/
 .course-list-intro {
   display: flex;
@@ -386,32 +381,32 @@ body {
 .course-list-container {
   display: flex;
   flex-wrap: wrap;
+  margin: auto;
 }
 
 .course-list-div {
   display: flex;
-  margin: 30px auto;
-  clip-path: polygon(53% 0, 100% 100%, 0 100%, 0 0);
+  justify-content: flex-start;
+  /* flex-wrap: wrap; */
+  clip-path: polygon(50% 0, 100% 100%, 0 50%, 0 0);
   transition: clip-path 1s;
+  margin: 40px auto;
+}
+
+.lastdiv {
+  display: flex;
+  flex-direction: column;
 }
 
 .course-list-div:hover {
-  display: flex;
-  margin: 30px auto;
   clip-path: polygon(100% 100%, 0 100%, 0 0, 100% 0);
   transition: clip-path 0.3s;
 }
 
-.course-list-div-description {
-  display: flex;
-  justify-content: space-between;
-}
-
 .course-list-div-btn {
   display: flex;
-  align-content: space-between;
   flex-direction: column;
-  align-self: center;
+  margin-top: 90%;
 }
 .btn-sm {
   margin: 4px;
@@ -421,8 +416,7 @@ body {
 }
 .course-list-div-title {
   font-family: "Abril Fatface", cursive;
-  text-shadow: -4px -6px 8px rgba(46,229,82,0.16);
-
+  text-shadow: -4px -6px 8px rgba(46, 229, 82, 0.16);
 }
 .course-list-img {
   border-radius: 10px;
@@ -434,8 +428,8 @@ body {
   box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
 }
 
-#course-list-h2{
-  text-shadow: 2px 2px 10px rgba(33,206,199,0.23);  
+#course-list-h2 {
+  text-shadow: 2px 2px 10px rgba(33, 206, 199, 0.23);
 }
 
 /* COURSE FORM ****************************************************** */
@@ -454,7 +448,6 @@ body {
   font-size: 35px;
   font-family: "Poiret One", cursive;
 }
-
 
 .A-course {
   background: url("http://i.giphy.com/ZAseSBcoRly1i.gif") repeat;
@@ -520,14 +513,19 @@ body {
   text-shadow: -6px 0px 20px rgba(161, 130, 45, 0.75);
 }
 
-
 /* RESPONSE SECTION  */
 @media (max-width: 576px) {
-  h2, h3, .card-link, .hp-about-us, .hp-about-us-description, .welcomeToArc_slogan, .welcomeToArc_title {
+  h2,
+  h3,
+  .card-link,
+  .hp-about-us,
+  .hp-about-us-description,
+  .welcomeToArc_slogan,
+  .welcomeToArc_title {
     font-size: 1rem;
   }
 
   .card-title {
-    font-size: .7rem;
+    font-size: 0.7rem;
   }
 }
