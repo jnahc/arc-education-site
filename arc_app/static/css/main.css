@@ -622,7 +622,13 @@ body {
     width: 50%;
   }
 
-  /* RESPONSIVE COURSE DETAIL AREA  */
+
+  .course-list-div {
+    clip-path: polygon(100% 100%, 0 100%, 0 0, 100% 0)
+  }
+
+/* RESPONSIVE COURSE DETAIL AREA  */
+
   #course-detail-description {
     width: 300px;
   }
