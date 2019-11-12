@@ -1,13 +1,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<main class-"course-list-main">
-  <h2>
-    Courses
-    <a href="{% url 'course_create' %}">+</a>
-  </h2>
 
+<section class="course-list-intro">
+<div class="course-list-intro-container">
+    <h1 class="course-list-intro-text">All courses</h1>
+    <h2 class="course-list-intro-text">Hey {{user.first_name}}, ready to unlock oportunities?</h2>
+</div>
+</section>
 
+<main class="course-list-main">
 <section class="course-list-container">
   {% for course in courses %}
 

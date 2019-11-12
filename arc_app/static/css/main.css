@@ -185,14 +185,11 @@ body {
 .full-screen-video-wrap video {
   min-height: 100%;
   min-width: 1024px;
-
   width: 100%;
   height: auto;
-
   position: fixed;
   top: 0;
   left: 0;
-
   z-index: -1;
 }
 
@@ -209,23 +206,6 @@ body {
   flex-direction: column;
   padding: 150px 0;
   color: whitesmoke;
-}
-
-.home-page-loged-content:hover {
-  /* clip-path: polygon(
-    20% 0%,
-    0% 20%,
-    30% 50%,
-    0% 80%,
-    20% 100%,
-    50% 70%,
-    80% 100%,
-    100% 80%,
-    70% 50%,
-    100% 20%,
-    80% 0%,
-    50% 30%
-  ); */
 }
 
 .cover-heading {
@@ -387,15 +367,35 @@ body {
 /* PROFILE PAGE **************************************************/
 
 /* COURSE LIST **************************************************/
-.course-list-main {
-  background: gray;
+.course-list-intro {
+  display: flex;
+  background-image: url("https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1753&q=80");
+  min-height: 400px;
+  width: 100%;
+  justify-content: center;
 }
+
+.course-list-intro-container {
+  display: flex;
+  color: whitesmoke;
+  font-family: "Poiret One", cursive;
+  align-self: center;
+  flex-direction: column;
+}
+
+.course-list-intro-text {
+  font-size: 90px;
+}
+.course-list-main {
+  background-color: rgba(187, 187, 187, 0.4);
+  width: 100%;
+}
+
 .course-list-container {
   display: flex;
   /* justify-content: space-evenly; */
   flex-wrap: wrap;
   /* padding: 150px; */
-  margin: 10px;
 }
 
 .course-list-div {
@@ -434,7 +434,7 @@ body {
 }
 .course-list-img {
   border-radius: 10px;
-  opacity: 0.7;
+  opacity: 0.9;
   max-width: 500px;
 }
 
