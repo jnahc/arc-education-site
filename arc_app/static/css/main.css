@@ -393,7 +393,7 @@ body {
   display: flex;
   justify-content: flex-start;
   /* flex-wrap: wrap; */
-  clip-path: polygon(50% 0, 100% 100%, 0 50%, 0 0);
+  clip-path: polygon(100% 100%, 0 100%, 50% 50%, 100% 0);
   transition: clip-path 1s;
   margin: 40px auto;
 }
@@ -623,6 +623,10 @@ body {
 
   .course-list-img {
     width: 50%;
+  }
+
+  .course-list-div {
+    clip-path: polygon(100% 100%, 0 100%, 0 0, 100% 0)
   }
 
 /* RESPONSIVE COURSE DETAIL AREA  */
