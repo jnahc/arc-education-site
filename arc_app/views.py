@@ -10,10 +10,8 @@ from .forms import CourseForm
 
 # Create your views here.
 
-
 def home(request):
     return render(request, 'index.html')
-
 
 def about_us(request):
     return render(request, 'about_us.html')
@@ -24,14 +22,12 @@ def course_list(request):
     context = {"courses": courses}
     return render(request, 'course_list.html', context)
 
-@login_required
 def course_detail(request, course_slug):
     course = Course.objects.get(slug=course_slug)
     course_pk = course.pk
     purchases = Purchase.objects.filter(course = course_pk)
     context = {"course": course, "purchases": purchases}
     return render(request, "course_detail.html", context)
-
 
 def api_courses(request):
     all_courses = Course.objects.all()
@@ -72,8 +68,8 @@ def course_edit(request, pk):
       return redirect('course_detail', course_slug=course.slug)
   else:
     form = CourseForm(instance=course)
-    context = {'form': form}
-    return render(request, 'course_form.html', context)
+    context = {'form': form, "creator": course.user}
+    return render(request, 'course_form_edit.html', context)
 
 @login_required
 def course_delete(request, course_slug):
