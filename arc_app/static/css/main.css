@@ -616,7 +616,7 @@ body {
 
   /* RESPONSIVE LOGIN PAGE */
   #login-page-form {
-    margin-top: 25%;
+    margin: 50%
   }
 }
 
