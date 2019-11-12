@@ -27,7 +27,9 @@
       </div>
   </div>
     {% comment %} <a href="#" class="btn btn-outline-success stretched-link">Continue reading</a> {% endcomment %}
-    <img class="course-list-img"  src={{ course.photo_url }}>
+    <div class="course-list-img-container ml-2">
+      <img class="course-list-img"  src={{ course.photo_url }}>
+    </div>
   </div>
    {% endfor %}
 </section>
