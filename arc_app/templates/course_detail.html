@@ -2,51 +2,60 @@
 
 {% block content %}
 
-<div class="w-50 p-3">
-<img src="{{course.photo_url}}" class="rounded-lg mx-auto d-block m-3 shadow-lg" alt="{{course.title}}">
-  <table class="table table-dark rounded-lg shadow">
-    <thead>
-      <tr>
-        <th scope="col">Title </th>
-        <th scope="col">Category</th>
-        <th scope="col">Start Date</th>
-        <th scope="col">End Date</th>
-        <th scope="col">Creator</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>{{course.title}}</td>
-        <td>{{course.category}}</td>
-        <td>{{course.start_date}}</td>
-        <td>{{course.end_date}}</td>
-        <td>{{course.user.first_name}} {{course.user.last_name}}</td>
-      </tr>
-    </tbody>
-  </table>
-  <div class="card rounded-lg shadow" id="course-detail-description">
-    <div class="card-body">
-      <h5 class="card-title">Description</h5>
-      <p class="card-text">{{course.description}}</p>
-      {% if user.is_authenticated %}
-      <div class="d-flex justify-content-between align-items-center btn-group mb-3">
-        <a href="{% url 'purchase_create' course_slug=course.slug %}">Purchase</a>
-      </div>
-      {% else %}
-      <div class="d-flex justify-content-between align-items-center">
-        <div class="btn-group">
-          <a class="nav-link" href="{% url 'login' %}">Want to Purchase? Please Login first</a>
+<div class="course-detail-container">
+  <div class="course-detail-table">
+    <table class="table table-dark rounded-lg shadow">
+      <thead>
+        <tr>
+          <th scope="col">Title </th>
+          <th scope="col">Category</th>
+          <th scope="col">Start Date</th>
+          <th scope="col">End Date</th>
+          <th scope="col">Creator</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{course.title}}</td>
+          <td>{{course.category}}</td>
+          <td>{{course.start_date}}</td>
+          <td>{{course.end_date}}</td>
+          <td>{{course.user.first_name}} {{course.user.last_name}}</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Description</h5>
+        <p class="card-text">{{course.description}}</p>
+        {% if user.is_authenticated %}
+        <div class="d-flex justify-content-between align-items-center btn-group mb-3">
+          <a href="{% url 'purchase_create' course_slug=course.slug %}">Purchase</a>
         </div>
+        {% else %}
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="btn-group">
+            <a class="nav-link" href="{% url 'login' %}">Want to Purchase? Please Login first</a>
+          </div>
+
+        </div>
+        {% endif %}
+        <div class="card-header shadow-sm">Users that have purchased this course</div>
+        <ul class="list-group list-group-flush">
+          {% for purchase in purchases %}
+          <li class="list-group-item">{{purchase.student.first_name}} {{purchase.student.last_name}}</li>
+          {% endfor %}
+        </ul>
       </div>
-      {% endif %}
-      <div class="card-header shadow-sm">Users that have purchased this course</div>
-      <ul class="list-group list-group-flush">
-        {% for purchase in purchases %}
-        <li class="list-group-item">{{purchase.student.first_name}} {{purchase.student.last_name}}</li>
-        {% endfor %}
-      </ul>
+    </div>
+    <img class="yoda-pic" src="https://www.discraft.com/product/image/medium/scbuzzz.yoda1_1.png">
+    <div class="yoda-message float-right">
+      <h3>May the force be with you!</h3>
     </div>
   </div>
+  <img class="course-detail-img" src="{{course.photo_url}}" alt="{{course.title}}">
+  
 </div>
 
 {% endblock %}
