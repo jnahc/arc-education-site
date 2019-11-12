@@ -557,7 +557,7 @@ body {
   text-shadow: -6px 0px 20px rgba(161, 130, 45, 0.75);
 }
 
-/* RESPONSE SECTION  */
+/* RESPONSIVE SECTION  */
 @media (max-width: 576px) {
   h2,
   h3,
@@ -572,4 +572,30 @@ body {
   .card-title {
     font-size: 0.7rem;
   }
+
+  .create-course-main {
+    padding: 5px;
+  }
+
+  #course-form-description {
+    width: 75%;
+  }
+
+  .course-list-intro {
+    min-height: 75px;
+  }
+
+  .course-list-intro-text {
+    font-size: 2rem;
+  }
+
+  .course-list-img {
+    width: 50%;
+  }
+
+  #course-detail-description {
+    width: 300px;
+  }
 }
+
+
