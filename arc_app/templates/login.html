@@ -6,14 +6,13 @@
   {% endif %}
 <body class="login-img" id="login-cycle-img">
  <main class="login-page-main">
-  <div class="d-none d-sm-block">
+  <div class="d-sm-block">
     <div class="moveBox-Login">
-
-      <div class="A-login">A</div>
-      <div class="R-login">R</div>
-      <div class="C-login">C</div>
-    </div>
-      <section class="form-section mb-5 rounded-lg shadow">
+      <div class="A-login d-none d-sm-block">A</div>
+      <div class="R-login d-none d-sm-block">R</div>
+      <div class="C-login d-none d-sm-block">C</div>
+    </div>  
+      <section class="form-section mb-5 rounded-lg shadow" id="login-page-form">
         <form action="{% url 'login' %}" method="POST">
           {% csrf_token %}
           <p>
