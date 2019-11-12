@@ -5,12 +5,14 @@
     <p style="background-color: firebrick">{{error}}</p>
   {% endif %}
 <body class="login-img" id="login-cycle-img">
-  <div class="moveBox-Login d-none d-sm-block">
-    <div class="A-login">A</div>
-    <div class="R-login">R</div>
-    <div class="C-login">C</div>
+  <div class="d-none d-sm-block">
+    <div class="moveBox-Login">
+      <div class="A-login">A</div>
+      <div class="R-login">R</div>
+      <div class="C-login">C</div>
+    </div>
   </div>
-  <div class="container-fluid d-flex justify-content-center align-items-center">
+  <div class="container-fluid d-flex justify-content-center align-items-center" id="login-page-form">
     <section class="form-section mb-5 rounded-lg shadow">
       <form action="{% url 'login' %}" method="POST">
         {% csrf_token %}

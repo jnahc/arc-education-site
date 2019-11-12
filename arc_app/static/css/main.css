@@ -514,6 +514,9 @@ body {
 }
 
 /* RESPONSIVE SECTION  */
+
+/* RESPONSIVE TEXT SIZING */
+
 @media (max-width: 576px) {
   h2,
   h3,
@@ -529,6 +532,7 @@ body {
     font-size: 0.7rem;
   }
 
+ /* RESPONSIVE CREATE COURSE FORM   */
   .create-course-main {
     padding: 5px;
   }
@@ -537,6 +541,7 @@ body {
     width: 75%;
   }
 
+  /* RESPONSIVE COURSE LIST AREA */
   .course-list-intro {
     min-height: 75px;
   }
@@ -549,8 +554,14 @@ body {
     width: 50%;
   }
 
+/* RESPONSIVE COURSE DETAIL AREA  */
   #course-detail-description {
     width: 300px;
+  }
+
+  /* RESPONSIVE LOGIN PAGE */
+  #login-page-form {
+    margin-top: 25%;
   }
 }
 
